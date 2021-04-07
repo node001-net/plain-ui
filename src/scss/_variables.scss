@@ -1,0 +1,119 @@
+/**
+ *  variables
+ *
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui-css
+ *
+ */
+
+
+/**
+ *  breakpoints
+ *
+ */
+
+$plain-ui__xs : 576px !default;
+$plain-ui__sm : 768px !default;
+$plain-ui__md : 992px !default;
+$plain-ui__lg : 1200px !default;
+$plain-ui__xlg: 1600px !default;
+
+
+/**
+ *  fonts
+ *
+ */
+
+$plain-ui__direction: ltr !default;
+$plain-ui__golden-ratio: 1.618 !default;
+
+$plain-ui__font-family: 'IBM Plex Mono', sans-serif !default;
+$plain-ui__font-weight: normal !default;
+$plain-ui__font-size: 0.9rem !default;
+$plain-ui__font-size-breakpoints: (
+    $plain-ui__md: 1.1rem
+) !default;
+
+$plain-ui__font-sizes: (
+    'default': $plain-ui__font-size,
+    'small'  : $plain-ui__font-size * 0.75,
+    'medium' : $plain-ui__font-size * 1.5,
+    'large'  : $plain-ui__font-size * 2,
+    'big'    : $plain-ui__font-size * 3
+) !default;
+
+$plain-ui__line-height: 1.4;
+$plain-ui__line-height__breakpoints: (
+    $plain-ui__md: $plain-ui__golden-ratio
+) !default;
+
+
+/**
+ *  colors
+ *
+ *
+ */
+
+$plain-ui__primary: #f18f01 !default;
+$plain-ui__secondary: #b3b2af !default;
+$plain-ui__success: #5cb85c !default;
+$plain-ui__warning: #f0ad4e !default;
+$plain-ui__danger: #d9534f !default;
+$plain-ui__info: #0090d4 !default;
+
+$plain-ui__background-light: #ffffff !default;
+$plain-ui__text-light: #363636 !default;
+$plain-ui__border-light: #dfdfdf !default;
+
+$plain-ui__link-light: #fff !default;
+
+/**
+ *  padding & nargin
+ *
+ */
+
+$plain-ui__margin: 0 0 15px !default;
+$plain-ui__margin-breakpoints: (
+    $plain-ui__md: 0 0 20px
+) !default;
+
+$plain-ui__padding: 5px 12px !default;
+$plain-ui__padding-breakpoints: (
+    $plain-ui__md: 10px 17px
+) !default;
+
+
+/**
+ *  heading
+ *
+ */
+
+$plain-ui__heading__font-sizes: (
+    'h1': $plain-ui__font-size * 2.5,
+    'h2': $plain-ui__font-size * 2,
+    'h3': $plain-ui__font-size * 1.75,
+    'h4': $plain-ui__font-size * 1.5,
+    'h5': $plain-ui__font-size * 1.25,
+    'h6': $plain-ui__font-size
+) !default;
+
+$plain-ui__heading__font-sizes__breakpoints: (
+    $plain-ui__md: 1.2rem
+) !default;
+
+$plain-ui__heading__font-weight: bold !default;
+$plain-ui__heading__font-family: $plain-ui__font-family !default;
+$plain-ui__heading__margin: $plain-ui__margin !default;
+$plain-ui__heading__margin-breakpoints: $plain-ui__margin-breakpoints !default;
+
+
+/**
+ *  z-index
+ *
+ */
+
+$plain-ui__z-index__modal: 1000 !default;
+$plain-ui__z-index__overlay: 999 !default;

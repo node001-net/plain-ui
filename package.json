@@ -1,0 +1,22 @@
+{
+  "name": "plain-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitea.tentakelfabrik.de:herrhase/plain-ui.git"
+  },
+  "author": "Björn Hase",
+  "license": "MIT",
+  "devDependencies": {
+    "laravel-mix": "^6.0.16"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "reflex-grid": "^2.0.7"
+  }
+}

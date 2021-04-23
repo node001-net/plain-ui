@@ -4,9 +4,46 @@
  *
  */
 
-@mixin component__button()
+@mixin plain-ui__component__button()
 {
     .button {
-        
+        appearance: none;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+
+        font-family: $plain-ui__font-family;
+
+        border: 1px solid darken($plain-ui__primary-light, 30%);
+        background-color: lighten($plain-ui__primary-light, 10%);
+        color: white;
+
+        padding: 0.7em 1.5em;
+        font-size: 1.1rem;
+
+        border-radius: 2px;
+
+        transition: background-color 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+
+            background-color: lighten($plain-ui__primary-light, 20%);
+        }
+
+        &:focus, &:active {
+
+        }
+
+        &--lighter {
+
+        }
+    }
+
+    .plain-ui-dark {
+        .button {
+
+        }
     }
 }

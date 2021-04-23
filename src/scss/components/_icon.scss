@@ -1,0 +1,25 @@
+/**
+ *
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__component__icon() {
+    .icon {
+        width: 1em;
+        height: 1em;
+
+        max-height: 100%;
+        max-width: 100%;
+
+        vertical-align: middle;
+        overflow: hidden;
+
+        fill: white;
+    }
+
+    .icon--danger {
+        fill: $plain-ui__danger-light;
+    }
+}

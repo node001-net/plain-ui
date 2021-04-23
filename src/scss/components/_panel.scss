@@ -1,0 +1,61 @@
+/**
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__component__panel()
+{
+    .panel {
+        border: 1px solid $plain-ui__primary-light;
+        border-radius: 2px;
+
+        background: #fff;
+
+        &__header {
+            display: flex;
+            background-color: $plain-ui__primary-light;
+            color: white;
+            padding: 0.8em 1.2em;
+            line-height: 1.6em;
+
+            button {
+                appearance: none;
+                background: none;
+                border: none;
+                padding: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .icon {
+                vertical-align: bottom;
+                width: 1.5em;
+                height: 1.5em;
+                margin-right: 0.5em;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+
+            button:last-child .icon {
+                margin-right: 0;
+            }
+        }
+
+        &__body {
+            padding: 0.6em 1.2em;
+        }
+    }
+
+    .plain-ui-dark {
+        .panel {
+
+        }
+    }
+}

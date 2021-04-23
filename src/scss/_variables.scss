@@ -32,7 +32,7 @@ $plain-ui__golden-ratio: 1.618 !default;
 
 $plain-ui__font-family: 'IBM Plex Mono', sans-serif !default;
 $plain-ui__font-weight: normal !default;
-$plain-ui__font-size: 0.9rem !default;
+$plain-ui__font-size: 1rem !default;
 $plain-ui__font-size-breakpoints: (
     $plain-ui__md: 1.1rem
 ) !default;
@@ -57,21 +57,21 @@ $plain-ui__line-height__breakpoints: (
  *
  */
 
-$plain-ui__primary: #f18f01 !default;
+$plain-ui__primary-light: #242424 !default;
 $plain-ui__secondary: #b3b2af !default;
-$plain-ui__success: #5cb85c !default;
+$plain-ui__success-light: #64ac64 !default;
 $plain-ui__warning: #f0ad4e !default;
-$plain-ui__danger: #d9534f !default;
+$plain-ui__danger-light: #d95959 !default;
 $plain-ui__info: #0090d4 !default;
 
-$plain-ui__background-light: #ffffff !default;
+$plain-ui__background-light: #f9f9f9 !default;
 $plain-ui__text-light: #363636 !default;
 $plain-ui__border-light: #dfdfdf !default;
 
 $plain-ui__link-light: #fff !default;
 
 /**
- *  padding & nargin
+ *  padding & margin
  *
  */
 

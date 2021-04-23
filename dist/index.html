@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en_EN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Crispy CSS | Lightweight CSS Framework for Building Apps and Websites</title>
+    <meta name="description" content="Lightweight Framework for building fast and clean Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="plain-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reflex-grid@2.0.4/css/reflex.min.css">
+</head>
+<body class="home">
+    <header id="header" class="header">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12">
+                    <div class="text-center">
+                        <hgroup>
+                            <a href="/">
+                                <h1 class="h2 margin-top-4 margin-bottom-0">Plain UI</h1>
+                        </a></hgroup>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="grid">
+            <div class="col-12">
+                <h2>Buttons</h2>
+                <button class="button">
+                    Default
+                </button>
+                <button class="button">
+                    Default
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="symbol-defs.svg#icon-check"></use>
+                    </svg>
+                </button>
+                <button class="button button--success">
+                    Success
+                </button>
+                <button class="button button--danger">
+                    Danger
+                </button>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <h2>Icon</h2>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-check"></use>
+                </svg>
+                <svg class="icon icon--circle" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-check"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <h2>Badge</h2>
+                <span class="badge">
+                    Category
+                </span>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+
+                <h2>Panel</h2>
+
+                <div class="panel">
+                    <div class="panel__header">
+                        <button type="button">
+                            <svg class="icon icon--first" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-expand"></use>
+                            </svg>
+                        </button>
+                        <div class="panel__title">Test</div>
+                        <div class="panel__buttons">
+                            <button type="button">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="symbol-defs.svg#icon-edit"></use>
+                                </svg>
+                            </button>
+                            <button type="button">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="symbol-defs.svg#icon-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="panel__body">
+                        <div class="content">
+                            <p>
+                                Hallo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <h2>Form</h2>
+
+                <form>
+                    <div class="group">
+                        <label class="label">
+                            Name
+                            <input class="text" />
+                        </label>
+                    </div>
+
+                    <div class="group group--valid">
+                        <label class="label">
+                            <svg class="icon" aria-hidden="true">
+                                <use class="test" xlink:href="symbol-defs.svg#icon-check"></use>
+                            </svg>
+                            Surname
+                            <input class="text" />
+                        </label>
+                    </div>
+
+                    <div class="group group--error">
+                        <label class="label">
+                            <svg class="icon" aria-hidden="true">
+                                <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
+                            </svg>
+                            E-Mail
+                            <input class="text" />
+                        </label>
+                        <span class="error">
+                            String is not valid
+                        </span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

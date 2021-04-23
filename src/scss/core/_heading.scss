@@ -1,0 +1,41 @@
+/**
+ *  Heading
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
+ */
+
+@mixin plain-ui__core__heading()
+{
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        font-family: $plain-ui__heading__font-family;
+        font-weight: $plain-ui__heading__font-weight;
+        line-height: 1.2;
+
+        margin: $plain-ui__heading__margin;
+        //@include crispy__media-breakpoints('margin', $plain-ui__heading__margin-breakpoints);
+    }
+
+    h5 {
+        line-height: 1.4;
+    }
+
+    h6 {
+        line-height: $plain-ui__line-height;
+    }
+
+    @each $h, $font-size in $plain-ui__heading__font-sizes {
+        #{$h}, .#{$h} {
+            font-size: $font-size;
+            //@include crispy__media-breakpoints-font-size($plain-ui__heading__font-sizes__breakpoints, $font-size, $plain-ui__font-size);
+        }
+    }
+}

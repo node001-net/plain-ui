@@ -31,7 +31,7 @@
             }
         }
     }
-    
+
     .field-label {
         font-size: 1rem;
         font-family: $plain-ui__font-family;
@@ -39,6 +39,10 @@
         .icon {
             vertical-align: sub;
             font-size: 1.1rem;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -66,6 +70,41 @@
 
     select.field-choice {
         padding: 0.8em;
+    }
+
+    /**
+     * radio & checkbox
+     *
+     * <div class="field">
+     *     <input id="field__checkbox__1" class="field__choice" type="checkbox" name="field__checkbox__1" value="true" />
+     *     <label for="field__checkbox__1" class="field__label">
+     *         <svg class="icon field__choice__unchecked" aria-hidden="true">
+     *             <use xlink:href="symbol-defs.svg#icon-minus"></use>
+     *         </svg>
+     *         <svg class="icon field__choice__checked" aria-hidden="true">
+     *             <use xlink:href="symbol-defs.svg#icon-checked"></use>
+     *         </svg>
+     *         checkbox 1
+     *    </label>
+     * </div>
+     *
+     */
+
+    input[type=checkbox].field-choice {
+        position: relative;
+        display: none;
+
+        ~ .field-choice__checked {
+            display: none;
+        }
+
+        &:checked ~ .field-choice__checked {
+            display: inline-block;
+        }
+
+        &:checked ~ .field-choice__unchecked {
+            display: none;
+        }
     }
 
     //

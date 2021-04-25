@@ -1,0 +1,214 @@
+/**
+ *  mixins
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui-css
+ *
+ */
+
+
+/**
+ *  Clear Floats
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__clearfix() {
+    &::before,
+    &::after {
+        display: table;
+        content: ' ';
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+
+/**
+ *  clear styles from list
+ *
+ *
+ */
+
+@mixin plain-ui__clearlist() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/**
+ *  media-queries as mixins
+ *  based on breakpoints from variables
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__media-xs() {
+    @media only screen and (min-width:$plain-ui__xs) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-sm() {
+    @media only screen and (min-width: $plain-ui__sm) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-md() {
+    @media only screen and (min-width: $plain-ui__md) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-lg() {
+    @media only screen and (min-width: $plain-ui__lg) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-xlg() {
+    @media only screen and (min-width: $plain-ui__xlg) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-xxs-only() {
+    @media only screen and (max-width: $plain-ui__xs) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-xxs-only() {
+    @media only screen and (max-width: $plain-ui__xs - 1) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-xs-only() {
+    @media only screen and (min-width: $plain-ui__xs) and (max-width: $plain-ui__sm - 1) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-sm-only() {
+    @media only screen and (min-width: $plain-ui__sm) and (max-width: $plain-ui__md - 1) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-md-only() {
+    @media only screen and (min-width: $plain-ui__md) and (max-width: $plain-ui__lg - 1) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-lg-only() {
+    @media only screen and (min-width: $plain-ui__lg) and (max-width: $plain-ui__xlg - 1) {
+        @content;
+    }
+}
+
+@mixin plain-ui__media-xlg-only() {
+    @media only screen and (min-width: $plain-ui__xlg) {
+        @content;
+    }
+}
+
+
+/**
+ *  Set property and his value for each Breakpoint
+ *
+ *  (
+ *      $plain-ui__md: 10px
+ *  )
+ *
+ *
+ *  @param  {css} $property
+ *  @param  {map} $breakpoints
+ *  @param  {Boolean} $important   [false]
+ *
+ */
+
+@mixin plain-ui__media-breakpoints($property, $breakpoints, $important: false) {
+    @each $breakpoint, $value in $breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            @if $important == false {
+                #{$property}: $value;
+            } @else {
+                #{$property}: $value !important;
+            }
+        }
+    }
+}
+
+
+/**
+ *  Set property and his value with an factor for each Breakpoint
+ *
+ *  (
+ *      $plain-ui__md: 10px
+ *  )
+ *
+ *  @param  {css} $property
+ *  @param  {number} $factor
+ *  @param  {map} $breakpoints
+ *  @param  {Boolean} $important   [false]
+ *
+ */
+
+@mixin plain-ui__media-breakpoints-calculate($property, $factor, $breakpoints, $important: false) {
+    @each $breakpoint, $value in $breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            @if $important == false {
+                #{$property}: ($value * $factor);
+            } @else {
+                #{$property}: ($value * $factor) !important;
+            }
+        }
+    }
+}
+
+/**
+ *  Set font-size from Breakpoints, use for calculating difference from font-size and default font-size
+ *
+ *  (
+ *      $plain-ui__md: 1rem
+ *  )
+ *
+ *  @param  {map}  $breakpoints
+ *  @param  {unit}  $font-size
+ *  @param  {unit}  $default
+ *  @param  {Boolean} $important   [false]
+ *
+ */
+@mixin plain-ui__media-breakpoints-font-size($breakpoints, $font-size, $default, $important: false) {
+    @each $breakpoint, $value in $breakpoints {
+
+        // getting diff
+        $factor: (stripUnit($font-size) - stripUnit($default)) + 1;
+
+        // ignore if factor is zero
+        @if $factor > 0 {
+            @media only screen and (min-width: $breakpoint) {
+                @if $important == false {
+                    font-size: ($value * $factor);
+                } @else {
+                    font-size: ($value * $factor) !important;
+                }
+            }
+        }
+    }
+}

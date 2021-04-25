@@ -19,10 +19,18 @@
         color: white;
 
         padding: 0.7em 1.5em;
+        margin-bottom: 0.5em;
+        
         font-size: 1.1rem;
 
         border-radius: 2px;
         transition: background-color 0.5s;
+
+        width: 100%;
+
+        @include plain-ui__media-sm() {
+            width: auto;
+        }
 
         &:hover {
             cursor: pointer;

@@ -17,9 +17,8 @@
                 <div class="col-12">
                     <div class="text-center">
                         <hgroup>
-                            <a href="/">
-                                <h1 class="h2 margin-top-4 margin-bottom-0">Plain UI</h1>
-                        </a></hgroup>
+                            <h1>Plain UI</h1>
+                        </hgroup>
                     </div>
                 </div>
             </div>
@@ -54,8 +53,11 @@
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="symbol-defs.svg#icon-check"></use>
                 </svg>
-                <svg class="icon icon--circle" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-check"></use>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-camera"></use>
+                </svg>
+                <svg class="icon icon--success" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-clock"></use>
                 </svg>
             </div>
         </div>
@@ -65,6 +67,9 @@
                 <h2>Badge</h2>
                 <span class="badge">
                     Category
+                </span>
+                <span class="badge badge--round">
+                    99+
                 </span>
             </div>
         </div>
@@ -109,37 +114,47 @@
 
         <div class="grid">
             <div class="col-12">
-                <h2>Form</h2>
+                <h2>Field</h2>
 
                 <form>
-                    <div class="group">
-                        <label class="label">
+                    <div class="field-group">
+                        <label class="field-label">
                             Name
-                            <input class="text" />
+                            <input class="field-text" />
                         </label>
                     </div>
 
-                    <div class="group group--valid">
-                        <label class="label">
+                    <div class="field-group field-group--valid">
+                        <label class="field-label">
                             <svg class="icon" aria-hidden="true">
                                 <use class="test" xlink:href="symbol-defs.svg#icon-check"></use>
                             </svg>
                             Surname
-                            <input class="text" />
+                            <input class="field-text" />
                         </label>
                     </div>
 
-                    <div class="group group--error">
-                        <label class="label">
+                    <div class="field-group field-group--error">
+                        <label class="field-label">
                             <svg class="icon" aria-hidden="true">
                                 <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
                             </svg>
                             E-Mail
-                            <input class="text" />
+                            <input class="field-text" />
                         </label>
-                        <span class="error">
+                        <span class="field-error">
                             String is not valid
                         </span>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">
+                            Towns
+                            <select class="field-choice">
+                                <option></option>
+                                <option value="lonytown">Lonytown</option>
+                            </select>
+                        </label>
                     </div>
                 </form>
 

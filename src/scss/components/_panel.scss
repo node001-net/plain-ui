@@ -35,6 +35,8 @@
                 width: 1.5em;
                 height: 1.5em;
                 margin-right: 0.5em;
+
+                fill: white;
             }
         }
 
@@ -50,12 +52,6 @@
 
         &__body {
             padding: 0.6em 1.2em;
-        }
-    }
-
-    .plain-ui-dark {
-        .panel {
-
         }
     }
 }

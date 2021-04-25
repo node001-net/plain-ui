@@ -217,8 +217,15 @@ summary {
  *
  *
  *
+ *
  */
 /**
+ *
+ *
+ *
+ */
+/**
+ *
  *
  *
  *
@@ -258,6 +265,22 @@ body {
   line-height: 1.4;
 }
 
+.badge {
+  display: inline-block;
+  background-color: #3e3e3e;
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+  border: 1px solid #242424;
+  border-radius: 2px;
+}
+.badge--round {
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2.5em;
+}
+
 .button {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -279,62 +302,66 @@ body {
   text-decoration: none;
   background-color: #575757;
 }
-.label {
-  font-family: "IBM Plex Mono", sans-serif;
-}
-.label .icon {
-  vertical-align: text-top;
-  font-size: 1.2rem;
+.button .icon {
+  fill: white;
 }
 
-input.text, textarea.text {
+.field-group {
+  margin-bottom: 1.2em;
+}
+.field-group--valid input.field-text, .field-group--valid textarea.field-text {
+  border-color: #64ac64;
+}
+.field-group--valid .icon {
+  fill: #64ac64;
+}
+.field-group--error input.field-text, .field-group--error textarea.field-text {
+  border-color: #d95959;
+}
+.field-group--error .icon {
+  fill: #d95959;
+}
+
+.field-label {
+  font-size: 1rem;
   font-family: "IBM Plex Mono", sans-serif;
+}
+.field-label .icon {
+  vertical-align: sub;
+  font-size: 1.1rem;
+}
+
+input.field-text, textarea.field-text, select.field-choice {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 0.95rem;
   width: 100%;
-  padding: 0.8em 1.1em;
-  font-size: 0.9rem;
-  border: 1px solid;
+  border: 1px solid #8a8a8a;
+  background-color: white;
   border-radius: 2px;
   margin: 0.7em 0 0;
 }
-input.text:focus, input.text:active, textarea.text:focus, textarea.text:active {
+input.field-text:focus, input.field-text:active, textarea.field-text:focus, textarea.field-text:active, select.field-choice:focus, select.field-choice:active {
   outline: 0;
-  border-color: #4d8c4d;
+  border-color: #242424;
 }
 
-.help, .error {
+input.field-text, textarea.field-text {
+  padding: 0.8em 1.1em;
+}
+
+select.field-choice {
+  padding: 0.8em;
+}
+
+.field-help, .field-error {
   display: inline-block;
   width: 100%;
   padding: 0.6em 0.5em;
   font-size: 0.8rem;
 }
 
-.error {
+.field-error {
   color: #d95959;
-}
-
-.group {
-  margin-bottom: 1.2em;
-}
-.group--valid input.text, .group--valid textarea.text {
-  border-color: #64ac64;
-}
-.group--valid .icon {
-  fill: #64ac64;
-}
-.group--error input.text, .group--error textarea.text {
-  border-color: #d95959;
-}
-.group--error .icon {
-  fill: #d95959;
-}
-
-.text-wrapper {
-  display: flex;
-}
-.text-wrapper input.text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: 0;
 }
 
 .icon {
@@ -344,7 +371,11 @@ input.text:focus, input.text:active, textarea.text:focus, textarea.text:active {
   max-width: 100%;
   vertical-align: middle;
   overflow: hidden;
-  fill: white;
+  fill: #242424;
+}
+
+.icon--success {
+  fill: #64ac64;
 }
 
 .icon--danger {
@@ -379,6 +410,7 @@ input.text:focus, input.text:active, textarea.text:focus, textarea.text:active {
   width: 1.5em;
   height: 1.5em;
   margin-right: 0.5em;
+  fill: white;
 }
 .panel__buttons {
   display: flex;

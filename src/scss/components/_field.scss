@@ -2,54 +2,17 @@
  *
  *
  *
+ *
  */
 
 @mixin plain-ui__component__field()
 {
-    .label {
-        font-family: $plain-ui__font-family;
-
-        .icon {
-            vertical-align: text-top;
-            font-size: 1.2rem;
-        }
-    }
-
-    input.text, textarea.text {
-        font-family: $plain-ui__font-family;
-
-        width: 100%;
-        padding: 0.8em 1.1em;
-        font-size: 0.9rem;
-
-        border: 1px solid;
-        border-radius: 2px;
-
-        margin: 0.7em 0 0;
-
-        &:focus, &:active {
-            outline: 0;
-            border-color: #4d8c4d;
-        }
-    }
-
-    .help, .error {
-        display: inline-block;
-        width: 100%;
-
-        padding: 0.6em 0.5em;
-        font-size: 0.8rem;
-    }
-
-    .error {
-        color: $plain-ui__danger-light;
-    }
-
-    .group {
+    // group, container for fields
+    .field-group {
         margin-bottom: 1.2em;
 
         &--valid {
-            input.text, textarea.text {
+            input.field-text, textarea.field-text {
                 border-color: $plain-ui__success-light;
             }
 
@@ -59,7 +22,7 @@
         }
 
         &--error {
-            input.text, textarea.text {
+            input.field-text, textarea.field-text {
                 border-color: $plain-ui__danger-light;
             }
 
@@ -68,14 +31,54 @@
             }
         }
     }
+    
+    .field-label {
+        font-size: 1rem;
+        font-family: $plain-ui__font-family;
 
-    .text-wrapper {
-        display: flex;
-
-        input.text {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-right: 0;
+        .icon {
+            vertical-align: sub;
+            font-size: 1.1rem;
         }
+    }
+
+    input.field-text, textarea.field-text, select.field-choice {
+        font-family: $plain-ui__font-family;
+        font-size: 0.95rem;
+
+        width: 100%;
+
+        border: 1px solid lighten($plain-ui__primary-light, 40%);
+        background-color: white;
+        border-radius: 2px;
+
+        margin: 0.7em 0 0;
+
+        &:focus, &:active {
+            outline: 0;
+            border-color: $plain-ui__primary-light;
+        }
+    }
+
+    input.field-text, textarea.field-text {
+        padding: 0.8em 1.1em;
+    }
+
+    select.field-choice {
+        padding: 0.8em;
+    }
+
+    //
+    .field-help, .field-error {
+        display: inline-block;
+        width: 100%;
+
+        padding: 0.6em 0.5em;
+        font-size: 0.8rem;
+    }
+
+    // display error for fields
+    .field-error {
+        color: $plain-ui__danger-light;
     }
 }

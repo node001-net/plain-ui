@@ -16,7 +16,11 @@
         vertical-align: middle;
         overflow: hidden;
 
-        fill: white;
+        fill: $plain-ui__primary-light;
+    }
+
+    .icon--success {
+        fill: $plain-ui__success-light;
     }
 
     .icon--danger {

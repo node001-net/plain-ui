@@ -90,7 +90,8 @@
      *
      */
 
-    input[type=checkbox].field-choice {
+    input[type=checkbox].field-choice,
+    input[type=radio].field-choice {
         position: relative;
         display: none;
 

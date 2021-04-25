@@ -22,7 +22,6 @@
         font-size: 1.1rem;
 
         border-radius: 2px;
-
         transition: background-color 0.5s;
 
         &:hover {
@@ -36,8 +35,9 @@
 
         }
 
-        .icon {
-            fill: white;
+        &--secondary {
+            border: 1px solid lighten($plain-ui__primary-light, 10%);
+            background-color: lighten($plain-ui__primary-light, 35%);
         }
     }
 }

@@ -4,7 +4,45 @@
  *
  */
 
-@mixin component__table()
+@mixin plain-ui__component__table()
 {
+    .table {
+        width: 100%;
+        border: 1px solid lighten($plain-ui__primary-light, 55%);
+        background: white;
 
+        &--striped {
+            tr {
+                &:nth-child(even) {
+                    background-color: lighten($plain-ui__primary-light, 75%);
+                }
+            }
+        }
+
+        &--scroll {
+            overflow-x: auto;
+        }
+
+        td {
+            color: $plain-ui__primary-light;
+        }
+
+        td,
+        th {
+            text-align: left;
+            border-bottom: 1px solid lighten($plain-ui__primary-light, 55%);
+
+            padding: 0.5em 1.25em;
+            //@include crispy__media-breakpoints('padding', $crispy__table__padding-breakpoints);
+        }
+
+        th {
+            border-bottom: 1px solid lighten($plain-ui__primary-light, 30%);
+            background-color: lighten($plain-ui__primary-light, 65%);
+        }
+
+        tr:hover {
+            background-color: lighten($plain-ui__primary-light, 65%);
+        }
+    }
 }

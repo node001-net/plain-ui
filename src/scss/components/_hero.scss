@@ -1,0 +1,23 @@
+/**
+ *  <div class="hero">
+ *      <img src="image.png" alt="image" />
+ *  </div>
+ *
+ */
+
+@mixin plain-ui__component__hero()
+{
+    .hero {
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        &--contain {
+            object-fit: contain;
+        }
+    }
+}

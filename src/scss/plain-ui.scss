@@ -10,7 +10,10 @@
     'components/button',
     'components/field',
     'components/icon',
-    'components/panel';
+    'components/hero',
+    'components/panel',
+    'components/media',
+    'components/table';
 
 @include plain-ui__core();
 
@@ -19,3 +22,6 @@
 @include plain-ui__component__field();
 @include plain-ui__component__icon();
 @include plain-ui__component__panel();
+@include plain-ui__component__media();
+@include plain-ui__component__table();
+@include plain-ui__component__hero();

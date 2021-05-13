@@ -303,6 +303,26 @@ summary {
  *
  */
 /**
+ *  <div class="hero">
+ *      <img src="image.png" alt="image" />
+ *  </div>
+ *
+ */
+/**
+ *
+ *
+ *
+ */
+/**
+ *  <figure class="media-figure">
+ *      <img class="media__img" src="https://via.placeholder.com/150" />
+ *      <figcaption class="media-figure__caption">
+ *          food truck yr franzen pabst
+ *      </figcaption>
+ *  </figure>
+ *
+ */
+/**
  *
  *
  *
@@ -337,7 +357,7 @@ body {
   color: white;
   font-size: 0.85rem;
   padding: 0.4em 0.8em;
-  border: 1px solid #242424;
+  border: 1px solid #3e3e3e;
   border-radius: 2px;
 }
 .badge--round {
@@ -355,14 +375,14 @@ body {
   display: inline-block;
   text-decoration: none;
   font-family: "IBM Plex Mono", sans-serif;
-  border: 1px solid black;
-  background-color: #3e3e3e;
-  color: white;
-  padding: 0.7em 1.5em;
-  margin-bottom: 0.5em;
-  font-size: 1.1rem;
+  border: 1px solid #3e3e3e;
+  background-color: white;
+  color: #3e3e3e;
   border-radius: 2px;
-  transition: background-color 0.5s;
+  transition: background-color 0.1s;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1.3em;
+  font-size: 1rem;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
@@ -370,14 +390,29 @@ body {
     width: auto;
   }
 }
+.button--small {
+  font-size: 0.8em;
+}
 .button:hover {
   cursor: pointer;
   text-decoration: none;
-  background-color: #575757;
+  color: white;
+  background-color: #3e3e3e;
 }
-.button--secondary {
-  border: 1px solid #4a4a4a;
-  background-color: #7d7d7d;
+.button:disabled {
+  opacity: 0.5;
+}
+.button:disabled:hover {
+  cursor: not-allowed;
+  border: 1px solid #3e3e3e;
+  background-color: white;
+  color: #3e3e3e;
+}
+.button--danger {
+  border-color: #d95959;
+}
+.button--danger:hover {
+  background-color: #d95959;
 }
 
 .field-group {
@@ -412,22 +447,40 @@ input.field-text, textarea.field-text, select.field-choice {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 0.95rem;
   width: 100%;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #a4a4a4;
   background-color: white;
   border-radius: 2px;
   margin: 0.7em 0 0;
 }
 input.field-text:focus, input.field-text:active, textarea.field-text:focus, textarea.field-text:active, select.field-choice:focus, select.field-choice:active {
   outline: 0;
-  border-color: #242424;
+  border-color: #3e3e3e;
 }
 
 input.field-text, textarea.field-text {
   padding: 0.8em 1.1em;
 }
 
+/**
+ *
+ *
+ */
 select.field-choice {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0.8em;
+  position: relative;
+}
+select.field-choice::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  background: red;
 }
 
 /**
@@ -466,7 +519,7 @@ input[type=radio].field-choice:checked ~ .field-choice__unchecked {
 }
 
 svg.field-choice__unchecked {
-  fill: #8a8a8a;
+  fill: #a4a4a4;
 }
 
 svg.field-choice__checked {
@@ -492,7 +545,7 @@ svg.field-choice__checked {
   vertical-align: middle;
   overflow: hidden;
   font-size: 1.2rem;
-  fill: #242424;
+  fill: #3e3e3e;
 }
 
 .icon--success {
@@ -504,13 +557,13 @@ svg.field-choice__checked {
 }
 
 .panel {
-  border: 1px solid #242424;
+  border: 1px solid #3e3e3e;
   border-radius: 2px;
   background: #fff;
 }
 .panel__header {
   display: flex;
-  background-color: #242424;
+  background-color: #3e3e3e;
   color: white;
   padding: 0.8em 1.2em;
   line-height: 1.6em;
@@ -543,4 +596,74 @@ svg.field-choice__checked {
 }
 .panel__body {
   padding: 0.6em 1.2em;
+}
+
+.figure {
+  margin: 0;
+  display: inline-block;
+  line-height: 0;
+  border: 1px solid #3e3e3e;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.figure__caption {
+  padding: 0.75em 1.1em;
+  font-size: 0.7rem;
+  background: #3e3e3e;
+  line-height: 1.4;
+  margin: 0;
+  color: white;
+}
+.figure img.media {
+  border: 0;
+}
+
+img.media {
+  border-radius: 2px;
+  border: 1px solid #3e3e3e;
+  width: 100%;
+  height: auto;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #cacaca;
+  background: white;
+}
+.table--striped tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+.table--scroll {
+  overflow-x: auto;
+}
+.table td {
+  color: #3e3e3e;
+}
+.table td,
+.table th {
+  text-align: left;
+  border-bottom: 1px solid #cacaca;
+  padding: 0.5em 1.25em;
+}
+.table th {
+  border-bottom: 1px solid #8b8b8b;
+  background-color: #e4e4e4;
+}
+.table tr:hover {
+  background-color: #e4e4e4;
+}
+
+.hero {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.hero--contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }

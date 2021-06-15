@@ -45,7 +45,7 @@
         }
 
         &:focus, &:active {
-
+            outline: 1px solid lighten($plain-ui__primary-light, 15%);
         }
 
         &:disabled {
@@ -58,12 +58,21 @@
                 color: $plain-ui__primary-light;
             }
         }
+    }
+}
 
+@mixin plain-ui__component__button-colors()
+{
+    .button {
         &--danger {
             border-color: $plain-ui__danger-light;
 
             &:hover {
                 background-color: $plain-ui__danger-light;
+            }
+
+            &:focus, &:active {
+                outline: 2px solid lighten($plain-ui__danger-light, 15%);
             }
         }
     }

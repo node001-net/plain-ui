@@ -327,6 +327,15 @@ summary {
  *
  *
  */
+/**
+ *  <figure class="media-figure">
+ *      <img class="media__img" src="https://via.placeholder.com/150" />
+ *      <figcaption class="media-figure__caption">
+ *          food truck yr franzen pabst
+ *      </figcaption>
+ *  </figure>
+ *
+ */
 a {
   color: #fff;
 }
@@ -399,6 +408,9 @@ body {
   color: white;
   background-color: #3e3e3e;
 }
+.button:focus, .button:active {
+  outline: 1px solid #646464;
+}
 .button:disabled {
   opacity: 0.5;
 }
@@ -408,11 +420,15 @@ body {
   background-color: white;
   color: #3e3e3e;
 }
+
 .button--danger {
   border-color: #d95959;
 }
 .button--danger:hover {
   background-color: #d95959;
+}
+.button--danger:focus, .button--danger:active {
+  outline: 2px solid #e79797;
 }
 
 .field-group {
@@ -666,4 +682,15 @@ img.media {
 .hero--contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.masonry {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.masonry__item {
+  width: 33.3%;
+  flex: 1;
 }

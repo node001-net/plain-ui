@@ -1,0 +1,179 @@
+/**
+ *
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__helpers__core()
+{
+    /**
+     *  borders
+     *
+     *
+     */
+
+    .border {
+        border: $crispy__border !important;
+    }
+
+    .border-round {
+        border-radius: $crispy__border-radius !important;
+    }
+
+    .borderless {
+        border: 0 !important;
+    }
+
+    .radiusless {
+        border-radius: 0 !important;
+    }
+
+    /**
+     *
+     *
+     */
+
+    .round {
+        border-radius: 50% !important;
+    }
+
+    /**
+     * typography
+     *
+     *
+     */
+
+    .left {
+        text-align: left !important;
+    }
+
+    .right {
+        text-align: right !important;
+    }
+
+    .center {
+        text-align: center !important;
+    }
+
+    .justify {
+        text-align: justify !important;
+    }
+
+    .uppercase {
+        text-transform: uppercase !important;
+    }
+
+    .lowercase {
+        text-transform: lowercase !important;
+    }
+
+    .crossed {
+        text-decoration: line-through !important;
+    }
+
+    .underline {
+        text-decoration: underline !important;
+    }
+
+    .capitalize {
+        text-transform: capitalize !important;
+    }
+
+    .italic {
+        font-style: italic !important;
+    }
+
+    .light {
+        font-weight: lighter !important;
+    }
+
+    .normal {
+        font-weight: normal !important;
+    }
+
+    .medium {
+        font-weight: medium !important;
+    }
+
+    .bold {
+        font-weight: bolder !important;
+    }
+
+    // create
+    @each $name, $font-size in $plain-ui__font-sizes {
+        .text-size-#{$name} {
+            font-size: $font-size !important;
+            @include plain-ui__breakpoints-font-size($crispy__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
+        }
+    }
+
+    /**
+     *  colors
+     *
+     *
+     */
+
+    @each $name, $color in $plain-ui__colors {
+        .text-color-#{$name} {
+            color: $color !important;
+        }
+    }
+
+    @each $name, $color in $plain-ui__colors {
+        .border-color-#{$name} {
+            border-color: $color !important;
+        }
+    }
+
+    @each $name, $color in $plain-ui__colors {
+        .background-color-#{$name} {
+            background-color: $color !important;
+        }
+    }
+
+    /**
+     *  floating
+     *
+     *
+     */
+
+    .float-left {
+        float: left;
+    }
+
+    .float-right {
+        float: right;
+    }
+
+    .float-none {
+        float: none;
+    }
+
+    .centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .clearfix {
+        @include plain-ui__clearfix();
+    }
+
+    /**
+     *  position
+     *
+     *
+     */
+
+    .absolute {
+        position: absolute !important;
+    }
+
+    .fixed {
+        position: fixed !important;
+    }
+
+    .relative {
+        position: relative !important;
+    }
+}

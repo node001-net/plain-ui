@@ -13,15 +13,22 @@
     'components/hero',
     'components/panel',
     'components/media',
-    'components/table';
+    'components/table',
+
+    'layout/masonry';
 
 @include plain-ui__core();
 
 @include plain-ui__component__badge();
+
 @include plain-ui__component__button();
+@include plain-ui__component__button-colors();
+
 @include plain-ui__component__field();
 @include plain-ui__component__icon();
 @include plain-ui__component__panel();
 @include plain-ui__component__media();
 @include plain-ui__component__table();
 @include plain-ui__component__hero();
+
+@include plain-ui__layout__masonry();

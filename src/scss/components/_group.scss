@@ -1,0 +1,25 @@
+/**
+ *
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__component__bar()
+{
+    .bar {
+        display: flex;
+
+        &__start {
+            justify-content: start;
+        }
+
+        &__title {
+            @extend .w-100;
+        }
+
+        &__end {
+            justify-content: end;
+        }
+    }
+}

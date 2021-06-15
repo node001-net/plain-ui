@@ -1,0 +1,20 @@
+/**
+ *  <figure class="media-figure">
+ *      <img class="media__img" src="https://via.placeholder.com/150" />
+ *      <figcaption class="media-figure__caption">
+ *          food truck yr franzen pabst
+ *      </figcaption>
+ *  </figure>
+ *
+ */
+
+@mixin plain-ui__layout__slider()
+{
+    .slider {
+        display: flex;
+        
+        &__item {
+
+        }
+    }
+}

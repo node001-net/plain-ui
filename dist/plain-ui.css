@@ -289,6 +289,12 @@ summary {
  *
  *
  *
+ *
+ */
+/**
+ *
+ *
+ *
  */
 /**
  *
@@ -328,12 +334,17 @@ summary {
  *
  */
 /**
- *  <figure class="media-figure">
- *      <img class="media__img" src="https://via.placeholder.com/150" />
- *      <figcaption class="media-figure__caption">
- *          food truck yr franzen pabst
- *      </figcaption>
- *  </figure>
+ *  <div class="slider">
+ *      <div class="slider__inner">
+ *          <div class="slider__item w-10"></div>
+ *      </div>
+ *  </div>
+ *
+ */
+/**
+ *
+ *
+ *
  *
  */
 a {
@@ -358,6 +369,200 @@ body {
   direction: ltr;
   font-size: 1rem;
   line-height: 1.4;
+}
+
+/**
+ *  borders
+ *
+ *
+ */
+.border {
+  border: 1px solid #3e3e3e !important;
+}
+
+.border-round {
+  border-radius: 2px !important;
+}
+
+.borderless {
+  border: 0 !important;
+}
+
+.radiusless {
+  border-radius: 0 !important;
+}
+
+/**
+ *
+ *
+ */
+.round {
+  border-radius: 50% !important;
+}
+
+/**
+ * typography
+ *
+ *
+ */
+.left {
+  text-align: left !important;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.justify {
+  text-align: justify !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.crossed {
+  text-decoration: line-through !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+.italic {
+  font-style: italic !important;
+}
+
+.light {
+  font-weight: lighter !important;
+}
+
+.normal {
+  font-weight: normal !important;
+}
+
+.medium {
+  font-weight: medium !important;
+}
+
+.bold {
+  font-weight: bolder !important;
+}
+
+.text-size-default {
+  font-size: 1rem !important;
+}
+
+.text-size-small {
+  font-size: 0.75rem !important;
+}
+
+.text-size-medium {
+  font-size: 1.5rem !important;
+}
+
+.text-size-large {
+  font-size: 2rem !important;
+}
+
+.text-size-big {
+  font-size: 3rem !important;
+}
+
+/**
+ *  colors
+ *
+ *
+ */
+.text-color-primary {
+  color: #3e3e3e !important;
+}
+
+.text-color-white {
+  color: #fff !important;
+}
+
+.fill-primary {
+  fill: #3e3e3e !important;
+}
+
+.fill-white {
+  fill: #fff !important;
+}
+
+.border-color-primary {
+  border-color: #3e3e3e !important;
+}
+
+.border-color-white {
+  border-color: #fff !important;
+}
+
+.background-color-primary {
+  background-color: #3e3e3e !important;
+}
+
+.background-color-white {
+  background-color: #fff !important;
+}
+
+/**
+ *  floating
+ *
+ *
+ */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-none {
+  float: none;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix::before, .clearfix::after {
+  display: table;
+  content: " ";
+}
+.clearfix::after {
+  clear: both;
+}
+
+/**
+ *  position
+ *
+ *
+ */
+.absolute {
+  position: absolute !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.relative {
+  position: relative !important;
 }
 
 .badge {
@@ -402,7 +607,13 @@ body {
 .button--small {
   font-size: 0.8em;
 }
-.button:hover {
+.button--no-style {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.button:hover, .button--hover {
   cursor: pointer;
   text-decoration: none;
   color: white;
@@ -684,13 +895,32 @@ img.media {
      object-fit: contain;
 }
 
-.masonry {
+.slider {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+}
+.slider__inner {
+  display: flex;
+  overflow: hidden;
+}
+.slider__item {
+  flex: none;
+  width: 33%;
+}
+
+.bar {
+  display: flex;
+  background-color: #3e3e3e;
+  color: white;
+  padding: 0.8em 1.2em;
+}
+.bar__start {
+  justify-content: start;
+  margin-right: 0.75em;
+}
+.bar__main {
   width: 100%;
 }
-.masonry__item {
-  width: 33.3%;
-  flex: 1;
+.bar__end {
+  justify-content: end;
+  margin-left: 0.75em;
 }

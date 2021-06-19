@@ -21,7 +21,6 @@ $plain-ui__md : 992px !default;
 $plain-ui__lg : 1200px !default;
 $plain-ui__xlg: 1600px !default;
 
-
 /**
  *  fonts
  *
@@ -70,6 +69,11 @@ $plain-ui__border-light: #dfdfdf !default;
 
 $plain-ui__link-light: #fff !default;
 
+$plain-ui__colors: (
+    'primary'    : $plain-ui__primary-light,
+    'white'      : #fff
+) !default;
+
 /**
  *  padding & margin
  *
@@ -117,3 +121,6 @@ $plain-ui__heading__margin-breakpoints: $plain-ui__margin-breakpoints !default;
 
 $plain-ui__z-index__modal: 1000 !default;
 $plain-ui__z-index__overlay: 999 !default;
+
+$plain-ui__border-radius: 2px;
+$plain-ui__border: 1px solid $plain-ui__primary-light;

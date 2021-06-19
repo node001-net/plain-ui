@@ -6,6 +6,8 @@
     'variables',
     'core',
 
+    'core/helpers/core',
+
     'components/badge',
     'components/button',
     'components/field',
@@ -14,10 +16,11 @@
     'components/panel',
     'components/media',
     'components/table',
-
-    'layout/masonry';
+    'components/slider',
+    'components/bar';
 
 @include plain-ui__core();
+@include plain-ui__helpers__core();
 
 @include plain-ui__component__badge();
 
@@ -30,5 +33,5 @@
 @include plain-ui__component__media();
 @include plain-ui__component__table();
 @include plain-ui__component__hero();
-
-@include plain-ui__layout__masonry();
+@include plain-ui__component__slider();
+@include plain-ui__component__bar();

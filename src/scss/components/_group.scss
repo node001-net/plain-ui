@@ -5,21 +5,17 @@
  *
  */
 
-@mixin plain-ui__component__bar()
+@mixin plain-ui__component__group()
 {
-    .bar {
-        display: flex;
+    .group {
+        &__item {
+            width: auto;
+            display: inline-block;
+            margin: 0 1em 1em;
 
-        &__start {
-            justify-content: start;
-        }
-
-        &__title {
-            @extend .w-100;
-        }
-
-        &__end {
-            justify-content: end;
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }

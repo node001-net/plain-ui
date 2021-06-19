@@ -1,0 +1,31 @@
+/**
+ *
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__component__bar()
+{
+    .bar {
+        display: flex;
+
+        background-color: $plain-ui__primary-light;
+        color: white;
+        padding: 0.8em 1.2em;
+
+        &__start {
+            justify-content: start;
+            margin-right: 0.75em;
+        }
+
+        &__main {
+            width: 100%;
+        }
+
+        &__end {
+            justify-content: end;
+            margin-left: 0.75em;
+        }
+    }
+}

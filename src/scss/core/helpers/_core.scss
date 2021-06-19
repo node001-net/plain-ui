@@ -14,11 +14,11 @@
      */
 
     .border {
-        border: $crispy__border !important;
+        border: $plain-ui__border !important;
     }
 
     .border-round {
-        border-radius: $crispy__border-radius !important;
+        border-radius: $plain-ui__border-radius !important;
     }
 
     .borderless {
@@ -100,11 +100,10 @@
         font-weight: bolder !important;
     }
 
-    // create
     @each $name, $font-size in $plain-ui__font-sizes {
         .text-size-#{$name} {
             font-size: $font-size !important;
-            @include plain-ui__breakpoints-font-size($crispy__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
+            //@include plain-ui__breakpoints-font-size($plain-ui__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
         }
     }
 
@@ -117,6 +116,12 @@
     @each $name, $color in $plain-ui__colors {
         .text-color-#{$name} {
             color: $color !important;
+        }
+    }
+
+    @each $name, $color in $plain-ui__colors {
+        .fill-#{$name} {
+            fill: $color !important;
         }
     }
 

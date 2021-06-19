@@ -1,0 +1,25 @@
+/**
+ *  <div class="slider">
+ *      <div class="slider__inner">
+ *          <div class="slider__item w-10"></div>
+ *      </div>
+ *  </div>
+ *
+ */
+
+@mixin plain-ui__component__slider()
+{
+    .slider {
+        display: flex;
+
+        &__inner {
+            display: flex;
+            overflow: hidden;
+        }
+
+        &__item {
+            flex: none;
+            width: 33%;
+        }
+    }
+}

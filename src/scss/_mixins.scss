@@ -142,7 +142,7 @@
  *
  */
 
-@mixin plain-ui__media-breakpoints($property, $breakpoints, $important: false) {
+@mixin plain-ui__breakpoints($property, $breakpoints, $important: false) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
             @if $important == false {
@@ -169,7 +169,7 @@
  *
  */
 
-@mixin plain-ui__media-breakpoints-calculate($property, $factor, $breakpoints, $important: false) {
+@mixin plain-ui__breakpoints-calculate($property, $factor, $breakpoints, $important: false) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
             @if $important == false {
@@ -194,7 +194,7 @@
  *  @param  {Boolean} $important   [false]
  *
  */
-@mixin plain-ui__media-breakpoints-font-size($breakpoints, $font-size, $default, $important: false) {
+@mixin plain-ui__breakpoints-font-size($breakpoints, $font-size, $default, $important: false) {
     @each $breakpoint, $value in $breakpoints {
 
         // getting diff

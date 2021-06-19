@@ -37,7 +37,14 @@
             font-size: 0.8em;
         }
 
-        &:hover {
+        &--no-style {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: transparent;
+        }
+
+        &:hover, &--hover {
             cursor: pointer;
             text-decoration: none;
             color: white;

@@ -13,6 +13,7 @@
     'components/field',
     'components/icon',
     'components/hero',
+    'components/tabs',
     'components/panel',
     'components/media',
     'components/table',
@@ -35,3 +36,4 @@
 @include plain-ui__component__hero();
 @include plain-ui__component__slider();
 @include plain-ui__component__bar();
+@include plain-ui__component__tab();

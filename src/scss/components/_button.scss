@@ -19,14 +19,13 @@
         background-color: white;
         color: $plain-ui__primary-light;
 
-        border-radius: 2px;
+        border-radius: $plain-ui__border-radius;
         transition: background-color 0.1s;
 
         margin-bottom: 0.5em;
         padding: 0.5em 1.3em;
         font-size: 1rem;
 
-        // for mobile
         width: 100%;
 
         @include plain-ui__media-sm() {
@@ -44,11 +43,11 @@
             background: transparent;
         }
 
-        &:hover, &--hover {
+        &:hover, &--selected {
             cursor: pointer;
             text-decoration: none;
             color: white;
-            background-color: $plain-ui__primary-light;
+            background-color: $plain-ui__primary-light-active;
         }
 
         &:focus, &:active {

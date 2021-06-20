@@ -10,13 +10,16 @@
     .bar {
         display: flex;
 
+        height: 2.8em;
         background-color: $plain-ui__primary-light;
         color: white;
-        padding: 0.8em 1.2em;
+
+        .icon {
+            font-size: 1.5rem;
+        }
 
         &__start {
             justify-content: start;
-            margin-right: 0.75em;
         }
 
         &__main {
@@ -26,6 +29,15 @@
         &__end {
             justify-content: end;
             margin-left: 0.75em;
+        }
+
+        &__start, &__main, &__end {
+            align-self: center;
+            margin-left: 0.75em;
+
+            &:last-child {
+                margin-right: 0.75em;
+            }
         }
     }
 }

@@ -320,6 +320,11 @@ summary {
  *
  */
 /**
+ *
+ *
+ *
+ */
+/**
  *  <figure class="media-figure">
  *      <img class="media__img" src="https://via.placeholder.com/150" />
  *      <figcaption class="media-figure__caption">
@@ -565,6 +570,26 @@ body {
   position: relative !important;
 }
 
+/**
+ *
+ *
+ */
+.vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+.vertical-align-baseline {
+  vertical-align: baseline;
+}
+
+/**
+ *
+ *
+ */
 .badge {
   display: inline-block;
   background-color: #3e3e3e;
@@ -613,11 +638,11 @@ body {
   border: none;
   background: transparent;
 }
-.button:hover, .button--hover {
+.button:hover, .button--selected {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  background-color: #3e3e3e;
+  background-color: #585858;
 }
 .button:focus, .button:active {
   outline: 1px solid #646464;
@@ -909,13 +934,15 @@ img.media {
 
 .bar {
   display: flex;
+  height: 2.8em;
   background-color: #3e3e3e;
   color: white;
-  padding: 0.8em 1.2em;
+}
+.bar .icon {
+  font-size: 1.5rem;
 }
 .bar__start {
   justify-content: start;
-  margin-right: 0.75em;
 }
 .bar__main {
   width: 100%;
@@ -923,4 +950,36 @@ img.media {
 .bar__end {
   justify-content: end;
   margin-left: 0.75em;
+}
+.bar__start, .bar__main, .bar__end {
+  align-self: center;
+  margin-left: 0.75em;
+}
+.bar__start:last-child, .bar__main:last-child, .bar__end:last-child {
+  margin-right: 0.75em;
+}
+
+.tab {
+  display: flex;
+}
+.tab__item {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1em;
+  background-color: white;
+  transition: background-color 0.1s;
+  background-color: white;
+  color: #3e3e3e;
+  border: 1px solid #3e3e3e;
+  border-right: 0;
+}
+.tab__item:last-child {
+  margin-right: 0;
+}
+.tab__item:hover, .tab__item--selected {
+  cursor: pointer;
+  background-color: #585858;
+  color: white;
+  border-color: #585858;
 }

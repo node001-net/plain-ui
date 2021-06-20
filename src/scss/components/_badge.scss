@@ -5,7 +5,8 @@
  *
  */
 
-@mixin plain-ui__component__badge() {
+@mixin plain-ui__component__badge()
+{
     .badge {
         display: inline-block;
 

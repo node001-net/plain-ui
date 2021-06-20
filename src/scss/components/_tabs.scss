@@ -1,0 +1,41 @@
+/**
+ *
+ *
+ *
+ */
+
+@mixin plain-ui__component__tab()
+{
+    .tab {
+        display: flex;
+
+        &__item {
+            height: 100%;
+
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1em;
+
+            background-color: white;
+            transition: background-color 0.1s;
+
+            background-color: white;
+            color: $plain-ui__primary-light;
+
+            border: 1px solid $plain-ui__primary-light;
+            border-right: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover, &--selected {
+                cursor: pointer;
+                background-color: lighten($plain-ui__primary-light, 10%);
+                color: white;
+
+                border-color: lighten($plain-ui__primary-light, 10%);
+            }
+        }
+    }
+}

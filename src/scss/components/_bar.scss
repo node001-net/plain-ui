@@ -20,7 +20,7 @@
 
         &__start {
             justify-content: start;
-            width: fit-content;
+            min-width: max-content;
         }
 
         &__main {
@@ -30,7 +30,7 @@
         &__end {
             text-align: right;
             margin-left: 0.75em;
-            width: fit-content;
+            min-width: max-content;
         }
 
         &__start, &__main, &__end {

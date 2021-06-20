@@ -847,7 +847,7 @@ svg.field-choice__checked {
   margin-right: 0;
 }
 .panel__body {
-  padding: 0.6em 1.2em;
+  padding: 0.25em 1em;
 }
 
 .figure {
@@ -943,9 +943,9 @@ img.media {
 }
 .bar__start {
   justify-content: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .bar__main {
   width: 100%;
@@ -953,9 +953,9 @@ img.media {
 .bar__end {
   text-align: right;
   margin-left: 0.75em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .bar__start, .bar__main, .bar__end {
   align-self: center;

@@ -43,7 +43,7 @@
                 <button class="button button--danger">
                     Danger
                 </button>
-                <button class="button button--hover">
+                <button class="button button--selected">
                     Hover
                 </button>
             </div>
@@ -130,21 +130,23 @@
                 <h2>Panel</h2>
 
                 <div class="panel">
-                    <div class="panel__header">
-                        <button type="button">
-                            <svg class="icon icon--first" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-expand"></use>
-                            </svg>
-                        </button>
-                        <div class="panel__title">Test</div>
-                        <div class="panel__buttons">
-                            <button type="button">
-                                <svg class="icon" aria-hidden="true">
+                    <div class="bar">
+                        <div class="bar__start">
+                            <button type="button" class="button button--no-style">
+                                <svg class="icon fill-white" aria-hidden="true">
+                                    <use xlink:href="symbol-defs.svg#icon-expand"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bar__main">Test</div>
+                        <div class="bar__end">
+                            <button type="button" class="button button--no-style">
+                                <svg class="icon fill-white" aria-hidden="true">
                                     <use xlink:href="symbol-defs.svg#icon-edit"></use>
                                 </svg>
                             </button>
-                            <button type="button">
-                                <svg class="icon" aria-hidden="true">
+                            <button type="button" class="button button--no-style">
+                                <svg class="icon fill-white" aria-hidden="true">
                                     <use xlink:href="symbol-defs.svg#icon-close"></use>
                                 </svg>
                             </button>

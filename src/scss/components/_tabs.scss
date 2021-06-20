@@ -25,10 +25,6 @@
             border: 1px solid $plain-ui__primary-light;
             border-right: 0;
 
-            &:last-child {
-                margin-right: 0;
-            }
-
             &:hover, &--selected {
                 cursor: pointer;
                 background-color: lighten($plain-ui__primary-light, 10%);

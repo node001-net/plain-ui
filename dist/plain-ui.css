@@ -943,13 +943,19 @@ img.media {
 }
 .bar__start {
   justify-content: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .bar__main {
   width: 100%;
 }
 .bar__end {
-  justify-content: end;
+  text-align: right;
   margin-left: 0.75em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .bar__start, .bar__main, .bar__end {
   align-self: center;
@@ -973,9 +979,6 @@ img.media {
   color: #3e3e3e;
   border: 1px solid #3e3e3e;
   border-right: 0;
-}
-.tab__item:last-child {
-  margin-right: 0;
 }
 .tab__item:hover, .tab__item--selected {
   cursor: pointer;

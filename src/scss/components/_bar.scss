@@ -20,7 +20,6 @@
 
         &__start {
             justify-content: start;
-            min-width: max-content;
         }
 
         &__main {
@@ -28,12 +27,11 @@
         }
 
         &__end {
-            text-align: right;
-            margin-left: 0.75em;
-            min-width: max-content;
+            justify-content: end;
         }
 
         &__start, &__main, &__end {
+            display: flex;
             align-self: center;
             margin-left: 0.75em;
 

@@ -943,21 +943,15 @@ img.media {
 }
 .bar__start {
   justify-content: start;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
 }
 .bar__main {
   width: 100%;
 }
 .bar__end {
-  text-align: right;
-  margin-left: 0.75em;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  justify-content: end;
 }
 .bar__start, .bar__main, .bar__end {
+  display: flex;
   align-self: center;
   margin-left: 0.75em;
 }
@@ -965,12 +959,19 @@ img.media {
   margin-right: 0.75em;
 }
 
-.tab {
-  display: flex;
+.tabs {
+  display: block;
+  width: 100%;
 }
-.tab__item {
+@media only screen and (min-width: 768px) {
+  .tabs {
+    display: flex;
+    width: auto;
+  }
+}
+.tabs__item {
   height: 100%;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 0 1em;
   background-color: white;
@@ -978,11 +979,23 @@ img.media {
   background-color: white;
   color: #3e3e3e;
   border: 1px solid #3e3e3e;
-  border-right: 0;
+  border-bottom-width: 0;
+  width: 100%;
 }
-.tab__item:hover, .tab__item--selected {
+@media only screen and (min-width: 768px) {
+  .tabs__item {
+    width: auto;
+    display: inline-flex;
+    border-right-width: 0;
+    border-bottom-width: 1px;
+  }
+}
+.tabs__item:hover, .tabs__item--selected {
   cursor: pointer;
   background-color: #585858;
   color: white;
   border-color: #585858;
+}
+.tabs__item:last-child {
+  border-bottom-width: 1px;
 }

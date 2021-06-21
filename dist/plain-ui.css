@@ -898,11 +898,14 @@ img.media {
   padding: 0.5em 1.25em;
 }
 .table th {
-  border-bottom: 1px solid #8b8b8b;
-  background-color: #e4e4e4;
+  color: white;
+  background-color: #3e3e3e;
 }
 .table tr:hover {
-  background-color: #e4e4e4;
+  background-color: #585858;
+}
+.table tr:hover td {
+  color: white;
 }
 
 .hero {

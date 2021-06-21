@@ -945,7 +945,7 @@ img.media {
   justify-content: start;
 }
 .bar__main {
-  width: 100%;
+  flex-grow: 1;
 }
 .bar__end {
   justify-content: end;

@@ -7,16 +7,18 @@
 @mixin plain-ui__component__tabs()
 {
     .tabs {
-        display: block;
+        display: flex;
+        flex-direction: column;
+
         width: 100%;
 
         @include plain-ui__media-sm() {
-            display: flex;
             width: auto;
+            flex-direction: row;
         }
 
         &__item {
-            height: 100%;
+            min-height: 2.8em;
 
             display: flex;
             align-items: center;

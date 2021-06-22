@@ -21,7 +21,7 @@
         line-height: 1.2;
 
         margin: $plain-ui__heading__margin;
-        //@include crispy__media-breakpoints('margin', $plain-ui__heading__margin-breakpoints);
+        @include plain-ui__breakpoints('margin', $plain-ui__heading__margin-breakpoints);
     }
 
     h5 {
@@ -35,7 +35,7 @@
     @each $h, $font-size in $plain-ui__heading__font-sizes {
         #{$h}, .#{$h} {
             font-size: $font-size;
-            //@include crispy__media-breakpoints-font-size($plain-ui__heading__font-sizes__breakpoints, $font-size, $plain-ui__font-size);
+            @include plain-ui__breakpoints-font-size($plain-ui__heading__font-sizes__breakpoints, $font-size, $plain-ui__font-size);
         }
     }
 }

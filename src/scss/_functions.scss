@@ -1,0 +1,54 @@
+/**
+ *  functions
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
+ */
+
+
+/**
+ *  strip unit from value
+ *
+ *  @param  {mixed} $value
+ *  @return {number}
+ *
+ */
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+
+/**
+ *  get value of key "default" in map
+ *
+ *  @param  {map} $value
+ *  @return {boolean|unit}
+ *
+ */
+@function getDefault($map) {
+
+    $default: false;
+
+    @if map-has-key($map, 'default') {
+        $default: map-get($map, 'default');
+    }
+
+    @return $default;
+}
+
+
+/**
+ *  factor
+ *
+ *
+ *
+ *  @param  {integer} $x
+ *  @return {float}
+ *
+ */
+@function factor($x) {
+    @return ($x * $x) / 2;
+}

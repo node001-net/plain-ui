@@ -10,16 +10,19 @@
 @mixin plain-ui__component__slider()
 {
     .slider {
-        display: flex;
+        position: relative;
+        overflow-x: visible;
 
         &__inner {
             display: flex;
-            overflow: hidden;
+            white-space: nowrap;
         }
 
         &__item {
-            flex: none;
-            width: 33%;
+            padding: 0 .6em;
+            display: inline-block;
+            white-space: normal;
+            flex-shrink: 0;
         }
     }
 }

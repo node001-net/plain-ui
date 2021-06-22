@@ -10,7 +10,7 @@
     .bar {
         display: flex;
 
-        height: 2.8em;
+        min-height: 2.8em;
         background-color: $plain-ui__primary-light;
         color: white;
 

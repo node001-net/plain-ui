@@ -19,7 +19,9 @@
     'components/media',
     'components/table',
     'components/slider',
-    'components/bar';
+    'components/bar',
+
+    'layout/masonry';
 
 @include plain-ui__core();
 @include plain-ui__helpers__core();
@@ -38,3 +40,5 @@
 @include plain-ui__component__slider();
 @include plain-ui__component__bar();
 @include plain-ui__component__tabs();
+
+@include plain-ui__layout__masonry();

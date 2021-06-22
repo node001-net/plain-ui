@@ -1,0 +1,44 @@
+/**
+ *
+ *
+ *
+ *
+ */
+@mixin plain-ui__layout__masonry() {
+    .masonry {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+
+        &__item {
+            height: 200px;
+            padding-left: 1px;
+            padding-bottom: 1px;
+            width: 100%;
+
+            @include plain-ui__media-sm() {
+                height: 300px;
+
+                &:nth-child(4n+1) {
+                    width: 25%;
+                }
+
+                &:nth-child(4n+2) {
+                    width: 55%;
+                }
+
+                &:nth-child(4n+3) {
+                    width: 20%;
+                }
+
+                &:nth-child(4n+4) {
+                    width: 67%;
+                }
+
+                &:nth-child(4n+5) {
+                    width: 33%;
+                }
+            }
+        }
+    }
+}

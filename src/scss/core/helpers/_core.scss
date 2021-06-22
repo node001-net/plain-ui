@@ -199,6 +199,14 @@
         vertical-align: baseline;
     }
 
+    .marginless {
+        margin: 0 !important;
+    }
+
+    .h-100 {
+        height: 100% !important;
+    }
+
     /**
      *
      *
@@ -210,5 +218,9 @@
 
     .overflow-y-hidden {
         overflow-y: hidden;
+    }
+
+    .object-fit-cover {
+        object-fit: cover;
     }
 }

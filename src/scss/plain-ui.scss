@@ -1,13 +1,14 @@
 @import
 
     '../fonts/stylesheet',
+    'node_modules/reflex-grid/scss/reflex',
 
     'functions',
     'mixins',
     'variables',
     'core',
 
-    'core/helpers/core',
+    'helpers/core',
 
     'components/badge',
     'components/button',
@@ -21,7 +22,8 @@
     'components/slider',
     'components/bar',
 
-    'layout/masonry';
+    'layout/masonry',
+    'layout/flex';
 
 @include plain-ui__core();
 @include plain-ui__helpers__core();

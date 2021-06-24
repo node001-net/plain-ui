@@ -10,6 +10,24 @@
 
 @mixin plain-ui__core__heading()
 {
+    $plain-ui__heading__font-sizes: (
+        'h1': $plain-ui__font-size * 2.5,
+        'h2': $plain-ui__font-size * 2,
+        'h3': $plain-ui__font-size * 1.75,
+        'h4': $plain-ui__font-size * 1.5,
+        'h5': $plain-ui__font-size * 1.25,
+        'h6': $plain-ui__font-size
+    ) !default;
+
+    $plain-ui__heading__font-sizes__breakpoints: (
+        $plain-ui__md: 1.2rem
+    ) !default;
+
+    $plain-ui__heading__font-weight: bold !default;
+    $plain-ui__heading__font-family: $plain-ui__font-family !default;
+    $plain-ui__heading__margin: $plain-ui__margin !default;
+    $plain-ui__heading__margin-breakpoints: $plain-ui__margin-breakpoints !default;
+    
     h1, .h1,
     h2, .h2,
     h3, .h3,

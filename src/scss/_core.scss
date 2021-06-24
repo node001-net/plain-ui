@@ -15,8 +15,7 @@
 
 @include plain-ui__core__normalize();
 @include plain-ui__core__heading();
-
-//@include plain__core__typography();
+@include plain-ui__core__typography();
 
 @mixin plain-ui__core() {
 

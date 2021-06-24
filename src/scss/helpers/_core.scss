@@ -30,6 +30,31 @@
     }
 
     /**
+     *  z-index
+     *
+     *
+     */
+
+    $plain-ui__z-index: 10;
+
+    @for $i from 1 through $plain-ui__z-index {
+        .z-index-#{$i} {
+            z-index: $i;
+        }
+    }
+
+    /**
+     *
+     *
+     */
+
+    @for $i from 1 through $reflex-columns {
+        .w-col-#{$i} {
+            width: percentage(($i / $reflex-columns));
+        }
+    }
+
+    /**
      *
      *
      */

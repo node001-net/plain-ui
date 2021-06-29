@@ -4897,15 +4897,19 @@ img.media {
   height: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  visibility: hidden;
+  transition: visibility 0s linear 0.5s;
   padding: 1em;
   z-index: 20;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 .modal__inner {
   position: relative;
   z-index: 21;
+  transition: transform 0.5s;
+  transform: scale(0);
   max-width: 500px;
 }
 .modal__inner .button {
@@ -4933,9 +4937,21 @@ img.media {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  transition: background-color 0.5s;
   z-index: 19;
   content: "";
+}
+.modal--open {
+  display: flex;
+  visibility: visible;
+  transition: visibility 0s linear 0s;
+}
+.modal--open:before {
+  background: rgba(0, 0, 0, 0.87);
+}
+.modal--open .modal__inner {
+  transform: scale(1);
 }
 
 .masonry {

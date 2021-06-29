@@ -167,6 +167,18 @@
         <div class="grid">
             <div class="col-12">
                 <h2>Modal</h2>
+                <button class="button" onclick="openModal()">
+                    Open
+                </button>
+                <script type="text/javascript">
+                    function openModal() {
+                        document.querySelector('.modal').classList.add('modal--open')
+                    }
+
+                    function closeModal() {
+                        document.querySelector('.modal').classList.remove('modal--open')
+                    }
+                </script>
                 <div class="modal">
                     <div class="modal__inner">
                         <div class="modal__title t-center">
@@ -179,10 +191,10 @@
                             Do you really wan't to delete all files?
                         </div>
                         <div class="modal__footer">
-                            <button class="button button--danger">
+                            <button class="button button--danger" onclick="closeModal()">
                                 Confirm
                             </button>
-                            <button class="button float-right">
+                            <button class="button float-right" onclick="closeModal()">
                                 Reject
                             </button>
                         </div>

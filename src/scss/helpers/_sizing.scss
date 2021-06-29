@@ -1,0 +1,37 @@
+/**
+ *  Sizing
+ *
+ *  Width and Height Classes,
+ *  Sizes with percentage will calculate with the Reflex Grid
+ *
+ *
+ */
+
+$plain-ui__helpers__height-steps: 50;
+
+.w-0 { width: 0; }
+.h-0 { height: 0; }
+.w-1 { width: 1px;}
+.h-1 { height: 1px; }
+
+@for $i from 1 through $reflex-columns {
+    .w-col-#{$i} {
+        width: percentage(($i / $reflex-columns));
+    }
+
+    .h-col-#{$i} {
+        height: percentage(($i / $reflex-columns));
+    }
+}
+
+@for $i from 1 through $plain-ui__helpers__height-steps {
+    .w-#{$i} {
+        width: #{($i * 0.5)}rem;
+    }
+}
+
+@for $i from 1 through $plain-ui__helpers__height-steps {
+    .h-#{$i} {
+        height: #{($i * 0.5)}rem;
+    }
+}

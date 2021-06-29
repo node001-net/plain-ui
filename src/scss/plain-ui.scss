@@ -9,6 +9,7 @@
     'core',
 
     'helpers/core',
+    'helpers/sizing',
 
     'components/badge',
     'components/button',
@@ -21,6 +22,7 @@
     'components/table',
     'components/slider',
     'components/bar',
+    'components/modal',
 
     'layout/masonry',
     'layout/flex';
@@ -42,5 +44,6 @@
 @include plain-ui__component__slider();
 @include plain-ui__component__bar();
 @include plain-ui__component__tabs();
+@include plain-ui__component__modal();
 
 @include plain-ui__layout__masonry();

@@ -1,0 +1,40 @@
+$plain-ui__spacing-direction: (
+    'top',
+    'bottom',
+    'left',
+    'right'
+);
+
+@each $direction in $plain-ui__spacing-direction {
+
+    @include spacing('m', 'margin', $direction, 0, 0);
+    @include spacing('m', 'margin', $direction, 1, 1px);
+
+    @for $i from 0 through $plain-ui__helpers__spacing-steps {
+        @include spacing($class, $style, $direction, $name, $plain-ui__helpers__spacing-gap * factor($i))
+        @include plain-ui__media-breakpoints-calculate('margin-'#{$direction}, factor($i), $plain-ui__helpers__spacing-breakpoints, true);
+    }
+}
+
+@each $direction in $plain-ui__spacing-direction {
+
+    @include spacing('p', 'padding', $direction, 0, 0);
+    @include spacing('p', 'padding', $direction, 1, 1px);
+
+    @for $i from 0 through $plain-ui__helpers__spacing-steps {
+        .p-#{$direction}-#{$i} {
+            padding-#{$direction}: ($plain-ui__helpers__spacing-gap * factor($i)) !important;
+
+            @if $i > 0 {
+                @include plain-ui__media-breakpoints-calculate('padding-'#{$direction}, factor($i), $plain-ui__helpers__spacing-breakpoints, true);
+            }
+        }
+    }
+}
+
+@mixin spacing($class, $style, $direction, $name, $value, $breakpoints)
+{
+    .#{$class}-#{$direction}-#{$name} {
+        #{$style}-#{$direction}: $value;
+    }
+}

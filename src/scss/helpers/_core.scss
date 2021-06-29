@@ -54,6 +54,14 @@
         }
     }
 
+    $plain-ui__width: 12;
+
+    @for $i from 1 through $plain-ui__width {
+        .w-#{$i} {
+            width: #{$i}em;
+        }
+    }
+
     /**
      *
      *

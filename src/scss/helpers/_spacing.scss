@@ -3,16 +3,31 @@ $plain-ui__spacing-direction: (
     'bottom',
     'left',
     'right'
-);
+) !default;
+
+$plain-ui__helpers__spacing-gap: 0.25 !default;
+$plain-ui__helpers__spacing-steps: 10 !default;
+
+/**
+ *
+ *
+ */
+@mixin spacing($class, $style, $direction, $name, $value, $breakpoints: 0)
+{
+    .#{$class}-#{$direction}-#{$name} {
+        #{$style}-#{$direction}: $value;
+    }
+}
 
 @each $direction in $plain-ui__spacing-direction {
 
     @include spacing('m', 'margin', $direction, 0, 0);
     @include spacing('m', 'margin', $direction, 1, 1px);
 
-    @for $i from 0 through $plain-ui__helpers__spacing-steps {
-        @include spacing($class, $style, $direction, $name, $plain-ui__helpers__spacing-gap * factor($i))
-        @include plain-ui__media-breakpoints-calculate('margin-'#{$direction}, factor($i), $plain-ui__helpers__spacing-breakpoints, true);
+    @for $i from 2 through $plain-ui__helpers__spacing-steps {
+        $value: $plain-ui__helpers__spacing-gap * factor($i - 1) * 1rem;
+        @include spacing('m', 'margin', $direction, $i, $value);
+        //@include plain-ui__breakpoints-calculate('margin-'#{$direction}, factor($i), $plain-ui__helpers__spacing-breakpoints, true);
     }
 }
 
@@ -22,19 +37,8 @@ $plain-ui__spacing-direction: (
     @include spacing('p', 'padding', $direction, 1, 1px);
 
     @for $i from 0 through $plain-ui__helpers__spacing-steps {
-        .p-#{$direction}-#{$i} {
-            padding-#{$direction}: ($plain-ui__helpers__spacing-gap * factor($i)) !important;
-
-            @if $i > 0 {
-                @include plain-ui__media-breakpoints-calculate('padding-'#{$direction}, factor($i), $plain-ui__helpers__spacing-breakpoints, true);
-            }
-        }
-    }
-}
-
-@mixin spacing($class, $style, $direction, $name, $value, $breakpoints)
-{
-    .#{$class}-#{$direction}-#{$name} {
-        #{$style}-#{$direction}: $value;
+        $value: $plain-ui__helpers__spacing-gap * factor($i - 1) * 1rem;
+        @include spacing('p', 'padding', $direction, $i, $value);
+        //@include plain-ui__breakpoints-calculate('padding-'#{$direction}, factor($i), $plain-ui__helpers__spacing-breakpoints, true);
     }
 }

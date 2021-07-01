@@ -8,10 +8,6 @@
     'variables',
     'core',
 
-    'helpers/core',
-    'helpers/sizing',
-    'helpers/spacing',
-
     'components/badge',
     'components/button',
     'components/field',
@@ -24,9 +20,14 @@
     'components/slider',
     'components/bar',
     'components/modal',
+    'components/loading',
 
     'layout/masonry',
-    'layout/flex';
+    'layout/flex',
+
+    'helpers/core',
+    'helpers/sizing',
+    'helpers/spacing';
 
 @include plain-ui__core();
 @include plain-ui__helpers__core();
@@ -46,5 +47,6 @@
 @include plain-ui__component__bar();
 @include plain-ui__component__tabs();
 @include plain-ui__component__modal();
+@include plain-ui__component__loading();
 
 @include plain-ui__layout__masonry();

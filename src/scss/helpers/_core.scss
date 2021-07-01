@@ -43,24 +43,7 @@
         }
     }
 
-    /**
-     *
-     *
-     */
 
-    @for $i from 1 through $reflex-columns {
-        .w-col-#{$i} {
-            width: percentage(($i / $reflex-columns));
-        }
-    }
-
-    $plain-ui__width: 12;
-
-    @for $i from 1 through $plain-ui__width {
-        .w-#{$i} {
-            width: #{$i}em;
-        }
-    }
 
     /**
      *
@@ -134,7 +117,7 @@
     }
 
     @each $name, $font-size in $plain-ui__font-sizes {
-        .text-size-#{$name} {
+        .t-size-#{$name} {
             font-size: $font-size !important;
             //@include plain-ui__breakpoints-font-size($plain-ui__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
         }

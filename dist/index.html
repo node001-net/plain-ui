@@ -56,6 +56,12 @@
                 <button class="button button--selected">
                     Hover
                 </button>
+                <button class="button button--outline">
+                    Outline
+                </button>
+                <button class="button button--danger button--outline">
+                    Danger Outline
+                </button>
             </div>
         </div>
 
@@ -119,6 +125,21 @@
                 <svg class="icon icon--success" aria-hidden="true">
                     <use xlink:href="symbol-defs.svg#icon-clock"></use>
                 </svg>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <h2>Content</h2>
+                <div class="content">
+                    <p>
+                    </p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -214,10 +235,10 @@
                             Do you really wan't to delete all files?
                         </div>
                         <div class="modal__footer">
-                            <button class="button button--danger" onclick="closeModal()">
+                            <button class="button button--outline button--danger" onclick="closeModal()">
                                 Confirm
                             </button>
-                            <button class="button float-right" onclick="closeModal()">
+                            <button class="button button--outline float-right" onclick="closeModal()">
                                 Reject
                             </button>
                         </div>

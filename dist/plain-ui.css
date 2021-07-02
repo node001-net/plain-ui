@@ -4808,7 +4808,10 @@ body {
   }
 }
 .button--small {
-  font-size: 0.8em;
+  font-size: 0.8rem;
+}
+.button--outline {
+  background-color: transparent;
 }
 .button--no-style {
   margin: 0;
@@ -4843,6 +4846,14 @@ body {
 }
 .button--danger:focus, .button--danger:active {
   outline: 2px solid #e79797;
+}
+.button--outline:hover {
+  color: #3e3e3e;
+  border-color: #8b8b8b;
+  background-color: transparent;
+}
+.button--danger.button--outline:hover {
+  border-color: #e38383;
 }
 
 .field-group {
@@ -5205,10 +5216,6 @@ img.media {
   transform: scale(0);
   max-width: 500px;
 }
-.modal__inner .button {
-  color: white;
-  background-color: transparent;
-}
 .modal__title {
   font-size: 2rem;
   text-align: center;
@@ -5223,6 +5230,9 @@ img.media {
 }
 .modal__body {
   margin-bottom: 1.5rem;
+}
+.modal .button {
+  color: white;
 }
 .modal:before {
   position: fixed;

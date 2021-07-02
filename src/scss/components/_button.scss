@@ -37,11 +37,11 @@
         }
 
         &--small {
-            font-size: 0.8em;
+            font-size: 0.8rem;
         }
 
         &--outline {
-            
+            background-color: transparent;
         }
 
         &--no-style {
@@ -87,6 +87,20 @@
 
             &:focus, &:active {
                 outline: 2px solid lighten($plain-ui__danger-light, 15%);
+            }
+        }
+
+        &--outline {
+            &:hover {
+                color: $plain-ui__primary-light;
+                border-color: lighten($plain-ui__primary-light, 30%);
+                background-color: transparent;
+            }
+        }
+
+        &--danger.button--outline {
+            &:hover {
+                border-color: lighten($plain-ui__danger-light, 10%);
             }
         }
     }

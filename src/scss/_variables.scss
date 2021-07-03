@@ -76,6 +76,19 @@ $plain-ui__colors: (
     'white'      : #fff
 ) !default;
 
+:root {
+    --primary: #{$plain-ui__primary-light};
+    --primary-active: #{$plain-ui__primary-light-active};
+    --link: #{$plain-ui__primary-light};
+    --link-hover: #{$plain-ui__danger-light};
+    --danger: #{$plain-ui__danger-light};
+    --success: #{$plain-ui__success-light};
+    --white: #ffffff;
+    --black: #000000;
+    --text: #{$plain-ui__text-light};
+    --background: #{$plain-ui__background-light};
+}
+
 /**
  *  padding & margin
  *

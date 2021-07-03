@@ -29,7 +29,7 @@
     'helpers/sizing',
     'helpers/spacing';
 
-@include plain-ui__core();
+
 @include plain-ui__helpers__core();
 
 @include plain-ui__component__badge();

@@ -1613,6 +1613,19 @@
  *
  *
  */
+:root {
+  --primary: #3e3e3e;
+  --primary-active: #585858;
+  --link: #3e3e3e;
+  --link-hover: #d95959;
+  --danger: #d95959;
+  --success: #64ac64;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #363636;
+  --background: #f9f9f9;
+}
+
 /**
  *  padding & margin
  *
@@ -1634,23 +1647,6 @@
  *  normalize
  *
  *  Thanks to https://necolas.github.io/normalize.css/, use a lot from them
- *
- *  @author Björn Hase, Tentakelfabrik
- *  @license http://opensource.org/licenses/MIT The MIT License
- *  @link https://github.com/tentakelfabrik/crispy-css
- *
- */
-/**
- *  Heading
- *
- *
- *  @author Björn Hase, Tentakelfabrik
- *  @license http://opensource.org/licenses/MIT The MIT License
- *  @link https://github.com/tentakelfabrik/crispy-css
- *
- */
-/**
- *  typograhy
  *
  *  @author Björn Hase, Tentakelfabrik
  *  @license http://opensource.org/licenses/MIT The MIT License
@@ -1689,12 +1685,17 @@ table {
   border-spacing: 0;
 }
 
+figure {
+  margin: 0 0 15px;
+}
+
 figcaption {
   margin: 10px 0;
 }
 
 /**
  *  form elements
+ *
  *
  *
  */
@@ -1769,7 +1770,8 @@ hr {
   height: 0;
   overflow: visible;
   border: 0;
-  margin: 0.3em 0;
+  border-top: 1px solid #b3b2af;
+  margin: 0 0 1rem;
 }
 
 progress {
@@ -1784,6 +1786,31 @@ summary {
   display: list-item;
 }
 
+code,
+pre,
+kbd,
+samp {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 1rem;
+}
+
+/**
+ *  Heading
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
+ */
+/**
+ *  typograhy
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
+ */
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -1973,6 +2000,30 @@ dt {
 
 dt {
   font-weight: bold;
+}
+
+a {
+  color: var(--link);
+  transition: color 0.5s;
+}
+a:hover {
+  color: var(--link-hover);
+}
+a:focus {
+  outline: none;
+}
+
+/**
+ *  body
+ *
+ */
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  direction: ltr;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 /**
@@ -4460,30 +4511,6 @@ dt {
 
 .p-right-10 {
   padding-right: 10.125rem;
-}
-
-a {
-  color: #fff;
-}
-a:focus {
-  outline: none;
-}
-
-/**
- *  body
- *
- *
- *
- *  line-height and breakpoints
- *  font-size and breakpoints
- *
- */
-body {
-  font-family: "IBM Plex Mono", sans-serif;
-  background-color: #f9f9f9;
-  direction: ltr;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
 /**

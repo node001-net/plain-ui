@@ -13,43 +13,36 @@
     'core/heading',
     'core/typography';
 
-@include plain-ui__core__normalize();
 @include plain-ui__core__heading();
 @include plain-ui__core__typography();
 
-@mixin plain-ui__core() {
+a {
+    color: var(--link);
+    transition: color 0.5s;
 
-    a {
-        color: $plain-ui__link-light;
-
-        &:hover {
-            color: $plain-ui__link-hover;
-        }
-
-        &:focus {
-            outline: none;
-        }
+    &:hover {
+        color: var(--link-hover);
     }
 
-    /**
-     *  body
-     *
-     *
-     *
-     *  line-height and breakpoints
-     *  font-size and breakpoints
-     *
-     */
-    body {
-        font-family: $plain-ui__font-family;
-        //color: $plain-ui__text-light;
-        background-color: $plain-ui__background-light;
-        direction: $plain-ui__direction;
-
-        font-size: $plain-ui__font-size;
-        //@include crispy__media-breakpoints('line-height', $crispy__line-height__breakpoints);
-
-        line-height: $plain-ui__line-height;
-        //@include crispy__media-breakpoints('font-size', $crispy__font-size-breakpoints);
+    &:focus {
+        outline: none;
     }
+}
+
+/**
+ *  body
+ *
+ */
+body {
+    font-family: $plain-ui__font-family;
+    color: var(--text);
+
+    background-color: var(--background);
+    direction: $plain-ui__direction;
+
+    font-size: $plain-ui__font-size;
+    //@include crispy__media-breakpoints('line-height', $crispy__line-height__breakpoints);
+
+    line-height: $plain-ui__line-height;
+    //@include crispy__media-breakpoints('font-size', $crispy__font-size-breakpoints);
 }

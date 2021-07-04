@@ -4583,7 +4583,7 @@ h6, .h6 {
 }
 
 .border-round, .badge {
-  border-radius: 2px !important;
+  border-radius: 2px;
 }
 
 .borderless {
@@ -4644,7 +4644,7 @@ h6, .h6 {
  *
  */
 .round {
-  border-radius: 50% !important;
+  border-radius: 50%;
 }
 
 /**

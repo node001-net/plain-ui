@@ -2037,6 +2037,17 @@ h6, .h6 {
  *
  *
  */
+.icon {
+  width: 1em;
+  height: 1em;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  font-size: 1.4rem;
+  fill: var(--text);
+}
+
 /**
  *  <div class="hero">
  *      <img src="image.png" alt="image" />
@@ -2052,10 +2063,6 @@ h6, .h6 {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
-}
-.hero--contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 /**
@@ -5060,25 +5067,6 @@ svg.field-choice__checked {
 
 .field-error {
   color: #d95959;
-}
-
-.icon {
-  width: 1em;
-  height: 1em;
-  max-height: 100%;
-  max-width: 100%;
-  vertical-align: middle;
-  overflow: hidden;
-  font-size: 1.4rem;
-  fill: #3e3e3e;
-}
-
-.icon--success {
-  fill: #64ac64;
-}
-
-.icon--danger {
-  fill: #d95959;
 }
 
 .panel {

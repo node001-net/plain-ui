@@ -5,27 +5,17 @@
  *
  */
 
-@mixin plain-ui__component__icon() {
-    .icon {
-        width: 1em;
-        height: 1em;
+.icon {
+    width: 1em;
+    height: 1em;
 
-        max-height: 100%;
-        max-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 
-        vertical-align: middle;
-        overflow: hidden;
+    vertical-align: middle;
+    overflow: hidden;
 
-        font-size: 1.4rem;
+    font-size: 1.4rem;
 
-        fill: $plain-ui__primary-light;
-    }
-
-    .icon--success {
-        fill: $plain-ui__success-light;
-    }
-
-    .icon--danger {
-        fill: $plain-ui__danger-light;
-    }
+    fill: var(--text);
 }

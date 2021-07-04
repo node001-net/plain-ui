@@ -8,7 +8,6 @@
 {
     .button {
         appearance: none;
-
         position: relative;
 
         display: inline-flex;
@@ -93,14 +92,14 @@
         &--outline {
             &:hover {
                 color: $plain-ui__primary-light;
-                border-color: lighten($plain-ui__primary-light, 30%);
+                border-color: lighten($plain-ui__primary-light, 40%);
                 background-color: transparent;
             }
         }
 
         &--danger.button--outline {
             &:hover {
-                border-color: lighten($plain-ui__danger-light, 10%);
+                border-color: lighten($plain-ui__danger-light, 20%);
             }
         }
     }

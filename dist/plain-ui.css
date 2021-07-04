@@ -1616,6 +1616,7 @@
 :root {
   --primary: #3e3e3e;
   --primary-active: #585858;
+  --primary-dark: #0b0b0b;
   --link: #3e3e3e;
   --link-hover: #d95959;
   --danger: #d95959;
@@ -2027,8 +2028,9 @@ body {
 }
 
 /**
- *
- *
+ *  <span class="badge">
+ *     A
+ *  </span>
  *
  *
  */
@@ -2055,6 +2057,21 @@ body {
  *  </div>
  *
  */
+.hero {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.hero--contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /**
  *
  *
@@ -2107,6 +2124,63 @@ body {
  *
  *
  */
+.loading {
+  height: 60px;
+  width: 47px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.loading span {
+  display: block;
+  width: 15px;
+  height: 80px;
+  background-color: var(--primary);
+  -webkit-animation-name: plain-ui__loading-animation;
+          animation-name: plain-ui__loading-animation;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  border-top: 1px solid var(--primary-dark);
+  border-bottom: 1px solid var(--primary-dark);
+}
+.loading span:first-child {
+  margin-right: 1px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.loading span:last-child {
+  margin-left: 1px;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes plain-ui__loading-animation {
+  0% {
+    height: 60px;
+  }
+  50% {
+    height: 40px;
+  }
+  100% {
+    height: 60px;
+  }
+}
+
+@keyframes plain-ui__loading-animation {
+  0% {
+    height: 60px;
+  }
+  50% {
+    height: 40px;
+  }
+  100% {
+    height: 60px;
+  }
+}
 /**
  *  masonry
  *
@@ -4518,11 +4592,11 @@ body {
  *
  *
  */
-.border {
+.border, .badge {
   border: 1px solid #3e3e3e !important;
 }
 
-.border-round {
+.border-round, .badge {
   border-radius: 2px !important;
 }
 
@@ -4799,8 +4873,6 @@ body {
   color: white;
   font-size: 0.85rem;
   padding: 0.4em 0.8em;
-  border: 1px solid #3e3e3e;
-  border-radius: 2px;
 }
 .badge--round {
   display: inline-flex;
@@ -4876,11 +4948,11 @@ body {
 }
 .button--outline:hover {
   color: #3e3e3e;
-  border-color: #8b8b8b;
+  border-color: #a4a4a4;
   background-color: transparent;
 }
 .button--danger.button--outline:hover {
-  border-color: #e38383;
+  border-color: #ecacac;
 }
 
 .field-group {
@@ -5123,21 +5195,6 @@ img.media {
   color: white;
 }
 
-.hero {
-  position: relative;
-}
-.hero img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-}
-.hero--contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .slider {
   position: relative;
   overflow-x: visible;
@@ -5284,63 +5341,6 @@ img.media {
   transform: scale(1);
 }
 
-.loading {
-  height: 60px;
-  width: 47px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-.loading span {
-  display: block;
-  width: 15px;
-  height: 80px;
-  background: #d95959;
-  -webkit-animation-name: plain-ui__loading-animation;
-          animation-name: plain-ui__loading-animation;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
-  border-top: 1px solid #a62626;
-  border-bottom: 1px solid #a62626;
-}
-.loading span:first-child {
-  margin-right: 1px;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-.loading span:last-child {
-  margin-left: 1px;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-@-webkit-keyframes plain-ui__loading-animation {
-  0% {
-    height: 60px;
-  }
-  50% {
-    height: 40px;
-  }
-  100% {
-    height: 60px;
-  }
-}
-
-@keyframes plain-ui__loading-animation {
-  0% {
-    height: 60px;
-  }
-  50% {
-    height: 40px;
-  }
-  100% {
-    height: 60px;
-  }
-}
 .masonry {
   display: flex;
   width: 100%;

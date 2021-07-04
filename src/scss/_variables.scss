@@ -58,6 +58,7 @@ $plain-ui__line-height__breakpoints: (
 
 $plain-ui__primary-light: #3e3e3e !default;
 $plain-ui__primary-light-active: lighten($plain-ui__primary-light, 10%) !default;
+$plain-ui__primary-light-dark: darken($plain-ui__primary-light, 20%) !default;
 
 $plain-ui__secondary: #b3b2af !default;
 $plain-ui__success-light: #64ac64 !default;
@@ -79,6 +80,7 @@ $plain-ui__colors: (
 :root {
     --primary: #{$plain-ui__primary-light};
     --primary-active: #{$plain-ui__primary-light-active};
+    --primary-dark: #{$plain-ui__primary-light-dark};
     --link: #{$plain-ui__primary-light};
     --link-hover: #{$plain-ui__danger-light};
     --danger: #{$plain-ui__danger-light};

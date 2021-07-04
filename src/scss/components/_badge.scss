@@ -1,6 +1,7 @@
 /**
- *
- *
+ *  <span class="badge">
+ *     A
+ *  </span>
  *
  *
  */
@@ -16,8 +17,8 @@
         font-size: 0.85rem;
         padding: 0.4em 0.8em;
 
-        border: 1px solid $plain-ui__primary-light;
-        border-radius: 2px;
+        @extend .border;
+        @extend .border-round;
 
         &--round {
             display: inline-flex;

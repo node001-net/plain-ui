@@ -4,49 +4,44 @@
  *
  */
 
-$plain-ui__loading__background-color: $plain-ui__danger-light !default;
+.loading {
+    height: 60px;
+    width: 47px;
+    margin: 0 auto;
 
-@mixin plain-ui__component__loading()
-{
-    .loading {
-        height: 60px;
-        width: 47px;
-        margin: 0 auto;
+    display: flex;
+    align-items: center;
 
-        display: flex;
-        align-items: center;
+    span {
+        display: block;
+        width: 15px;
+        height: 80px;
 
-        span {
-            display: block;
-            width: 15px;
-            height: 80px;
+        background-color: var(--primary);
 
-            background: $plain-ui__loading__background-color;
+        animation-name: plain-ui__loading-animation;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
 
-            animation-name: plain-ui__loading-animation;
-            animation-duration: 0.5s;
-            animation-iteration-count: infinite;
+        animation-delay: 0.15s;
 
-            animation-delay: 0.15s;
+        border-top: 1px solid var(--primary-dark);
+        border-bottom: 1px solid var(--primary-dark);
 
-            border-top: 1px solid darken($plain-ui__loading__background-color, 20%);
-            border-bottom: 1px solid darken($plain-ui__loading__background-color, 20%);
+        &:first-child {
+            margin-right: 1px;
+            animation-delay: 0s;
+        }
 
-            &:first-child {
-                margin-right: 1px;
-                animation-delay: 0s;
-            }
-
-            &:last-child {
-                margin-left: 1px;
-                animation-delay: 0.3s;
-            }
+        &:last-child {
+            margin-left: 1px;
+            animation-delay: 0.3s;
         }
     }
+}
 
-    @keyframes plain-ui__loading-animation {
-        0%   {  height: 60px; }
-        50%  {  height: 40px; }
-        100% {  height: 60px; }
-    }
+@keyframes plain-ui__loading-animation {
+    0%   {  height: 60px; }
+    50%  {  height: 40px; }
+    100% {  height: 60px; }
 }

@@ -1,6 +1,10 @@
 /**
  *
- *
+ *  <div class="group">
+ *      <span class="group__item">
+ *          A
+ *      </span>
+ *  </div>
  *
  *
  */
@@ -11,7 +15,7 @@
         &__item {
             width: auto;
             display: inline-block;
-            margin: 0 1em 1em;
+            margin: 0 1rem 1rem;
 
             &:last-child {
                 margin-right: 0;

@@ -5,19 +5,16 @@
  *
  */
 
-@mixin plain-ui__component__hero()
-{
-    .hero {
-        position: relative;
+.hero {
+    position: relative;
 
-        img {
-            width: 100%;
-            object-fit: cover;
-            object-position: 50% 50%;
-        }
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
 
-        &--contain {
-            object-fit: contain;
-        }
+    &--contain {
+        object-fit: contain;
     }
 }

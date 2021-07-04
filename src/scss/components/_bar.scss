@@ -12,7 +12,7 @@
 
         min-height: 2.8em;
         background-color: $plain-ui__primary-light;
-        color: white;
+        color: var(--white);
 
         .icon {
             font-size: 1.5rem;
@@ -37,6 +37,12 @@
 
             &:last-child {
                 margin-right: 0.75em;
+            }
+        }
+
+        .button {
+            &:active {
+                outline: none;
             }
         }
     }

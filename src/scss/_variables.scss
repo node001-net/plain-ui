@@ -44,7 +44,7 @@ $plain-ui__font-sizes: (
     'big'    : $plain-ui__font-size * 3
 ) !default;
 
-$plain-ui__line-height: 1.4;
+$plain-ui__line-height: 1.618;
 $plain-ui__line-height__breakpoints: (
     $plain-ui__md: $plain-ui__golden-ratio
 ) !default;
@@ -89,6 +89,7 @@ $plain-ui__colors: (
     --black: #000000;
     --text: #{$plain-ui__text-light};
     --background: #{$plain-ui__background-light};
+    --border: #{$plain-ui__border-light};
 }
 
 /**
@@ -96,9 +97,9 @@ $plain-ui__colors: (
  *
  */
 
-$plain-ui__margin: 0 0 15px !default;
+$plain-ui__margin: 0 0 1rem !default;
 $plain-ui__margin-breakpoints: (
-    $plain-ui__md: 0 0 20px
+    $plain-ui__md: 0 0 1.5rem
 ) !default;
 
 $plain-ui__padding: 5px 12px !default;

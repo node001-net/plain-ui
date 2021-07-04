@@ -11,7 +11,7 @@
     .badge {
         display: inline-block;
 
-        background-color: $plain-ui__primary-light;
+        background-color: var(--primary);
         color: white;
 
         font-size: 0.85rem;

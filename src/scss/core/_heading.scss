@@ -8,52 +8,49 @@
  *
  */
 
-@mixin plain-ui__core__heading()
-{
-    $plain-ui__heading__font-sizes: (
-        'h1': $plain-ui__font-size * 2.5,
-        'h2': $plain-ui__font-size * 2,
-        'h3': $plain-ui__font-size * 1.75,
-        'h4': $plain-ui__font-size * 1.5,
-        'h5': $plain-ui__font-size * 1.25,
-        'h6': $plain-ui__font-size
-    ) !default;
+$plain-ui__heading__font-sizes: (
+    'h1': $plain-ui__font-size * 2.5,
+    'h2': $plain-ui__font-size * 2,
+    'h3': $plain-ui__font-size * 1.75,
+    'h4': $plain-ui__font-size * 1.5,
+    'h5': $plain-ui__font-size * 1.25,
+    'h6': $plain-ui__font-size
+) !default;
 
-    $plain-ui__heading__font-sizes__breakpoints: (
-        $plain-ui__md: 1.2rem
-    ) !default;
+$plain-ui__heading__font-sizes__breakpoints: (
+    $plain-ui__md: 1.2rem
+) !default;
 
-    $plain-ui__heading__font-weight: bold !default;
-    $plain-ui__heading__font-family: $plain-ui__font-family !default;
-    $plain-ui__heading__margin: $plain-ui__margin !default;
-    $plain-ui__heading__margin-breakpoints: $plain-ui__margin-breakpoints !default;
-    
-    h1, .h1,
-    h2, .h2,
-    h3, .h3,
-    h4, .h4,
-    h5, .h5,
-    h6, .h6 {
-        font-family: $plain-ui__heading__font-family;
-        font-weight: $plain-ui__heading__font-weight;
-        line-height: 1.2;
+$plain-ui__heading__font-weight: bold !default;
+$plain-ui__heading__font-family: $plain-ui__font-family !default;
+$plain-ui__heading__margin: $plain-ui__margin !default;
+$plain-ui__heading__margin-breakpoints: $plain-ui__margin-breakpoints !default;
 
-        margin: $plain-ui__heading__margin;
-        @include plain-ui__breakpoints('margin', $plain-ui__heading__margin-breakpoints);
-    }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $plain-ui__heading__font-family;
+    font-weight: $plain-ui__heading__font-weight;
+    line-height: 1.2;
 
-    h5 {
-        line-height: 1.4;
-    }
+    margin: $plain-ui__heading__margin;
+    @include plain-ui__breakpoints('margin', $plain-ui__heading__margin-breakpoints);
+}
 
-    h6 {
-        line-height: $plain-ui__line-height;
-    }
+h5 {
+    line-height: 1.4;
+}
 
-    @each $h, $font-size in $plain-ui__heading__font-sizes {
-        #{$h}, .#{$h} {
-            font-size: $font-size;
-            @include plain-ui__breakpoints-font-size($plain-ui__heading__font-sizes__breakpoints, $font-size, $plain-ui__font-size);
-        }
+h6 {
+    line-height: $plain-ui__line-height;
+}
+
+@each $h, $font-size in $plain-ui__heading__font-sizes {
+    #{$h}, .#{$h} {
+        font-size: $font-size;
+        @include plain-ui__breakpoints-font-size($plain-ui__heading__font-sizes__breakpoints, $font-size, $plain-ui__font-size);
     }
 }

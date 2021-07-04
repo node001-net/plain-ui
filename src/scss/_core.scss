@@ -11,38 +11,4 @@
 @import
     'core/normalize',
     'core/heading',
-    'core/typography';
-
-@include plain-ui__core__heading();
-@include plain-ui__core__typography();
-
-a {
-    color: var(--link);
-    transition: color 0.5s;
-
-    &:hover {
-        color: var(--link-hover);
-    }
-
-    &:focus {
-        outline: none;
-    }
-}
-
-/**
- *  body
- *
- */
-body {
-    font-family: $plain-ui__font-family;
-    color: var(--text);
-
-    background-color: var(--background);
-    direction: $plain-ui__direction;
-
-    font-size: $plain-ui__font-size;
-    //@include crispy__media-breakpoints('line-height', $crispy__line-height__breakpoints);
-
-    line-height: $plain-ui__line-height;
-    //@include crispy__media-breakpoints('font-size', $crispy__font-size-breakpoints);
-}
+    'core/content';

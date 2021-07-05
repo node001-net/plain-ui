@@ -7,37 +7,41 @@
  *      </div>
  *  </div>
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
-@mixin plain-ui__layout__masonry()
-{
-    $plain-ui__masonry_sizes: (
-        1: 25%,
-        2: 55%,
-        3: 20%,
-        4: 67%,
-        5: 33%
-    ) !default;
+$plain-ui__masonry_sizes: (
+    1: 25%,
+    2: 55%,
+    3: 20%,
+    4: 67%,
+    5: 33%
+) !default;
 
-    .masonry {
-        display: flex;
+$plain-ui__masonry_height: 200px !default;
+$plain-ui__masonry_height--sm: 300px !default;
+
+.masonry {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+
+    &__item {
         width: 100%;
-        flex-flow: row wrap;
+        height: $plain-ui__masonry_height;
+        padding-left: 1px;
+        padding-bottom: 1px;
 
-        &__item {
-            height: 200px;
-            padding-left: 1px;
-            padding-bottom: 1px;
-            width: 100%;
+        @include plain-ui__media-sm() {
+            height: $plain-ui__masonry_height--sm;
 
-            @include plain-ui__media-sm() {
-                height: 300px;
-
-                @each $index, $size in $plain-ui__masonry_sizes {
-                    &:nth-child(4n+#{$index}) {
-                        width: #{$size};
-                    }
+            // add width from data
+            @each $index, $size in $plain-ui__masonry_sizes {
+                &:nth-child(4n+#{$index}) {
+                    width: #{$size};
                 }
             }
         }

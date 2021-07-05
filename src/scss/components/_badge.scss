@@ -3,29 +3,29 @@
  *     A
  *  </span>
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
 
-@mixin plain-ui__component__badge()
-{
-    .badge {
-        display: inline-block;
+.badge {
+    display: inline-block;
 
-        background-color: var(--primary);
-        color: white;
+    background-color: var(--primary);
+    color: var(--white);
 
-        font-size: 0.85rem;
-        padding: 0.4em 0.8em;
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
 
-        @extend .border;
-        @extend .border-round;
+    @extend .border;
+    @extend .border-round;
 
-        &--round {
-            display: inline-flex;
-            justify-content: center;
+    &--round {
+        display: inline-flex;
+        justify-content: center;
 
-            border-radius: 50%;
-            width: 2.5em;
-        }
+        border-radius: 50%;
+        width: 2.5em;
     }
 }

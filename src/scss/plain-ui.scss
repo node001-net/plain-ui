@@ -29,21 +29,12 @@
     'helpers/sizing',
     'helpers/spacing';
 
-
 @include plain-ui__helpers__core();
-
-@include plain-ui__component__badge();
-
-@include plain-ui__component__button();
-@include plain-ui__component__button-colors();
 
 @include plain-ui__component__field();
 @include plain-ui__component__panel();
 @include plain-ui__component__media();
 @include plain-ui__component__table();
 @include plain-ui__component__slider();
-@include plain-ui__component__bar();
 @include plain-ui__component__tabs();
 @include plain-ui__component__modal();
-
-@include plain-ui__layout__masonry();

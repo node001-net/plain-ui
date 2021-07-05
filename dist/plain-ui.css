@@ -1614,12 +1614,14 @@
  *
  */
 :root {
-  --primary: #3e3e3e;
-  --primary-active: #585858;
-  --primary-dark: #0b0b0b;
-  --link: #3e3e3e;
-  --link-hover: #d95959;
+  --primary: #585858;
+  --primary-light: #585858;
+  --primary-active: #717171;
+  --primary-dark: #252525;
+  --link: #585858;
+  --link-hover: #ecacac;
   --danger: #d95959;
+  --danger-light: #ecacac;
   --success: #64ac64;
   --white: #ffffff;
   --black: #000000;
@@ -1974,7 +1976,7 @@ h6, .h6 {
   padding: 0.25em;
 }
 .content blockquote {
-  border-left: 1px solid #3e3e3e;
+  border-left: 1px solid #585858;
   margin-left: 0;
   padding: 5px 12px;
 }
@@ -2018,13 +2020,106 @@ h6, .h6 {
  *     A
  *  </span>
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
+.badge {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 0.85rem;
+  padding: 0.4em 0.8em;
+}
+.badge--round {
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2.5em;
+}
+
 /**
  *
  *
  *
  */
+.button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 1rem;
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  color: var(--primary);
+  border-radius: 2px;
+  transition: background-color 0.1s;
+  margin-bottom: 0.5em;
+  padding: 0 1.3em;
+  min-height: 2.8em;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .button {
+    width: auto;
+  }
+}
+.button--small {
+  font-size: 0.8rem;
+}
+.button--clearfix {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.button--clearfix:focus, .button--clearfix:active {
+  outline: none;
+}
+.button:hover, .button--selected {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-active);
+}
+.button:focus, .button:active {
+  outline: 1px solid var(--primary-active);
+}
+.button:disabled {
+  opacity: 0.5;
+}
+.button:disabled:hover {
+  cursor: not-allowed;
+  border: 1px solid var(--primary);
+  background-color: white;
+  color: var(--primary);
+}
+.button--danger {
+  border-color: var(--danger);
+}
+.button--danger:hover {
+  background-color: var(--danger);
+}
+.button--danger:focus, .button--danger:active {
+  outline: 2px solid var(--primary-active);
+}
+.button--outline {
+  background-color: transparent;
+}
+.button--outline:hover {
+  color: var(--primary);
+  border-color: var(--primary-light);
+  background-color: transparent;
+}
+.button--danger.button--outline:hover {
+  border-color: var(--danger-light);
+}
+
 /**
  *
  *
@@ -2103,6 +2198,36 @@ h6, .h6 {
  *
  *
  */
+.bar {
+  display: flex;
+  min-height: 2.8em;
+  background-color: #585858;
+  color: var(--white);
+}
+.bar .icon {
+  font-size: 1.5rem;
+}
+.bar__start {
+  justify-content: start;
+}
+.bar__main {
+  flex-grow: 1;
+}
+.bar__end {
+  justify-content: end;
+}
+.bar__start, .bar__main, .bar__end {
+  display: flex;
+  align-self: center;
+  margin-left: 0.75em;
+}
+.bar__start:last-child, .bar__main:last-child, .bar__end:last-child {
+  margin-right: 0.75em;
+}
+.bar .button:active, .bar .button:focus {
+  outline: none;
+}
+
 /**
  *  <figure class="media-figure">
  *      <img class="media__img" src="https://via.placeholder.com/150" />
@@ -2183,8 +2308,43 @@ h6, .h6 {
  *      </div>
  *  </div>
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
+.masonry {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+.masonry__item {
+  width: 100%;
+  height: 200px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+}
+@media only screen and (min-width: 768px) {
+  .masonry__item {
+    height: 300px;
+  }
+  .masonry__item:nth-child(4n+1) {
+    width: 25%;
+  }
+  .masonry__item:nth-child(4n+2) {
+    width: 55%;
+  }
+  .masonry__item:nth-child(4n+3) {
+    width: 20%;
+  }
+  .masonry__item:nth-child(4n+4) {
+    width: 67%;
+  }
+  .masonry__item:nth-child(4n+5) {
+    width: 33%;
+  }
+}
+
 :root {
   --reflex-columns: 12;
   --reflex-grid-spacing: 15px;
@@ -4586,7 +4746,7 @@ h6, .h6 {
  *
  */
 .border, .badge {
-  border: 1px solid #3e3e3e !important;
+  border: 1px solid #585858 !important;
 }
 
 .border-round, .badge {
@@ -4824,94 +4984,6 @@ h6, .h6 {
      object-fit: cover;
 }
 
-.badge {
-  display: inline-block;
-  background-color: var(--primary);
-  color: white;
-  font-size: 0.85rem;
-  padding: 0.4em 0.8em;
-}
-.badge--round {
-  display: inline-flex;
-  justify-content: center;
-  border-radius: 50%;
-  width: 2.5em;
-}
-
-.button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  font-family: "IBM Plex Mono", sans-serif;
-  border: 1px solid #3e3e3e;
-  background-color: white;
-  color: #3e3e3e;
-  border-radius: 2px;
-  transition: background-color 0.1s;
-  margin-bottom: 0.5em;
-  padding: 0 1.3em;
-  min-height: 2.8em;
-  font-size: 1rem;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .button {
-    width: auto;
-  }
-}
-.button--small {
-  font-size: 0.8rem;
-}
-.button--outline {
-  background-color: transparent;
-}
-.button--no-style {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-}
-.button:hover, .button--selected {
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  background-color: #585858;
-}
-.button:focus, .button:active {
-  outline: 1px solid #646464;
-}
-.button:disabled {
-  opacity: 0.5;
-}
-.button:disabled:hover {
-  cursor: not-allowed;
-  border: 1px solid #3e3e3e;
-  background-color: white;
-  color: #3e3e3e;
-}
-
-.button--danger {
-  border-color: #d95959;
-}
-.button--danger:hover {
-  background-color: #d95959;
-}
-.button--danger:focus, .button--danger:active {
-  outline: 2px solid #e79797;
-}
-.button--outline:hover {
-  color: #3e3e3e;
-  border-color: #a4a4a4;
-  background-color: transparent;
-}
-.button--danger.button--outline:hover {
-  border-color: #ecacac;
-}
-
 .field-group {
   margin-bottom: 1.2em;
 }
@@ -4922,10 +4994,10 @@ h6, .h6 {
   fill: #64ac64;
 }
 .field-group--error input.field-text, .field-group--error textarea.field-text {
-  border-color: #d95959;
+  border-color: #ecacac;
 }
 .field-group--error .icon {
-  fill: #d95959;
+  fill: #ecacac;
 }
 
 .field-label {
@@ -4943,14 +5015,14 @@ input.field-text, textarea.field-text, select.field-choice {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 0.95rem;
   width: 100%;
-  border: 1px solid #a4a4a4;
+  border: 1px solid #bebebe;
   background-color: white;
   border-radius: 2px;
   margin: 0.7em 0 0;
 }
 input.field-text:focus, input.field-text:active, textarea.field-text:focus, textarea.field-text:active, select.field-choice:focus, select.field-choice:active {
   outline: 0;
-  border-color: #3e3e3e;
+  border-color: #585858;
 }
 
 input.field-text, textarea.field-text {
@@ -5015,7 +5087,7 @@ input[type=radio].field-choice:checked ~ .field-choice__unchecked {
 }
 
 svg.field-choice__unchecked {
-  fill: #a4a4a4;
+  fill: #bebebe;
 }
 
 svg.field-choice__checked {
@@ -5030,17 +5102,17 @@ svg.field-choice__checked {
 }
 
 .field-error {
-  color: #d95959;
+  color: #ecacac;
 }
 
 .panel {
-  border: 1px solid #3e3e3e;
+  border: 1px solid #585858;
   border-radius: 2px;
   background: #fff;
 }
 .panel__header {
   display: flex;
-  background-color: #3e3e3e;
+  background-color: #585858;
   color: white;
   padding: 0.8em 1.2em;
   line-height: 1.6em;
@@ -5079,14 +5151,14 @@ svg.field-choice__checked {
   margin: 0;
   display: inline-block;
   line-height: 0;
-  border: 1px solid #3e3e3e;
+  border: 1px solid #585858;
   border-radius: 2px;
   overflow: hidden;
 }
 .figure__caption {
   padding: 0.75em 1.1em;
   font-size: 0.7rem;
-  background: #3e3e3e;
+  background: #585858;
   line-height: 1.618;
   margin: 0;
   color: white;
@@ -5097,37 +5169,37 @@ svg.field-choice__checked {
 
 img.media {
   border-radius: 2px;
-  border: 1px solid #3e3e3e;
+  border: 1px solid #585858;
   width: 100%;
   height: auto;
 }
 
 .table {
   width: 100%;
-  border: 1px solid #cacaca;
+  border: 1px solid #e4e4e4;
   background: white;
 }
 .table--striped tr:nth-child(even) {
-  background-color: #fdfdfd;
+  background-color: white;
 }
 .table--scroll {
   overflow-x: auto;
 }
 .table td {
-  color: #3e3e3e;
+  color: #585858;
 }
 .table td,
 .table th {
   text-align: left;
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid #e4e4e4;
   padding: 0.5em 1.25em;
 }
 .table th {
   color: white;
-  background-color: #3e3e3e;
+  background-color: #585858;
 }
 .table tr:hover {
-  background-color: #585858;
+  background-color: #717171;
 }
 .table tr:hover td {
   color: white;
@@ -5146,36 +5218,6 @@ img.media {
   display: inline-block;
   white-space: normal;
   flex-shrink: 0;
-}
-
-.bar {
-  display: flex;
-  min-height: 2.8em;
-  background-color: #3e3e3e;
-  color: var(--white);
-}
-.bar .icon {
-  font-size: 1.5rem;
-}
-.bar__start {
-  justify-content: start;
-}
-.bar__main {
-  flex-grow: 1;
-}
-.bar__end {
-  justify-content: end;
-}
-.bar__start, .bar__main, .bar__end {
-  display: flex;
-  align-self: center;
-  margin-left: 0.75em;
-}
-.bar__start:last-child, .bar__main:last-child, .bar__end:last-child {
-  margin-right: 0.75em;
-}
-.bar .button:active {
-  outline: none;
 }
 
 .tabs {
@@ -5197,8 +5239,8 @@ img.media {
   background-color: white;
   transition: background-color 0.1s;
   background-color: white;
-  color: #3e3e3e;
-  border: 1px solid #3e3e3e;
+  color: #585858;
+  border: 1px solid #585858;
   border-bottom-width: 0;
   width: 100%;
 }
@@ -5212,9 +5254,9 @@ img.media {
 }
 .tabs__item:hover, .tabs__item--selected {
   cursor: pointer;
-  background-color: #585858;
+  background-color: #717171;
   color: white;
-  border-color: #585858;
+  border-color: #717171;
 }
 .tabs__item:last-child {
   border-bottom-width: 1px;
@@ -5280,36 +5322,4 @@ img.media {
 }
 .modal--open .modal__inner {
   transform: scale(1);
-}
-
-.masonry {
-  display: flex;
-  width: 100%;
-  flex-flow: row wrap;
-}
-.masonry__item {
-  height: 200px;
-  padding-left: 1px;
-  padding-bottom: 1px;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .masonry__item {
-    height: 300px;
-  }
-  .masonry__item:nth-child(4n+1) {
-    width: 25%;
-  }
-  .masonry__item:nth-child(4n+2) {
-    width: 55%;
-  }
-  .masonry__item:nth-child(4n+3) {
-    width: 20%;
-  }
-  .masonry__item:nth-child(4n+4) {
-    width: 67%;
-  }
-  .masonry__item:nth-child(4n+5) {
-    width: 33%;
-  }
 }

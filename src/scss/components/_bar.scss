@@ -5,45 +5,42 @@
  *
  */
 
-@mixin plain-ui__component__bar()
-{
-    .bar {
+.bar {
+    display: flex;
+
+    min-height: 2.8em;
+    background-color: $plain-ui__primary-light;
+    color: var(--white);
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    &__start {
+        justify-content: start;
+    }
+
+    &__main {
+        flex-grow: 1;
+    }
+
+    &__end {
+        justify-content: end;
+    }
+
+    &__start, &__main, &__end {
         display: flex;
+        align-self: center;
+        margin-left: 0.75em;
 
-        min-height: 2.8em;
-        background-color: $plain-ui__primary-light;
-        color: var(--white);
-
-        .icon {
-            font-size: 1.5rem;
+        &:last-child {
+            margin-right: 0.75em;
         }
+    }
 
-        &__start {
-            justify-content: start;
-        }
-
-        &__main {
-            flex-grow: 1;
-        }
-
-        &__end {
-            justify-content: end;
-        }
-
-        &__start, &__main, &__end {
-            display: flex;
-            align-self: center;
-            margin-left: 0.75em;
-
-            &:last-child {
-                margin-right: 0.75em;
-            }
-        }
-
-        .button {
-            &:active {
-                outline: none;
-            }
+    .button {
+        &:active, &:focus {
+            outline: none;
         }
     }
 }

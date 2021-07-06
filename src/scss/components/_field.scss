@@ -5,145 +5,145 @@
  *
  */
 
-@mixin plain-ui__component__field()
-{
-    // group, container for fields
-    .field-group {
-        margin-bottom: 1.2em;
+.field-group {
+    margin: $plain-ui__margin;
 
-        &--valid {
-            input.field-text, textarea.field-text {
-                border-color: $plain-ui__success-light;
-            }
-
-            .icon {
-                fill: $plain-ui__success-light;
-            }
+    &--valid {
+        input.field-text, textarea.field-text {
+            border-color: var(--success);
         }
-
-        &--error {
-            input.field-text, textarea.field-text {
-                border-color: $plain-ui__danger-light;
-            }
-
-            .icon {
-                fill: $plain-ui__danger-light;
-            }
-        }
-    }
-
-    .field-label {
-        font-size: 1rem;
-        font-family: $plain-ui__font-family;
 
         .icon {
-            vertical-align: text-bottom;
-        }
-
-        &:hover {
-            cursor: pointer;
+            fill: var(--success);
         }
     }
 
-    input.field-text, textarea.field-text, select.field-choice {
-        font-family: $plain-ui__font-family;
-        font-size: 0.95rem;
+    &--error {
+        input.field-text, textarea.field-text {
+            border-color: var(--danger);
+        }
 
-        width: 100%;
-
-        border: 1px solid lighten($plain-ui__primary-light, 40%);
-        background-color: white;
-        border-radius: 2px;
-
-        margin: 0.7em 0 0;
-
-        &:focus, &:active {
-            outline: 0;
-            border-color: $plain-ui__primary-light;
+        .icon {
+            fill: var(--danger);
         }
     }
+}
 
-    input.field-text, textarea.field-text {
-        padding: 0.8em 1.1em;
+.field-label {
+    font-size: 1rem;
+    font-family: $plain-ui__font-family;
+
+    .icon {
+        vertical-align: text-bottom;
     }
 
-    /**
-     *
-     *
-     */
-
-    select.field-choice {
-        appearance: none;
-        padding: 0.8em;
-        position: relative;
-
-        &::after {
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: block;
-            content: " ";
-            width: 10px;
-            height: 10px;
-            background: red;
-        }
+    &:hover {
+        cursor: pointer;
     }
+}
 
-    /**
-     * radio & checkbox
-     *
-     * <div class="field">
-     *     <label for="field__checkbox__1" class="field__label">
-     *         <input class="field__choice" type="checkbox" name="field__checkbox__1" value="true" />
-     *         <svg class="icon field__choice__unchecked" aria-hidden="true">
-     *             <use xlink:href="symbol-defs.svg#icon-minus"></use>
-     *         </svg>
-     *         <svg class="icon field__choice__checked" aria-hidden="true">
-     *             <use xlink:href="symbol-defs.svg#icon-checked"></use>
-     *         </svg>
-     *         checkbox 1
-     *    </label>
-     * </div>
-     *
-     */
+input.field-text, textarea.field-text, select.field-choice {
+    font-family: $plain-ui__font-family;
+    font-size: 0.95rem;
 
-    input[type=checkbox].field-choice,
-    input[type=radio].field-choice {
-        position: relative;
+    width: 100%;
+
+    border: 1px solid var(--primary-active);
+    background-color: var(--white);
+    border-radius: $plain-ui__border-radius;
+
+    margin: 0.7rem 0 0;
+
+    &:focus, &:active {
+        outline: 0;
+        border-color: var(--primary);
+    }
+}
+
+input.field-text, textarea.field-text {
+    padding: 0.8em 1.1em;
+}
+
+
+/**
+ * field-choice
+ *
+ *
+ */
+
+select.field-choice {
+    appearance: none;
+    padding: 0.8em;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        content: " ";
+        width: 10px;
+        height: 10px;
+        background: red;
+    }
+}
+
+/**
+ * radio & checkbox
+ *
+ * <div class="field">
+ *     <label for="field__checkbox__1" class="field__label">
+ *         <input class="field__choice" type="checkbox" name="field__checkbox__1" value="true" />
+ *         <svg class="icon field__choice__unchecked" aria-hidden="true">
+ *             <use xlink:href="symbol-defs.svg#icon-minus"></use>
+ *         </svg>
+ *         <svg class="icon field__choice__checked" aria-hidden="true">
+ *             <use xlink:href="symbol-defs.svg#icon-checked"></use>
+ *         </svg>
+ *         checkbox 1
+ *    </label>
+ * </div>
+ *
+ */
+
+input[type=checkbox].field-choice,
+input[type=radio].field-choice {
+    position: relative;
+    display: none;
+
+    ~ .field-choice__checked {
         display: none;
-
-        ~ .field-choice__checked {
-            display: none;
-        }
-
-        &:checked ~ .field-choice__checked {
-            display: inline-block;
-        }
-
-        &:checked ~ .field-choice__unchecked {
-            display: none;
-        }
     }
 
-    svg.field-choice__unchecked {
-        fill: lighten($plain-ui__primary-light, 40%);
-    }
-
-    svg.field-choice__checked {
-        fill: $plain-ui__success-light;
-    }
-
-    //
-    .field-help, .field-error {
+    &:checked ~ .field-choice__checked {
         display: inline-block;
-        width: 100%;
-
-        padding: 0.6em 0.5em;
-        font-size: 0.8rem;
     }
 
-    // display error for fields
-    .field-error {
-        color: $plain-ui__danger-light;
+    &:checked ~ .field-choice__unchecked {
+        display: none;
     }
+}
+
+svg.field-choice__unchecked {
+    fill: var(--primary-active);
+}
+
+svg.field-choice__checked {
+    fill: var(--success);
+}
+
+.field-help, .field-error {
+    display: inline-block;
+    width: 100%;
+
+    padding: 0.6em 0.5em;
+    font-size: 0.8rem;
+}
+
+/**
+ * display error for fields
+ *
+ */
+.field-error {
+    color: var(--danger);
 }

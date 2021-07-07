@@ -28,13 +28,12 @@
 
     'helpers/core',
     'helpers/sizing',
-    'helpers/spacing';
+    'helpers/spacing',
+    'helpers/colors';
 
 @include plain-ui__helpers__core();
 
-@include plain-ui__component__panel();
 @include plain-ui__component__media();
 @include plain-ui__component__table();
 @include plain-ui__component__slider();
 @include plain-ui__component__tabs();
-@include plain-ui__component__modal();

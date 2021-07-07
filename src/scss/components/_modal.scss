@@ -8,84 +8,83 @@
  *
  */
 
-@mixin plain-ui__component__modal()
-{
-    .modal {
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    // make sure that animation starts after visibility is not longer hidden
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s;
+
+    padding: 1rem;
+    z-index: 20;
+
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        position: relative;
+        z-index: 21;
+
+        transition: transform 0.5s;
+        transform: scale(0);
+
+        max-width: 600px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        white-space: pre-line;
+
+        margin-bottom: 2rem;
+
+        .icon {
+            font-size: 3rem;
+        }
+    }
+
+    &__title, &__body {
+        color: var(--white);
+    }
+
+    &__body {
+        margin-bottom: 1.5rem;
+    }
+
+    .button {
+        color: var(--white);
+    }
+
+    &:before {
         position: fixed;
-        width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        transition: background-color 0.5s;
+        z-index: 19;
+        content: '';
+    }
 
+    &--open {
         display: flex;
-        visibility: hidden;
-        transition: visibility 0s linear 0.5s;
+        visibility: visible;
 
-        padding: 1em;
-        z-index: 20;
-
-        align-items: center;
-        justify-content: center;
-
-        &__inner {
-            position: relative;
-            z-index: 21;
-
-            transition: transform 0.5s;
-            transform: scale(0);
-
-            max-width: 500px;
-        }
-
-        &__title {
-            font-size: 2rem;
-            text-align: center;
-            white-space: pre-line;
-
-            margin-bottom: 2rem;
-
-            .icon {
-                font-size: 3rem;
-            }
-        }
-
-        &__title, &__body {
-            color: white;
-        }
-
-        &__body {
-            margin-bottom: 1.5rem;
-        }
-
-        .button {
-            color: white;
-        }
+        transition: visibility 0s linear 0s;
 
         &:before {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            transition: background-color 0.5s;
-            z-index: 19;
-            content: '';
+            background: rgba(0,0,0,.87);
         }
 
-        &--open {
-            display: flex;
-            visibility: visible;
-
-            transition: visibility 0s linear 0s;
-
-            &:before {
-                background: rgba(0,0,0,.87);
-            }
-
-            .modal__inner {
-                transform: scale(1);
-            }
+        .modal__inner {
+            transform: scale(1);
         }
     }
 }

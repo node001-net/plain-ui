@@ -75,8 +75,9 @@ $plain-ui__border-light: #dfdfdf !default;
 $plain-ui__link-light: #fff !default;
 
 $plain-ui__colors: (
-    'primary'    : $plain-ui__primary-light,
-    'white'      : #fff
+    'primary' : --primary,
+    'success' : --success,
+    'white'   : --white
 ) !default;
 
 :root {

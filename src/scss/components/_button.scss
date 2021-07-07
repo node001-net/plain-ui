@@ -35,7 +35,7 @@
         font-size: 0.8rem;
     }
 
-    &--clearfix {
+    &--transparent {
         margin: 0;
         padding: 0;
         border: none;
@@ -80,6 +80,18 @@
         }
     }
 
+    &--success {
+        border-color: var(--success);
+
+        &:hover {
+            background-color: var(--sucess);
+        }
+
+        &:focus, &:active {
+            outline: 2px solid var(--primary-active);
+        }
+    }
+
     &--outline {
         background-color: transparent;
 
@@ -93,6 +105,12 @@
     &--danger.button--outline {
         &:hover {
             border-color: var(--danger-light);
+        }
+    }
+
+    &--success.button--outline {
+        &:hover {
+            border-color: var(--success-light);
         }
     }
 }

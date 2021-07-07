@@ -1,9 +1,17 @@
 /**
  *
  *
- *  
+ *
  */
-@mixin component__loading()
-{
 
+.progress {
+    height: 40px;
+    width: 100%;
+
+    border: 1px solid var(--primary);
+
+    &__inner {
+        margin: 1px;
+        height: 100%;
+    }
 }

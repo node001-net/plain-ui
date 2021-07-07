@@ -4,25 +4,14 @@
  *
  */
 
-@mixin plain-ui__component__panel()
-{
-    .panel {
-        border: 1px solid var(--primary);
-        border-radius: $plain-ui__border-radius;
-        background: var(--white);
+.panel {
+    border: 1px solid var(--primary);
+    border-radius: $plain-ui__border-radius;
+    background-color: var(--white);
 
-        &__buttons {
-            display: flex;
-            justify-content: end;
-            width: 100%;
-
-            button:last-child .icon {
-                margin-right: 0;
-            }
-        }
-
-        &__body {
-            padding: 0.25em 1em;
-        }
+    &__body {
+        padding: 0.25em 1em;
     }
+
+    // bar left, right, top, bottom
 }

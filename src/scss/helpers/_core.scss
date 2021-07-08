@@ -5,29 +5,21 @@
  *
  */
 
-@mixin plain-ui__helpers__core()
-{
-    /**
-     *  borders
-     *
-     *
-     */
+.border {
+    border: $plain-ui__border !important;
+}
 
-    .border {
-        border: $plain-ui__border !important;
-    }
+.border-round {
+    border-radius: $plain-ui__border-radius;
+}
 
-    .border-round {
-        border-radius: $plain-ui__border-radius;
-    }
+.borderless {
+    border: 0 !important;
+}
 
-    .borderless {
-        border: 0 !important;
-    }
-
-    .radiusless {
-        border-radius: 0 !important;
-    }
+.radiusless {
+    border-radius: 0 !important;
+}
 
     /**
      *  z-index
@@ -110,105 +102,96 @@
         font-weight: medium !important;
     }
 
-    .bold {
-        font-weight: bolder !important;
+.bold {
+    font-weight: bolder !important;
+}
+
+@each $name, $font-size in $plain-ui__font-sizes {
+    .t-size-#{$name} {
+        font-size: $font-size !important;
+        //@include plain-ui__breakpoints-font-size($plain-ui__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
     }
+}
 
-    @each $name, $font-size in $plain-ui__font-sizes {
-        .t-size-#{$name} {
-            font-size: $font-size !important;
-            //@include plain-ui__breakpoints-font-size($plain-ui__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
-        }
-    }
+/**
+ *  floating
+ *
+ *
+ */
 
-    /**
-     *  colors
-     *
-     *
-     */
+.float-left {
+    float: left;
+}
 
+.float-right {
+    float: right;
+}
 
+.float-none {
+    float: none;
+}
 
-    /**
-     *  floating
-     *
-     *
-     */
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .float-left {
-        float: left;
-    }
+.clearfix {
+    @include plain-ui__clearfix();
+}
 
-    .float-right {
-        float: right;
-    }
+/**
+ *  position
+ *
+ *
+ */
 
-    .float-none {
-        float: none;
-    }
+.absolute {
+    position: absolute !important;
+}
 
-    .centered {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.fixed {
+    position: fixed !important;
+}
 
-    .clearfix {
-        @include plain-ui__clearfix();
-    }
+.relative {
+    position: relative !important;
+}
 
-    /**
-     *  position
-     *
-     *
-     */
+/**
+ *
+ *
+ */
 
-    .absolute {
-        position: absolute !important;
-    }
+.vertical-align-bottom {
+    vertical-align: bottom;
+}
 
-    .fixed {
-        position: fixed !important;
-    }
+.vertical-align-top {
+    vertical-align: top;
+}
 
-    .relative {
-        position: relative !important;
-    }
+.vertical-align-baseline {
+    vertical-align: baseline;
+}
 
-    /**
-     *
-     *
-     */
+.marginless {
+    margin: 0 !important;
+}
 
-    .vertical-align-bottom {
-        vertical-align: bottom;
-    }
+/**
+ *
+ *
+ */
 
-    .vertical-align-top {
-        vertical-align: top;
-    }
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
 
-    .vertical-align-baseline {
-        vertical-align: baseline;
-    }
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
 
-    .marginless {
-        margin: 0 !important;
-    }
-
-    /**
-     *
-     *
-     */
-
-    .overflow-x-hidden {
-        overflow-x: hidden;
-    }
-
-    .overflow-y-hidden {
-        overflow-y: hidden;
-    }
-
-    .object-fit-cover {
-        object-fit: cover;
-    }
+.object-fit-cover {
+    object-fit: cover;
 }

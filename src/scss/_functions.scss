@@ -16,7 +16,8 @@
  *  @return {number}
  *
  */
-@function stripUnit($value) {
+@function stripUnit($value)
+{
     @return $value / ($value * 0 + 1);
 }
 
@@ -28,8 +29,8 @@
  *  @return {boolean|unit}
  *
  */
-@function getDefault($map) {
-
+@function getDefault($map)
+{
     $default: false;
 
     @if map-has-key($map, 'default') {
@@ -49,6 +50,7 @@
  *  @return {float}
  *
  */
-@function factor($x) {
+@function factor($x)
+{
     @return ($x * $x) / 2;
 }

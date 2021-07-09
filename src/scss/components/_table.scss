@@ -8,13 +8,13 @@
 {
     .table {
         width: 100%;
-        border: 1px solid lighten($plain-ui__primary-light, 55%);
-        background: white;
+        border: 1px solid lighten($plain-ui__primary, 55%);
+        background: var(--white);
 
         &--striped {
             tr {
                 &:nth-child(even) {
-                    background-color: lighten($plain-ui__primary-light, 75%);
+                    background-color: lighten($plain-ui__primary, 75%);
                 }
             }
         }
@@ -24,13 +24,13 @@
         }
 
         td {
-            color: $plain-ui__primary-light;
+            color: var(--text);
         }
 
         td,
         th {
             text-align: left;
-            border-bottom: 1px solid lighten($plain-ui__primary-light, 55%);
+            border-bottom: 1px solid lighten($plain-ui__primary, 55%);
 
             padding: 0.5em 1.25em;
             //@include crispy__media-breakpoints('padding', $crispy__table__padding-breakpoints);
@@ -38,11 +38,11 @@
 
         th {
             color: white;
-            background-color: $plain-ui__primary-light;
+            background-color: $plain-ui__primary;
         }
 
         tr:hover {
-            background-color: lighten($plain-ui__primary-light, 10%);
+            background-color: lighten($plain-ui__primary, 10%);
 
             td {
                 color: white;

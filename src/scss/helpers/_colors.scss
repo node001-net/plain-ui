@@ -7,7 +7,7 @@
  */
 
 @each $name, $color in $plain-ui__colors {
-    .text-color-#{$name} {
+    .color-#{$name} {
         color: var(#{$color});
     }
 }

@@ -8,36 +8,33 @@
  *
  */
 
-@mixin plain-ui__component__media()
-{
-    .figure {
+.figure {
+    margin: 0;
+    display: inline-block;
+    line-height: 0;
+
+    border: $plain-ui__border;
+    border-radius: $plain-ui__border-radius;
+
+    overflow: hidden;
+
+    &__caption {
+        padding: 0.75em 1.1em;
+        font-size: 0.7rem;
+        background: var(--background);
+        line-height: $plain-ui__line-height;
         margin: 0;
-        display: inline-block;
-        line-height: 0;
-
-        border: 1px solid $plain-ui__primary-light;
-        border-radius: 2px;
-
-        overflow: hidden;
-
-        &__caption {
-            padding: 0.75em 1.1em;
-            font-size: 0.7rem;
-            background: $plain-ui__primary-light;
-            line-height: $plain-ui__line-height;
-            margin: 0;
-            color: white;
-        }
-
-        img.media {
-            border: 0;
-        }
+        color: var(--text-secondary);
     }
 
-    img.media {
-        border-radius: 2px;
-        border: 1px solid $plain-ui__primary-light;
-        width: 100%;
-        height: auto;
+    .media {
+        border: 0;
     }
+}
+
+.media {
+    border-radius: $plain-ui__border-radius;
+    border: $plain-ui__border;
+    width: 100%;
+    height: auto;
 }

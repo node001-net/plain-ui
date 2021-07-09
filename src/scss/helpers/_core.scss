@@ -6,110 +6,36 @@
  */
 
 .border {
-    border: $plain-ui__border !important;
+    border: $plain-ui__border;
 }
 
 .border-round {
     border-radius: $plain-ui__border-radius;
 }
 
-.borderless {
-    border: 0 !important;
+.border-0 {
+    border: 0;
 }
 
-.radiusless {
-    border-radius: 0 !important;
+.radius-0 {
+    border-radius: 0;
 }
 
-    /**
-     *  z-index
-     *
-     *
-     */
-
-    $plain-ui__z-index: 10;
-
-    @for $i from 1 through $plain-ui__z-index {
-        .z-index-#{$i} {
-            z-index: $i;
-        }
-    }
-
-    /**
-     *
-     *
-     */
-
-    .round {
-        border-radius: 50%;
-    }
-
-    /**
-     * typography
-     *
-     *
-     */
-
-    .left {
-        text-align: left !important;
-    }
-
-    .right {
-        text-align: right !important;
-    }
-
-    .center {
-        text-align: center !important;
-    }
-
-    .justify {
-        text-align: justify !important;
-    }
-
-    .uppercase {
-        text-transform: uppercase !important;
-    }
-
-    .lowercase {
-        text-transform: lowercase !important;
-    }
-
-    .crossed {
-        text-decoration: line-through !important;
-    }
-
-    .underline {
-        text-decoration: underline !important;
-    }
-
-    .capitalize {
-        text-transform: capitalize !important;
-    }
-
-    .italic {
-        font-style: italic !important;
-    }
-
-    .light {
-        font-weight: lighter !important;
-    }
-
-    .normal {
-        font-weight: normal !important;
-    }
-
-    .medium {
-        font-weight: medium !important;
-    }
-
-.bold {
-    font-weight: bolder !important;
+.round {
+    border-radius: 50%;
 }
 
-@each $name, $font-size in $plain-ui__font-sizes {
-    .t-size-#{$name} {
-        font-size: $font-size !important;
-        //@include plain-ui__breakpoints-font-size($plain-ui__font-size-breakpoints, $font-size, getDefault($plain-ui__font-sizes), true);
+/**
+ *  z-index
+ *
+ *
+ */
+
+$plain-ui__z-index: 20;
+
+@for $i from 1 through $plain-ui__z-index {
+    .z-index-#{$i} {
+        z-index: $i;
     }
 }
 
@@ -173,10 +99,6 @@
 
 .vertical-align-baseline {
     vertical-align: baseline;
-}
-
-.marginless {
-    margin: 0 !important;
 }
 
 /**

@@ -154,6 +154,18 @@
     }
 }
 
+@mixin media-breakpoints($property, $breakpoints, $important: false) {
+    @each $breakpoint, $value in $breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            @if $important == false {
+                #{$property}: $value;
+            } @else {
+                #{$property}: $value !important;
+            }
+        }
+    }
+}
+
 
 /**
  *  Set property and his value with an factor for each Breakpoint

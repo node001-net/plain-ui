@@ -5,7 +5,7 @@
  *
  *  @author Björn Hase, Tentakelfabrik
  *  @license http://opensource.org/licenses/MIT The MIT License
- *  @link https://github.com/tentakelfabrik/crispy-css
+ *  @link https://github.com/tentakelfabrik/plain-ui
  *
  */
 
@@ -16,16 +16,15 @@
     color: var(--white);
 
     font-size: 0.85rem;
-    padding: 0.4em 0.8em;
+    padding: 0.4rem 0.8rem;
 
     @extend .border;
-    @extend .border-round;
 
     &--round {
         display: inline-flex;
         justify-content: center;
 
         border-radius: 50%;
-        width: 2.5em;
+        width: 2.8em;
     }
 }

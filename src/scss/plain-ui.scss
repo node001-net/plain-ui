@@ -29,9 +29,9 @@
     'helpers/core',
     'helpers/sizing',
     'helpers/spacing',
-    'helpers/colors';
+    'helpers/colors',
+    'helpers/typography';
 
-@include plain-ui__component__media();
 @include plain-ui__component__table();
 @include plain-ui__component__slider();
 @include plain-ui__component__tabs();

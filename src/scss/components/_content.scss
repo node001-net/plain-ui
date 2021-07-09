@@ -13,7 +13,7 @@
     // paragraphs
     p {
         margin: $plain-ui__margin;
-        //@include crispy__media-breakpoints('margin', $plain-ui__margin-breakpoints);
+        @include media-breakpoints('margin', $plain-ui__margin-breakpoints);
     }
 
     // Semantic text elements
@@ -88,7 +88,7 @@
     ul {
         padding: 0;
         margin: $plain-ui__margin;
-        //@include crispy__media-breakpoints('margin', $plain-ui__margin-breakpoints);
+        @include media-breakpoints('margin', $plain-ui__margin-breakpoints);
     }
 
     ol,

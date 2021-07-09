@@ -8,7 +8,9 @@
  *      </div>
  *  </div>
  *
- *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://gitea.com/tentakelfabrik/plain-ui
  *
  */
 
@@ -16,8 +18,8 @@
     display: flex;
 
     min-height: 2.8em;
-    background-color: $plain-ui__primary-light;
-    color: var(--white);
+    background-color: var(--primary);
+    color: var(--text-secondary);
 
     .icon {
         font-size: 1.5rem;

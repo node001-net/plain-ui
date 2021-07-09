@@ -5,7 +5,7 @@
  *
  *  @author Björn Hase, Tentakelfabrik
  *  @license http://opensource.org/licenses/MIT The MIT License
- *  @link https://github.com/tentakelfabrik/crispy-css
+ *  @link https://github.com/tentakelfabrik/plain-ui
  *
  */
 
@@ -34,7 +34,7 @@ body {
     direction: $plain-ui__direction;
 
     font-size: $plain-ui__font-size;
-    //@include crispy__media-breakpoints('line-height', $crispy__line-height__breakpoints);
+    @include media-breakpoints('font-size', $plain-ui__font-size-breakpoints);
 
     line-height: $plain-ui__line-height;
     //@include crispy__media-breakpoints('font-size', $crispy__font-size-breakpoints);
@@ -43,6 +43,7 @@ body {
 a {
     color: var(--link);
     transition: color 0.5s;
+    text-decoration: none;
 
     &:hover {
         color: var(--link-hover);
@@ -69,10 +70,14 @@ table {
 }
 
 figure {
-    margin: $plain-ui__margin;
+    margin: 0;
 }
 
 figcaption {
+    margin: 0;
+}
+
+p {
     margin: 0;
 }
 

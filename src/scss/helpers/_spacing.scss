@@ -11,8 +11,24 @@ $plain-ui__spacing-steps: 10 !default;
 /**
  *
  *
+ *
  */
-@mixin spacing($class, $style, $direction, $name, $value, $breakpoints: 0)
+
+.marginless {
+    margin: 0;
+}
+
+.paddingless {
+    padding: 0;
+}
+
+
+/**
+ *  spacing for single padding or margin
+ *
+ *
+ */
+@mixin spacing($class, $style, $direction, $name, $value)
 {
     .#{$class}-#{$direction}-#{$name} {
         #{$style}-#{$direction}: $value;

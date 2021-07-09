@@ -1,0 +1,92 @@
+/**
+ *  typography
+ *
+ *
+ */
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.light {
+    font-weight: lighter;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.medium {
+    font-weight: medium;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+@mixin add_font_size($name, $font-size) {
+    .size-#{$name} {
+        font-size: $font-size;
+    }
+}
+
+@each $name, $font-size in $plain-ui__font-sizes {
+    @include add_font_size($name, $font-size);
+
+    @include plain-ui__media-xs() {
+        @include add_font_size('xs-' + $name, $font-size);
+    }
+
+    @include plain-ui__media-sm() {
+        @include add_font_size('sm-' + $name, $font-size);
+    }
+
+    @include plain-ui__media-md() {
+        @include add_font_size('md-' + $name, $font-size);
+    }
+
+    @include plain-ui__media-lg() {
+        @include add_font_size('lg-' + $name, $font-size);
+    }
+
+    @include plain-ui__media-xlg() {
+        @include add_font_size('xlg-' + $name, $font-size);
+    }
+}
+

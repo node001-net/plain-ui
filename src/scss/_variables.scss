@@ -92,7 +92,9 @@ $plain-ui__colors: (
     --black: #212121;
     --text: #{$plain-ui__text};
     --text-secondary: #{$plain-ui__text-secondary};
-    --background: #{$plain-ui__background};
+    --background: #{$plain-ui__primary};
+    --background--contrast: #{$plain-ui__primary};
+    --body: #{$plain-ui__body};
     --border: #{$plain-ui__border};
 }
 
@@ -111,9 +113,9 @@ $plain-ui__margin-breakpoints: (
  *
  */
 
-$plain-ui__padding: 0.5rem 1rem !default;
+$plain-ui__padding: 0.4rem 0.8rem !default;
 $plain-ui__padding-breakpoints: (
-    $plain-ui__md: 0.25rem 0.75rem
+    $plain-ui__md: 0.6rem 1rem
 ) !default;
 
 /**

@@ -7,7 +7,6 @@
     <title>Plain UI | Lightweight CSS UI Framework for Building Apps and Websites</title>
     <meta name="description" content="Lightweight UI Framework for building fast and clean Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
     <link rel="stylesheet" href="plain-ui.css">
 </head>
 
@@ -28,10 +27,10 @@
             <div class="col-12">
                 <nav>
                     <div class="tabs">
-                        <a href="index.html" class="tabs__item tabs__item--selected">
+                        <a href="index.html" class="tabs__item">
                             Basics
                         </a>
-                        <a href="components.html" class="tabs__item">
+                        <a href="components.html" class="tabs__item tabs__item--selected">
                             Components
                         </a>
                         <a href="layout.html" class="tabs__item">
@@ -47,63 +46,20 @@
     </div>
 
     <div class="container">
-        <div class="grid justify-center">
+        <div class="grid">
             <div class="col-6">
                 <div class="content">
                     <p>
-                        <span class="bold">Plain UI</span> is a simple UI Framework.
-
-
-                        It uses strong Utility Classes and has a few Components.
-                    </p>
+                        Some Text
                     <p>
-                        Some ideas of this are based Work from the last 10 Years. But also Ideas from Frameworks TailwindCSS.
-                    </p>
-                    <h3 class="h4 highlight">
-                        Contribution
-                    </h3>
-                    <ul>
-                        <li>TailwindCSS that have thought me a few new Ideas to handle Helper-Classes</li>
-                        <li>TailwindCSS for showing new ideas and concepts to handle handle Helper-Classes</li>
-                    </ul>
-                </div>
-                <div class="center">
-                    <a href="#">
-                        <svg class="icon fill-success" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-github"></use>
-                        </svg>
-                    </a>
-                    <a href="https://gitea.tentakelfabrik.de/">
-                        <svg class="icon fill-success" aria-hidden="true">
-                            <use xlink:href="symbol-defs.svg#icon-gitea"></use>
-                        </svg>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2 class="m-bottom-2 h-contrast">Heading</h2>
-
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <div class="grid">
             <div class="col-12">
                 <h2 class="m-bottom-2">Components</h2>
-                <hr>
-
                 <h3>Buttons</h3>
                 <button class="button">
                     Default
@@ -271,7 +227,7 @@
             <div class="col-12">
                 <h2>Modal</h2>
                 <button class="button" onclick="openModal()">
-                    Open
+                    Click me!
                 </button>
                 <script type="text/javascript">
                     function openModal() {

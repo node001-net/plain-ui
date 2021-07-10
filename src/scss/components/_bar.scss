@@ -21,9 +21,7 @@
     background-color: var(--primary);
     color: var(--text-secondary);
 
-    .icon {
-        font-size: 1.5rem;
-    }
+    border-radius: $plain-ui__border-radius;
 
     &__start {
         justify-content: start;
@@ -44,12 +42,6 @@
 
         &:last-child {
             margin-right: 0.75em;
-        }
-    }
-
-    .button {
-        &:active, &:focus {
-            outline: none;
         }
     }
 }

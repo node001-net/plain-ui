@@ -1849,10 +1849,14 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+  display: table;
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  margin: 0 0 1rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--primary);
+  color: var(--text-secondary);
+  margin: 0 0 1.2rem;
 }
 @media only screen and (min-width: 992px) {
   h1, .h1,
@@ -1861,24 +1865,16 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    margin: 0 0 0.8rem;
+    margin: 0 0 1.4rem;
   }
 }
 
-h5 {
-  line-height: 1.4;
-}
-
-h6 {
-  line-height: 1.618;
-}
-
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 @media only screen and (min-width: 992px) {
   h1, .h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -1892,38 +1888,38 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
 }
 @media only screen and (min-width: 992px) {
   h3, .h3 {
-    font-size: 2.1rem;
+    font-size: 2.16rem;
   }
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 @media only screen and (min-width: 992px) {
   h4, .h4 {
-    font-size: 1.8rem;
+    font-size: 1.92rem;
   }
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 @media only screen and (min-width: 992px) {
   h5, .h5 {
-    font-size: 1.5rem;
+    font-size: 1.68rem;
   }
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 @media only screen and (min-width: 992px) {
   h6, .h6 {
-    font-size: 1.2rem;
+    font-size: 1.44rem;
   }
 }
 
@@ -2020,7 +2016,7 @@ h6, .h6 {
 .content blockquote {
   border-left: 1px solid var(--primary);
   margin-left: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
 }
 .content blockquote p:last-child {
   margin-bottom: 0;
@@ -2105,6 +2101,7 @@ h6, .h6 {
   padding: 0;
   border: none;
   background: transparent;
+  border-radius: 0;
 }
 .button--transparent:focus, .button--transparent:active {
   outline: none;
@@ -2414,9 +2411,7 @@ svg.field-choice__checked {
   min-height: 2.8em;
   background-color: var(--primary);
   color: var(--text-secondary);
-}
-.bar .icon {
-  font-size: 1.5rem;
+  border-radius: 2px;
 }
 .bar__start {
   justify-content: start;
@@ -2434,9 +2429,6 @@ svg.field-choice__checked {
 }
 .bar__start:last-child, .bar__main:last-child, .bar__end:last-child {
   margin-right: 0.75em;
-}
-.bar .button:active, .bar .button:focus {
-  outline: none;
 }
 
 /**
@@ -7530,6 +7522,7 @@ svg.field-choice__checked {
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-bottom: 1px solid var(--primary);
 }
 @media only screen and (min-width: 768px) {
   .tabs {
@@ -7542,28 +7535,26 @@ svg.field-choice__checked {
   display: flex;
   align-items: center;
   padding: 0 1em;
-  background-color: white;
-  transition: background-color 0.1s;
-  background-color: white;
   color: var(--text);
-  border: 1px solid var(--primary);
-  border-bottom-width: 0;
+  transition: background-color 0.1s;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .tabs__item {
     width: auto;
     display: inline-flex;
-    border-right-width: 0;
-    border-bottom-width: 1px;
   }
 }
-.tabs__item:hover, .tabs__item--selected {
+.tabs__item:hover {
   cursor: pointer;
   background-color: var(--primary-active);
-  color: white;
-  border-color: var(--primary-active);
+  color: var(--text-secondary);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
-.tabs__item:last-child {
-  border-bottom-width: 1px;
+.tabs__item--selected {
+  color: var(--text);
+  border-color: var(--primary);
 }

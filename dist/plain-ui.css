@@ -1876,6 +1876,9 @@ samp {
   -webkit-text-decoration-skip: ink edges;
           text-decoration-skip: ink edges;
 }
+.content a {
+  text-decoration: underline;
+}
 .content b,
 .content strong {
   font-weight: bolder;

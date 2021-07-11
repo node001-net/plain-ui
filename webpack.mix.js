@@ -39,3 +39,9 @@ mix.webpackConfig({
 mix
     .sass('src/scss/plain-ui.scss', 'dist/plain-ui.css')
     .copy('src/fonts/*', 'dist/fonts')
+    .options({
+        terser: {
+            extractComments: false,
+        },
+        processCssUrls: false
+    })

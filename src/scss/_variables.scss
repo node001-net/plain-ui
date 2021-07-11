@@ -56,8 +56,9 @@ $plain-ui__line-height__breakpoints: (
  */
 
 $plain-ui__primary: #3e3e3e !default;
+$plain-ui__primary-secondary: #ffffff !default;
+
 $plain-ui__primary-active: lighten($plain-ui__primary, 20%) !default;
-$plain-ui__primary-active-secondary: #ffffff !default;
 $plain-ui__secondary: #b3b2af !default;
 
 $plain-ui__success: #64ac64 !default;
@@ -69,14 +70,15 @@ $plain-ui__danger-light: lighten($plain-ui__danger, 20%) !default;
 $plain-ui__info: #0090d4 !default;
 $plain-ui__info-light: lighten($plain-ui__info, 20%) !default;
 
-$plain-ui__background: #f9f9f9 !default;
-$plain-ui__background--secondary: #ffffff !default;
 $plain-ui__body: #f9f9f9 !default;
 $plain-ui__text: #363636 !default;
 $plain-ui__text-secondary: #ffffff !default;
+$plain-ui__background: #f9f9f9 !default;
+$plain-ui__background--secondary: #ffffff !default;
 $plain-ui__border: $plain-ui__primary !default;
 $plain-ui__border-secondary: #ffffff !default;
-$plain-ui__link: #fff !default;
+$plain-ui__link: $plain-ui__text !default;
+$plain-ui__link-hover: $plain-ui__danger !default;
 
 $plain-ui__colors: (
     'primary' : --primary,
@@ -85,21 +87,28 @@ $plain-ui__colors: (
 ) !default;
 
 :root {
-    --primary: #{$plain-ui__primary};
-    --primary-active: #{$plain-ui__primary-active};
-    --primary-active-secondary: #{$plain-ui__primary-active-secondary};
-    --link: #{$plain-ui__primary};
-    --link-hover: #{$plain-ui__danger};
-    --danger: #{$plain-ui__danger};
-    --danger-light: #{$plain-ui__danger};
-    --success: #{$plain-ui__success};
-    --white: #ffffff;
-    --black: #212121;
+    --body: #{$plain-ui__body};
     --text: #{$plain-ui__text};
     --text-secondary: #{$plain-ui__text-secondary};
+    --primary: #{$plain-ui__primary};
+    --primary-secondary: #{$plain-ui__primary-secondary};
+    --active: #{$plain-ui__active};
+    --active-secondary: #{$plain-ui__active-secondary};
+    --link: #{$plain-ui__link};
+    --link-hover: #{$plain-ui__link-hover};
+    --danger: #{$plain-ui__danger};
+    --danger-activ: #{$plain-ui__danger-activ};
+    --danger-secondary: #{$plain-ui__danger-secondary};
+    --info: #{$plain-ui__danger};
+    --info-activ: #{$plain-ui__danger-activ};
+    --info-secondary: #{$plain-ui__danger-secondary};
+    --success: #{$plain-ui__success};
+    --success-activ: #{$plain-ui__success-activ};
+    --success-secondary: #{$plain-ui__success-secondary};
+    --white: #ffffff;
+    --black: #212121;
     --background: #{$plain-ui__primary};
     --background-secondary: #{$plain-ui__border-secondary};
-    --body: #{$plain-ui__body};
     --border: #{$plain-ui__border};
     --border-secondary: #{$plain-ui__border-secondary};
 }

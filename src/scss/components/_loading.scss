@@ -1,6 +1,9 @@
 /**
  *
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui
  *
  */
 
@@ -17,7 +20,7 @@
         width: 15px;
         height: 80px;
 
-        background-color: var(--primary);
+        background-color: var(--background);
 
         animation-name: plain-ui__loading-animation;
         animation-duration: 0.5s;
@@ -25,8 +28,8 @@
 
         animation-delay: 0.15s;
 
-        border-top: 1px solid var(--primary-dark);
-        border-bottom: 1px solid var(--primary-dark);
+        border-top: 1px solid var(--background);
+        border-bottom: 1px solid var(--background);
 
         &:first-child {
             margin-right: 1px;

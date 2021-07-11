@@ -1616,6 +1616,7 @@
 :root {
   --primary: #3e3e3e;
   --primary-active: #717171;
+  --primary-active-secondary: #ffffff;
   --link: #3e3e3e;
   --link-hover: #d95959;
   --danger: #d95959;
@@ -1625,8 +1626,11 @@
   --black: #212121;
   --text: #363636;
   --text-secondary: #ffffff;
-  --background: #f9f9f9;
-  --border: #dfdfdf;
+  --background: #3e3e3e;
+  --background-secondary: #ffffff;
+  --body: #f9f9f9;
+  --border: #3e3e3e;
+  --border-secondary: #ffffff;
 }
 
 /**
@@ -1680,7 +1684,7 @@ legend {
 body {
   font-family: "IBM Plex Mono", sans-serif;
   color: var(--text);
-  background-color: var(--background);
+  background-color: var(--body);
   direction: ltr;
   font-size: 1rem;
   line-height: 1.618;
@@ -1843,19 +1847,156 @@ samp {
  *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
+.content {
+  /**
+   *  Prevent `sub` and `sup` elements from affecting the line height in
+   *  all browsers.
+   */
+  /**
+   *  blockquote
+   *
+   *
+   */
+  /**
+   *  lists
+   *
+   */
+}
+.content p {
+  margin: 0 0 1rem;
+}
+@media only screen and (min-width: 992px) {
+  .content p {
+    margin: 0 0 0.8rem;
+  }
+}
+.content a,
+.content ins,
+.content u {
+  -webkit-text-decoration-skip: ink edges;
+          text-decoration-skip: ink edges;
+}
+.content b,
+.content strong {
+  font-weight: bolder;
+}
+.content small {
+  font-size: 80%;
+}
+.content sub,
+.content sup {
+  font-size: 70%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.content sub {
+  bottom: -0.25em;
+}
+.content sup {
+  top: -0.5em;
+}
+.content abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+.content mark {
+  padding: 0.25em;
+}
+.content blockquote {
+  border-left: 1px solid var(--primary);
+  margin-left: 0;
+  padding: 0.6rem 0.8rem;
+}
+.content blockquote p:last-child {
+  margin-bottom: 0;
+}
+.content dl,
+.content ol,
+.content ul {
+  padding: 0;
+  margin: 0 0 1rem;
+}
+@media only screen and (min-width: 992px) {
+  .content dl,
+.content ol,
+.content ul {
+    margin: 0 0 0.8rem;
+  }
+}
+.content ol,
+.content ul {
+  margin-left: 1.5em;
+}
+.content ol ol,
+.content ul ul {
+  margin-top: 0;
+  margin-left: 1em;
+}
+.content ol {
+  list-style: decimal outside;
+}
+.content ul {
+  list-style: disc outside;
+}
+.content dl {
+  margin-left: 0.5em;
+}
+.content dd,
+.content dt {
+  margin: 0;
+}
+.content dt {
+  font-weight: bold;
+}
+.content code {
+  white-space: pre;
+  display: block;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border: 1px solid var(--primary);
+  border-radius: 2px;
+  background-color: var(--background-secondary);
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.8rem;
+}
+@media only screen and (min-width: 992px) {
+  .content code {
+    margin: 0 0 0.8rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .content code {
+    padding: 0.8rem 1rem;
+  }
+}
+
+.highlight {
+  padding: 0.15rem 0.4rem 0.25rem;
+  background: var(--primary);
+  color: var(--text-secondary);
+  border-radius: 2px;
+}
+
+/**
+ *  Heading
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/crispy-css
+ *
+ */
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  display: table;
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  padding: 0.25rem 0.5rem;
-  background: var(--primary);
-  color: var(--text-secondary);
   margin: 0 0 1.2rem;
 }
 @media only screen and (min-width: 992px) {
@@ -1867,6 +2008,14 @@ h5, .h5,
 h6, .h6 {
     margin: 0 0 1.4rem;
   }
+}
+h1.highlight, .h1.highlight,
+h2.highlight, .h2.highlight,
+h3.highlight, .h3.highlight,
+h4.highlight, .h4.highlight,
+h5.highlight, .h5.highlight,
+h6.highlight, .h6.highlight {
+  display: table;
 }
 
 h1, .h1 {
@@ -1935,129 +2084,18 @@ h6, .h6 {
  */
 .badge {
   display: inline-block;
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--background);
+  color: var(--text-secondary);
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
+  border: 1px solid var(--primary);
+  border-radius: 2px;
 }
 .badge--round {
   display: inline-flex;
   justify-content: center;
   border-radius: 50%;
   width: 2.8em;
-}
-
-/**
- *  Heading
- *
- *
- *  @author Björn Hase, Tentakelfabrik
- *  @license http://opensource.org/licenses/MIT The MIT License
- *  @link https://github.com/tentakelfabrik/crispy-css
- *
- */
-.content {
-  /**
-   *  Prevent `sub` and `sup` elements from affecting the line height in
-   *  all browsers.
-   */
-  /**
-   *  blockquote
-   *
-   *
-   */
-  /**
-   *  lists
-   *
-   */
-}
-.content p {
-  margin: 0 0 1rem;
-}
-@media only screen and (min-width: 992px) {
-  .content p {
-    margin: 0 0 0.8rem;
-  }
-}
-.content a,
-.content ins,
-.content u {
-  -webkit-text-decoration-skip: ink edges;
-          text-decoration-skip: ink edges;
-}
-.content b,
-.content strong {
-  font-weight: bolder;
-}
-.content small {
-  font-size: 80%;
-}
-.content sub,
-.content sup {
-  font-size: 70%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-.content sub {
-  bottom: -0.25em;
-}
-.content sup {
-  top: -0.5em;
-}
-.content abbr[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-  text-decoration: none;
-}
-.content mark {
-  padding: 0.25em;
-}
-.content blockquote {
-  border-left: 1px solid var(--primary);
-  margin-left: 0;
-  padding: 0.4rem 0.8rem;
-}
-.content blockquote p:last-child {
-  margin-bottom: 0;
-}
-.content dl,
-.content ol,
-.content ul {
-  padding: 0;
-  margin: 0 0 1rem;
-}
-@media only screen and (min-width: 992px) {
-  .content dl,
-.content ol,
-.content ul {
-    margin: 0 0 0.8rem;
-  }
-}
-.content ol,
-.content ul {
-  margin-left: 1.5em;
-}
-.content ol ol,
-.content ul ul {
-  margin-top: 0;
-  margin-left: 1em;
-}
-.content ol {
-  list-style: decimal outside;
-}
-.content ul {
-  list-style: disc outside;
-}
-.content dl {
-  margin-left: 0.5em;
-}
-.content dd,
-.content dt {
-  margin: 0;
-}
-.content dt {
-  font-weight: bold;
 }
 
 /**
@@ -2290,9 +2328,11 @@ svg.field-choice__checked {
 }
 
 /**
+ *  
  *
- *
- *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui
  *
  */
 .icon {
@@ -2311,6 +2351,10 @@ svg.field-choice__checked {
  *      <img src="image.png" alt="image" />
  *  </div>
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui
+ *
  */
 .hero {
   position: relative;
@@ -2328,18 +2372,81 @@ svg.field-choice__checked {
  *
  *
  */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid var(--primary);
+}
+@media only screen and (min-width: 768px) {
+  .tabs {
+    width: auto;
+    flex-direction: row;
+  }
+}
+.tabs__item {
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  color: var(--text);
+  transition: background-color 0.1s;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .tabs__item {
+    width: auto;
+    display: inline-flex;
+  }
+}
+.tabs__item:hover {
+  cursor: pointer;
+  background-color: var(--primary-active);
+  color: var(--text-secondary);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.tabs__item--selected {
+  color: var(--text);
+  border-color: var(--border);
+}
+.tabs--secondary {
+  border: 0;
+}
+.tabs--secondary .tabs__item {
+  color: var(--text-secondary);
+}
+.tabs--secondary .tabs__item:hover {
+  background-color: var(--primary-active-secondary);
+  color: var(--text);
+  border-radius: 0;
+}
+.tabs--secondary .tabs__item--selected {
+  border-color: var(--border-secondary);
+}
+
 /**
  *
  *
  *
  */
 .panel {
-  border: 1px solid var(--primary);
+  border: 1px solid var(--border);
   border-radius: 2px;
-  background-color: var(--white);
+  background-color: var(--background-secondary);
 }
 .panel__body {
-  padding: 0.25em 1em;
+  padding: 0.6rem 0.8rem;
+}
+@media only screen and (min-width: 992px) {
+  .panel__body {
+    padding: 0.8rem 1rem;
+  }
+}
+.panel--border-highlight {
+  border-left-width: 10px;
 }
 
 /**
@@ -2383,6 +2490,37 @@ svg.field-choice__checked {
  *
  *
  */
+.table {
+  width: 100%;
+  border: 1px solid #cacaca;
+  background: var(--white);
+}
+.table--striped tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+.table--scroll {
+  overflow-x: auto;
+}
+.table td {
+  color: var(--text);
+}
+.table td,
+.table th {
+  text-align: left;
+  border-bottom: 1px solid #cacaca;
+  padding: 0.5em 1.25em;
+}
+.table th {
+  color: white;
+  background-color: #3e3e3e;
+}
+.table tr:hover {
+  background-color: #585858;
+}
+.table tr:hover td {
+  color: white;
+}
+
 /**
  *  <div class="slider">
  *      <div class="slider__inner">
@@ -2391,6 +2529,21 @@ svg.field-choice__checked {
  *  </div>
  *
  */
+.slider {
+  position: relative;
+  overflow-x: visible;
+}
+.slider__inner {
+  display: flex;
+  white-space: nowrap;
+}
+.slider__item {
+  padding: 0 0.6em;
+  display: inline-block;
+  white-space: normal;
+  flex-shrink: 0;
+}
+
 /**
  *  <div class="bar">
  *      <div class="bar__start">
@@ -2411,6 +2564,7 @@ svg.field-choice__checked {
   min-height: 2.8em;
   background-color: var(--primary);
   color: var(--text-secondary);
+  border: 1px solid var(--primary);
   border-radius: 2px;
 }
 .bar__start {
@@ -2505,6 +2659,9 @@ svg.field-choice__checked {
 /**
  *
  *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui
  *
  */
 .loading {
@@ -2518,7 +2675,7 @@ svg.field-choice__checked {
   display: block;
   width: 15px;
   height: 80px;
-  background-color: var(--primary);
+  background-color: var(--background);
   -webkit-animation-name: plain-ui__loading-animation;
           animation-name: plain-ui__loading-animation;
   -webkit-animation-duration: 0.5s;
@@ -2527,8 +2684,8 @@ svg.field-choice__checked {
           animation-iteration-count: infinite;
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
-  border-top: 1px solid var(--primary-dark);
-  border-bottom: 1px solid var(--primary-dark);
+  border-top: 1px solid var(--background);
+  border-bottom: 1px solid var(--background);
 }
 .loading span:first-child {
   margin-right: 1px;
@@ -4096,7 +4253,7 @@ svg.field-choice__checked {
  *
  *
  */
-.border, .badge {
+.border {
   border: 1px solid var(--primary);
 }
 
@@ -4820,6 +4977,10 @@ svg.field-choice__checked {
 
 .paddingless {
   padding: 0;
+}
+
+.marginless-last-child > *:last-child {
+  margin-bottom: 0;
 }
 
 /**
@@ -7471,90 +7632,4 @@ svg.field-choice__checked {
   .size-xlg-big {
     font-size: 3rem;
   }
-}
-.table {
-  width: 100%;
-  border: 1px solid #cacaca;
-  background: var(--white);
-}
-.table--striped tr:nth-child(even) {
-  background-color: #fdfdfd;
-}
-.table--scroll {
-  overflow-x: auto;
-}
-.table td {
-  color: var(--text);
-}
-.table td,
-.table th {
-  text-align: left;
-  border-bottom: 1px solid #cacaca;
-  padding: 0.5em 1.25em;
-}
-.table th {
-  color: white;
-  background-color: #3e3e3e;
-}
-.table tr:hover {
-  background-color: #585858;
-}
-.table tr:hover td {
-  color: white;
-}
-
-.slider {
-  position: relative;
-  overflow-x: visible;
-}
-.slider__inner {
-  display: flex;
-  white-space: nowrap;
-}
-.slider__item {
-  padding: 0 0.6em;
-  display: inline-block;
-  white-space: normal;
-  flex-shrink: 0;
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-bottom: 1px solid var(--primary);
-}
-@media only screen and (min-width: 768px) {
-  .tabs {
-    width: auto;
-    flex-direction: row;
-  }
-}
-.tabs__item {
-  min-height: 2.8em;
-  display: flex;
-  align-items: center;
-  padding: 0 1em;
-  color: var(--text);
-  transition: background-color 0.1s;
-  border-bottom: 3px solid transparent;
-  background-color: transparent;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .tabs__item {
-    width: auto;
-    display: inline-flex;
-  }
-}
-.tabs__item:hover {
-  cursor: pointer;
-  background-color: var(--primary-active);
-  color: var(--text-secondary);
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.tabs__item--selected {
-  color: var(--text);
-  border-color: var(--primary);
 }

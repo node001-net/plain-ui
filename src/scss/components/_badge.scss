@@ -12,13 +12,14 @@
 .badge {
     display: inline-block;
 
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--background);
+    color: var(--text-secondary);
 
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
 
-    @extend .border;
+    border: $plain-ui__border;
+    border-radius: $plain-ui__border-radius;
 
     &--round {
         display: inline-flex;

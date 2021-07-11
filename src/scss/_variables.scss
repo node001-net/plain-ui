@@ -57,6 +57,7 @@ $plain-ui__line-height__breakpoints: (
 
 $plain-ui__primary: #3e3e3e !default;
 $plain-ui__primary-active: lighten($plain-ui__primary, 20%) !default;
+$plain-ui__primary-active-secondary: #ffffff !default;
 $plain-ui__secondary: #b3b2af !default;
 
 $plain-ui__success: #64ac64 !default;
@@ -69,9 +70,12 @@ $plain-ui__info: #0090d4 !default;
 $plain-ui__info-light: lighten($plain-ui__info, 20%) !default;
 
 $plain-ui__background: #f9f9f9 !default;
+$plain-ui__background--secondary: #ffffff !default;
+$plain-ui__body: #f9f9f9 !default;
 $plain-ui__text: #363636 !default;
 $plain-ui__text-secondary: #ffffff !default;
-$plain-ui__border: #dfdfdf !default;
+$plain-ui__border: $plain-ui__primary !default;
+$plain-ui__border-secondary: #ffffff !default;
 $plain-ui__link: #fff !default;
 
 $plain-ui__colors: (
@@ -83,6 +87,7 @@ $plain-ui__colors: (
 :root {
     --primary: #{$plain-ui__primary};
     --primary-active: #{$plain-ui__primary-active};
+    --primary-active-secondary: #{$plain-ui__primary-active-secondary};
     --link: #{$plain-ui__primary};
     --link-hover: #{$plain-ui__danger};
     --danger: #{$plain-ui__danger};
@@ -93,9 +98,10 @@ $plain-ui__colors: (
     --text: #{$plain-ui__text};
     --text-secondary: #{$plain-ui__text-secondary};
     --background: #{$plain-ui__primary};
-    --background--contrast: #{$plain-ui__primary};
+    --background-secondary: #{$plain-ui__border-secondary};
     --body: #{$plain-ui__body};
     --border: #{$plain-ui__border};
+    --border-secondary: #{$plain-ui__border-secondary};
 }
 
 /**
@@ -113,9 +119,9 @@ $plain-ui__margin-breakpoints: (
  *
  */
 
-$plain-ui__padding: 0.4rem 0.8rem !default;
+$plain-ui__padding: 0.6rem 0.8rem !default;
 $plain-ui__padding-breakpoints: (
-    $plain-ui__md: 0.6rem 1rem
+    $plain-ui__md: 0.8rem 1rem
 ) !default;
 
 /**

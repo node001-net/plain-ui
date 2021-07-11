@@ -22,6 +22,12 @@ $plain-ui__spacing-steps: 10 !default;
     padding: 0;
 }
 
+.marginless-last-child {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
 
 /**
  *  spacing for single padding or margin

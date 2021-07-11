@@ -21,6 +21,7 @@
     background-color: var(--primary);
     color: var(--text-secondary);
 
+    border: $plain-ui__border;
     border-radius: $plain-ui__border-radius;
 
     &__start {

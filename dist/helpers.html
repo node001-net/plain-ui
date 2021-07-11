@@ -4,12 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>
-        Plain UI | Lightweight CSS UI Framework for Building Apps and Websites
-    </title>
+    <title>Plain UI | Lightweight CSS UI Framework for Building Apps and Websites</title>
     <meta name="description" content="Lightweight UI Framework for building fast and clean Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
     <link rel="stylesheet" href="plain-ui.css">
 </head>
 
@@ -62,10 +59,8 @@
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2>Components</h2>
-
+                <h2 class="m-bottom-2">Components</h2>
                 <h3>Buttons</h3>
-
                 <button class="button">
                     Default
                 </button>
@@ -102,24 +97,6 @@
 
         <div class="grid">
             <div class="col-12">
-                <h2>Icon</h2>
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-check"></use>
-                </svg>
-                <svg class="icon icon--danger" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-camera"></use>
-                </svg>
-                <svg class="icon icon--success" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-clock"></use>
-                </svg>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h3>
-                    Bar
-                </h3>
                 <div class="bar">
                     <div class="bar__start">
                         <button class="button button--transparent">
@@ -137,9 +114,6 @@
 
         <div class="grid">
             <div class="col-12">
-                <h3>
-                    Tabs
-                </h3>
                 <div class="tabs">
                     <a class="tabs__item tabs__item--selected">
                         Tab A
@@ -156,23 +130,30 @@
 
         <div class="grid">
             <div class="col-12">
-                <h3>
-                    Tabs + Bar
-                </h3>
-                <div class="bar">
-                    <div class="bar__start marginless">
-                        <div class="tabs tabs--secondary">
-                            <a class="tabs__item tabs__item--selected">
-                                Tab A
-                            </a>
-                            <a class="tabs__item">
-                                Tab B
-                            </a>
-                            <a class="tabs__item">
-                                Tab C
-                            </a>
-                        </div>
-                    </div>
+                <h2>Icon</h2>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-check"></use>
+                </svg>
+                <svg class="icon icon--danger" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-camera"></use>
+                </svg>
+                <svg class="icon icon--success" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-clock"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <h2>Content</h2>
+                <div class="content">
+                    <p>
+                    </p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -204,7 +185,9 @@
 
         <div class="grid">
             <div class="col-12">
+
                 <h2>Panel</h2>
+
                 <div class="panel">
                     <div class="bar">
                         <div class="bar__start">
@@ -236,6 +219,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -405,22 +389,21 @@
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2>
-                    Hero
-                </h2>
-                <div class="hero">
-                    <img style="max-height: 400px;" src="/image.jpg" />
-                </div>
+                <h2 class="">Hero</h2>
             </div>
         </div>
+    </div>
+
+    <div class="hero">
+        <img style="max-height: 400px;" src="/image.jpg" />
     </div>
 
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2>
-                    Media
-                </h2>
+                <h2 class="">Media</h2>
+            </div>
+            <div class="col-12">
                 <figure class="figure">
                     <img class="media" src="/image.jpg" />
                     <figcaption class="figure__caption">
@@ -433,6 +416,9 @@
 
     <div class="container">
         <div class="grid">
+            <div class="col-12">
+                <h2>Layout</h2>
+            </div>
             <div class="col-12">
                 <h2>Slider</h3>
             </div>
@@ -484,5 +470,31 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2>Masonry</h3>
+                <div class="masonry">
+                    <figure class="masonry__item marginless">
+                        <img class="media object-fit-cover h-100" src="/image.jpg" />
+                    </figure>
+                    <figure class="masonry__item marginless">
+                        <img class="media object-fit-cover h-100" src="/image.jpg" />
+                    </figure>
+                    <figure class="masonry__item marginless">
+                        <img class="media object-fit-cover h-100" src="/image.jpg" />
+                    </figure>
+                    <figure class="masonry__item marginless">
+                        <img class="media object-fit-cover h-100" src="/image.jpg" />
+                    </figure>
+                    <figure class="masonry__item marginless">
+                        <img class="media object-fit-cover h-100" src="/image.jpg" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html

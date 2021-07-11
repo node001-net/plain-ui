@@ -4,53 +4,68 @@
  *
  */
 
-@mixin plain-ui__component__tabs()
-{
-    .tabs {
+.tabs {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    border-bottom: $plain-ui__border;
+
+    @include plain-ui__media-sm() {
+        width: auto;
+        flex-direction: row;
+    }
+
+    &__item {
+        min-height: 2.8em;
+
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        padding: 0 1em;
+        color: var(--text);
+
+        transition: background-color 0.1s;
+
+        border-bottom: 3px solid transparent;
+        background-color: transparent;
 
         width: 100%;
-        border-bottom: $plain-ui__border;
 
         @include plain-ui__media-sm() {
             width: auto;
-            flex-direction: row;
+            display: inline-flex;
         }
 
-        &__item {
-            min-height: 2.8em;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--primary-active);
+            color: var(--text-secondary);
 
-            display: flex;
-            align-items: center;
-            padding: 0 1em;
+            border-top-left-radius: $plain-ui__border-radius;
+            border-top-right-radius: $plain-ui__border-radius;
+        }
+
+        &--selected {
             color: var(--text);
+            border-color: var(--border);
+        }
+    }
 
-            transition: background-color 0.1s;
+    &--secondary {
+        border: 0;
 
-            border-bottom: 3px solid transparent;
-            background-color: transparent;
-
-            width: 100%;
-
-            @include plain-ui__media-sm() {
-                width: auto;
-                display: inline-flex;
-            }
+        .tabs__item {
+            color: var(--text-secondary);
 
             &:hover {
-                cursor: pointer;
-                background-color: var(--primary-active);
-                color: var(--text-secondary);
-
-                border-top-left-radius: $plain-ui__border-radius;
-                border-top-right-radius: $plain-ui__border-radius;
-            }
-
-            &--selected {
+                background-color: var(--primary-active-secondary);
                 color: var(--text);
-                border-color: var(--primary);
+                border-radius: 0;
             }
+        }
+
+        .tabs__item--selected {
+            border-color: var(--border-secondary);
         }
     }
 }

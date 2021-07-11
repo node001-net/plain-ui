@@ -5,13 +5,16 @@
  */
 
 .panel {
-    border: 1px solid var(--primary);
+    border: 1px solid var(--border);
     border-radius: $plain-ui__border-radius;
-    background-color: var(--white);
+    background-color: var(--background-secondary);
 
     &__body {
-        padding: 0.25em 1em;
+        padding: $plain-ui__padding;
+        @include media-breakpoints('padding', $plain-ui__padding-breakpoints);
     }
 
-    // bar left, right, top, bottom
+    &--border-highlight {
+        border-left-width: 10px;
+    }
 }

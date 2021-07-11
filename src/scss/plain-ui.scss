@@ -9,7 +9,6 @@
     'core',
 
     'components/badge',
-    'components/content',
     'components/button',
     'components/field',
     'components/icon',
@@ -31,7 +30,3 @@
     'helpers/spacing',
     'helpers/colors',
     'helpers/typography';
-
-@include plain-ui__component__table();
-@include plain-ui__component__slider();
-@include plain-ui__component__tabs();

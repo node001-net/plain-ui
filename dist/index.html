@@ -47,17 +47,15 @@
     </div>
 
     <div class="container">
-        <div class="grid justify-center">
-            <div class="col-6">
+        <div class="grid">
+            <div class="col-12 col-md-8">
                 <div class="content">
                     <p>
                         <span class="bold">Plain UI</span> is a simple UI Framework.
-
-
                         It uses strong Utility Classes and has a few Components.
                     </p>
                     <p>
-                        Some ideas of this are based Work from the last 10 Years. But also Ideas from Frameworks TailwindCSS.
+                        Some ideas of this are based Work from the last 10 Years. <span class="highlight">But</span> also Ideas from Frameworks TailwindCSS.
                     </p>
                     <h3 class="h4 highlight">
                         Contribution
@@ -86,14 +84,12 @@
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2 class="m-bottom-2 h-contrast">Heading</h2>
-
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
+                <h2 class="highlight">
+                    Installation
+                </h2>
+                <div class="content">
+<code>npm install plain-ui --save</code>
+                </div>
             </div>
         </div>
     </div>
@@ -101,95 +97,75 @@
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2 class="m-bottom-2">Components</h2>
-                <hr>
+                <h2 class="highlight">
+                    Building
+                </h2>
+                <p>
+                    For Buildung use Webpack or a similiar System. Plain UI is build by Laravel-Mix. Consider to use PurgeCSS,
+                    with all Helper-Classes the CSS is really growning. PurgeCSS, with Laravel Mix it looks like this,
+                </p>
+                <code>
 
-                <h3>Buttons</h3>
-                <button class="button">
-                    Default
-                </button>
-                <button class="button">
-                    Default
-                    <svg class="icon fill-success" aria-hidden="true">
-                        <use xlink:href="symbol-defs.svg#icon-check"></use>
-                    </svg>
-                </button>
-                <button class="button button--danger">
-                    Danger
-                </button>
-                <button class="button button--selected">
-                    Hover
-                </button>
-                <button class="button button--outline">
-                    Outline
-                </button>
-                <button class="button button--danger button--outline">
-                    Danger Outline
-                </button>
-            </div>
-            <div class="col-12">
-                <button class="button" disabled>
-                    Disabled
-                </button>
-            </div>
-            <div class="col-12">
-                <button class="button button--small">
-                    Small
-                </button>
+                </code>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="grid">
             <div class="col-12">
-                <div class="bar">
-                    <div class="bar__start">
-                        <button class="button button--transparent">
-                            <svg class="icon fill-white marginless" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="bar__main">
-                        Bar
-                    </div>
-                </div>
+                <h2 class="highlight">
+                    Variables + Themes
+                </h2>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="grid">
             <div class="col-12">
-                <div class="tabs">
-                    <a class="tabs__item tabs__item--selected">
-                        Tab A
-                    </a>
-                    <a class="tabs__item">
-                        Tab B
-                    </a>
-                    <a class="tabs__item">
-                        Tab C
-                    </a>
-                </div>
-            </div>
-        </div>
+                <h2 class="m-bottom-2 highlight">
+                    Basic Styles
+                </h2>
 
-        <div class="grid">
-            <div class="col-12">
-                <h2>Icon</h2>
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-check"></use>
-                </svg>
-                <svg class="icon icon--danger" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-camera"></use>
-                </svg>
-                <svg class="icon icon--success" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-clock"></use>
-                </svg>
-            </div>
-        </div>
+                <h3 class="m-bottom-2 highlight">
+                    Normalize
+                </h3>
 
-        <div class="grid">
-            <div class="col-12">
-                <h2>Content</h2>
+                <p>
+                    For all elements is the same, try set a basic style without anything, no margin, no padding. The Reason is to use Components, Layout and
+                    Helpers for the styling or make your own rules for the elements.
+                </p>
+
+                <h3 class="m-bottom-2 highlight">
+                    Heading + .highlight
+                </h3>
+
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+
+                <h2 class="m-bottom-2 highlight">
+                    Heading
+                </h2>
+
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+
+                <h3 class="m-bottom-2 highlight">
+                    Heading + .highlight
+                </h3>
+
+                <h3>
+                    Content
+                </h3>
                 <div class="content">
                     <p>
                     </p>
@@ -201,344 +177,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h2>Badge</h2>
-                <span class="badge">
-                    Category
-                </span>
-                <span class="badge badge--round">
-                    99+
-                </span>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h2>Loading</h2>
-                <div>
-                    <div class="loading">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-
-                <h2>Panel</h2>
-
-                <div class="panel">
-                    <div class="bar">
-                        <div class="bar__start">
-                            <button type="button" class="button button--transparent">
-                                <svg class="icon fill-white" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-expand"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="bar__main">Test</div>
-                        <div class="bar__end">
-                            <button type="button" class="button button--transparent">
-                                <svg class="icon fill-white" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-edit"></use>
-                                </svg>
-                            </button>
-                            <button type="button" class="button button--transparent">
-                                <svg class="icon fill-white" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-close"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="panel__body">
-                        <div class="content">
-                            <p>
-                                Hallo
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h2>Modal</h2>
-                <button class="button" onclick="openModal()">
-                    Open
-                </button>
-                <script type="text/javascript">
-                    function openModal() {
-                        document.querySelector('.modal').classList.add('modal--open')
-                    }
-
-                    function closeModal() {
-                        document.querySelector('.modal').classList.remove('modal--open')
-                    }
-                </script>
-                <div class="modal">
-                    <div class="modal__inner">
-                        <div class="modal__title t-center">
-                            <svg class="icon fill-white" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-close"></use>
-                            </svg>
-                            Delete
-                        </div>
-                        <div class="modal__body">
-                            Do you really wan't to delete all files?
-                        </div>
-                        <div class="modal__footer">
-                            <button class="button button--outline button--danger" onclick="closeModal()">
-                                Confirm
-                            </button>
-                            <button class="button button--outline float-right" onclick="closeModal()">
-                                Reject
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h2>Field</h2>
-
-                <form>
-                    <div class="field-group">
-                        <label class="field-label">
-                            Name
-                            <input class="field-text" />
-                        </label>
-                    </div>
-
-                    <div class="field-group field-group--valid">
-                        <label class="field-label">
-                            <svg class="icon" aria-hidden="true">
-                                <use class="test" xlink:href="symbol-defs.svg#icon-check"></use>
-                            </svg>
-                            Surname
-                            <input class="field-text" />
-                        </label>
-                    </div>
-
-                    <div class="field-group field-group--error">
-                        <label class="field-label">
-                            <svg class="icon" aria-hidden="true">
-                                <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
-                            </svg>
-                            E-Mail
-                            <input class="field-text" />
-                        </label>
-                        <span class="field-error">
-                            String is not valid
-                        </span>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            Towns
-                            <select class="field-choice">
-                                <option></option>
-                                <option value="lonytown">Lonytown</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            <input class="field-choice" type="checkbox" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            Do it!
-                        </label>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            <input class="field-choice" type="radio" name="radio" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            A
-                        </label>
-                        <label class="field-label">
-                            <input class="field-choice" type="radio" name="radio" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            B
-                        </label>
-                    </div>
-
-                </form>
-
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h2>Table</h2>
-
-                <table class="table table--striped">
-                    <thead>
-                        <tr>
-                            <th>A</th>
-                            <th>B</th>
-                            <th>C</th>
-                            <th>D</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2 class="">Hero</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="hero">
-        <img style="max-height: 400px;" src="/image.jpg" />
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2 class="">Media</h2>
-            </div>
-            <div class="col-12">
-                <figure class="figure">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2>Layout</h2>
-            </div>
-            <div class="col-12">
-                <h2>Slider</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="slider">
-        <div class="slider__inner">
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2>Masonry</h3>
-                <div class="masonry">
-                    <figure class="masonry__item marginless">
-                        <img class="media object-fit-cover h-100" src="/image.jpg" />
-                    </figure>
-                    <figure class="masonry__item marginless">
-                        <img class="media object-fit-cover h-100" src="/image.jpg" />
-                    </figure>
-                    <figure class="masonry__item marginless">
-                        <img class="media object-fit-cover h-100" src="/image.jpg" />
-                    </figure>
-                    <figure class="masonry__item marginless">
-                        <img class="media object-fit-cover h-100" src="/image.jpg" />
-                    </figure>
-                    <figure class="masonry__item marginless">
-                        <img class="media object-fit-cover h-100" src="/image.jpg" />
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 
 </html

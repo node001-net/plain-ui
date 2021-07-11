@@ -49,12 +49,6 @@ h6, .h6 {
     }
 }
 
-.highlight {
-    padding: 0.25rem 0.5rem;
-    background: var(--primary);
-    color: var(--text-secondary);
-}
-
 @each $h, $font-size in $plain-ui__heading__font-sizes {
     #{$h}, .#{$h} {
         font-size: $font-size;

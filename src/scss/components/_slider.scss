@@ -7,22 +7,19 @@
  *
  */
 
-@mixin plain-ui__component__slider()
-{
-    .slider {
-        position: relative;
-        overflow-x: visible;
+.slider {
+    position: relative;
+    overflow-x: visible;
 
-        &__inner {
-            display: flex;
-            white-space: nowrap;
-        }
+    &__inner {
+        display: flex;
+        white-space: nowrap;
+    }
 
-        &__item {
-            padding: 0 .6em;
-            display: inline-block;
-            white-space: normal;
-            flex-shrink: 0;
-        }
+    &__item {
+        padding: 0 0.6em;
+        display: inline-block;
+        white-space: normal;
+        flex-shrink: 0;
     }
 }

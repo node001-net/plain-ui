@@ -38,7 +38,7 @@
 
         &:hover {
             cursor: pointer;
-            background-color: var(--primary-active);
+            background-color: var(--active);
             color: var(--text-contrast);
 
             border-top-left-radius: $plain-ui__border-radius;
@@ -58,7 +58,7 @@
             color: var(--text-contrast);
 
             &:hover {
-                background-color: var(--primary-active-contrast);
+                background-color: var(--background-contrast);
                 color: var(--text);
                 border-radius: 0;
             }

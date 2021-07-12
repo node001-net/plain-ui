@@ -64,7 +64,7 @@ $plain-ui__primary-contrast: $plain-ui__primary !default;
 $plain-ui__active: lighten($plain-ui__primary, 20%) !default;
 $plain-ui__active-contrast: #ffffff !default;
 
-$plain-ui__background: #f9f9f9 !default;
+$plain-ui__background: $plain-ui__primary !default;
 $plain-ui__background-contrast: #ffffff !default;
 
 $plain-ui__body: #f9f9f9 !default;

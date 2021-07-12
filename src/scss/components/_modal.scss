@@ -50,7 +50,7 @@
     }
 
     &__title, &__body {
-        color: var(--white);
+        color: var(--text-contrast);
     }
 
     &__body {
@@ -58,7 +58,7 @@
     }
 
     .button {
-        color: var(--white);
+        color: var(--text-contrast);
     }
 
     &:before {

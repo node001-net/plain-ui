@@ -1509,6 +1509,12 @@
  *
  */
 /**
+ *
+ *
+ *  https://css-tricks.com/snippets/sass/str-replace-function/
+ *
+ */
+/**
  *  get value of key "default" in map
  *
  *  @param  {map} $value
@@ -1631,7 +1637,7 @@
   --success-contrast: #a6d0a6;
   --warning: #f0ad4e;
   --warning-contrast: #f8d9ac;
-  --background: #f9f9f9;
+  --background: #3e3e3e;
   --background-contrast: #ffffff;
   --border: #3e3e3e;
   --border-contrast: #ffffff;
@@ -2123,9 +2129,9 @@ h6, .h6 {
   text-decoration: none;
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 1rem;
-  border: 1px solid var(--primary);
-  background-color: var(--white);
-  color: var(--primary);
+  border: 1px solid var(--border);
+  background-color: var(--background-contrast);
+  color: var(--text);
   border-radius: 2px;
   transition: background-color 0.1s;
   margin-bottom: 0.5em;
@@ -2141,6 +2147,24 @@ h6, .h6 {
 .button--small {
   font-size: 0.8rem;
 }
+.button:hover, .button--selected {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: var(--active);
+}
+.button:focus, .button:active {
+  outline: 1px solid var(--active);
+}
+.button:disabled {
+  opacity: 0.5;
+}
+.button:disabled:hover {
+  cursor: not-allowed;
+  border: 1px solid var(--border);
+  background-color: var(--background-contrast);
+  color: var(--border);
+}
 .button--transparent {
   margin: 0;
   padding: 0;
@@ -2151,24 +2175,6 @@ h6, .h6 {
 .button--transparent:focus, .button--transparent:active {
   outline: none;
 }
-.button:hover, .button--selected {
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  background-color: var(--primary-active);
-}
-.button:focus, .button:active {
-  outline: 1px solid var(--primary-active);
-}
-.button:disabled {
-  opacity: 0.5;
-}
-.button:disabled:hover {
-  cursor: not-allowed;
-  border: 1px solid var(--primary);
-  background-color: white;
-  color: var(--primary);
-}
 .button--danger {
   border-color: var(--danger);
 }
@@ -2176,7 +2182,7 @@ h6, .h6 {
   background-color: var(--danger);
 }
 .button--danger:focus, .button--danger:active {
-  outline: 2px solid var(--primary-active);
+  outline: 2px solid var(--active);
 }
 .button--success {
   border-color: var(--success);
@@ -2185,21 +2191,21 @@ h6, .h6 {
   background-color: var(--sucess);
 }
 .button--success:focus, .button--success:active {
-  outline: 2px solid var(--primary-active);
+  outline: 2px solid var(--active);
 }
 .button--outline {
   background-color: transparent;
 }
 .button--outline:hover {
-  color: var(--primary);
-  border-color: var(--primary-light);
+  color: var(--border);
+  border-color: var(--border-contrast);
   background-color: transparent;
 }
 .button--danger.button--outline:hover {
-  border-color: var(--danger-light);
+  border-color: var(--danger);
 }
 .button--success.button--outline:hover {
-  border-color: var(--success-light);
+  border-color: var(--success);
 }
 
 /**
@@ -2239,14 +2245,14 @@ input.field-text, textarea.field-text, select.field-choice {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 0.95rem;
   width: 100%;
-  border: 1px solid var(--primary-active);
-  background-color: var(--white);
+  border: 1px solid var(--active);
+  background-color: var(--background-contrast);
   border-radius: 2px;
   margin: 0.7rem 0 0;
 }
 input.field-text:focus, input.field-text:active, textarea.field-text:focus, textarea.field-text:active, select.field-choice:focus, select.field-choice:active {
   outline: 0;
-  border-color: var(--primary);
+  border-color: var(--border);
 }
 
 input.field-text, textarea.field-text {
@@ -2312,7 +2318,7 @@ input[type=radio].field-choice:checked ~ .field-choice__unchecked {
 }
 
 svg.field-choice__unchecked {
-  fill: var(--primary-active);
+  fill: var(--active);
 }
 
 svg.field-choice__checked {
@@ -2410,7 +2416,7 @@ svg.field-choice__checked {
 }
 .tabs__item:hover {
   cursor: pointer;
-  background-color: var(--primary-active);
+  background-color: var(--active);
   color: var(--text-contrast);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -2426,7 +2432,7 @@ svg.field-choice__checked {
   color: var(--text-contrast);
 }
 .tabs--contrast .tabs__item:hover {
-  background-color: var(--primary-active-contrast);
+  background-color: var(--background-contrast);
   color: var(--text);
   border-radius: 0;
 }
@@ -2569,7 +2575,7 @@ svg.field-choice__checked {
 .bar {
   display: flex;
   min-height: 2.8em;
-  background-color: var(--primary);
+  background-color: var(--background);
   color: var(--text-contrast);
   border: 1px solid var(--primary);
   border-radius: 2px;
@@ -2632,13 +2638,13 @@ svg.field-choice__checked {
   font-size: 3rem;
 }
 .modal__title, .modal__body {
-  color: var(--white);
+  color: var(--text-contrast);
 }
 .modal__body {
   margin-bottom: 1.5rem;
 }
 .modal .button {
-  color: var(--white);
+  color: var(--text-contrast);
 }
 .modal:before {
   position: fixed;

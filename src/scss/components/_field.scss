@@ -48,15 +48,15 @@ input.field-text, textarea.field-text, select.field-choice {
 
     width: 100%;
 
-    border: 1px solid var(--primary-active);
-    background-color: var(--white);
+    border: 1px solid var(--active);
+    background-color: var(--background-contrast);
     border-radius: $plain-ui__border-radius;
 
     margin: 0.7rem 0 0;
 
     &:focus, &:active {
         outline: 0;
-        border-color: var(--primary);
+        border-color: var(--border);
     }
 }
 
@@ -125,7 +125,7 @@ input[type=radio].field-choice {
 }
 
 svg.field-choice__unchecked {
-    fill: var(--primary-active);
+    fill: var(--active);
 }
 
 svg.field-choice__checked {

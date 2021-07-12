@@ -18,9 +18,9 @@
     font-family: $plain-ui__font-family;
     font-size: 1rem;
 
-    border: 1px solid var(--primary);
-    background-color: var(--white);
-    color: var(--primary);
+    border: 1px solid var(--border);
+    background-color: var(--background-contrast);
+    color: var(--text);
 
     border-radius: $plain-ui__border-radius;
     transition: background-color 0.1s;
@@ -38,6 +38,28 @@
         font-size: 0.8rem;
     }
 
+    &:hover, &--selected {
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        background-color: var(--active);
+    }
+
+    &:focus, &:active {
+        outline: 1px solid var(--active);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+
+        &:hover {
+            cursor: not-allowed;
+            border: 1px solid var(--border);
+            background-color: var(--background-contrast);
+            color: var(--border);
+        }
+    }
+
     &--transparent {
         margin: 0;
         padding: 0;
@@ -50,28 +72,6 @@
         }
     }
 
-    &:hover, &--selected {
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
-        background-color: var(--primary-active);
-    }
-
-    &:focus, &:active {
-        outline: 1px solid var(--primary-active);
-    }
-
-    &:disabled {
-        opacity: 0.5;
-
-        &:hover {
-            cursor: not-allowed;
-            border: 1px solid var(--primary);
-            background-color: white;
-            color: var(--primary);
-        }
-    }
-
     &--danger {
         border-color: var(--danger);
 
@@ -80,7 +80,7 @@
         }
 
         &:focus, &:active {
-            outline: 2px solid var(--primary-active);
+            outline: 2px solid var(--active);
         }
     }
 
@@ -92,7 +92,7 @@
         }
 
         &:focus, &:active {
-            outline: 2px solid var(--primary-active);
+            outline: 2px solid var(--active);
         }
     }
 
@@ -100,21 +100,21 @@
         background-color: transparent;
 
         &:hover {
-            color: var(--primary);
-            border-color: var(--primary-light);
+            color: var(--border);
+            border-color: var(--border-contrast);
             background-color: transparent;
         }
     }
 
     &--danger.button--outline {
         &:hover {
-            border-color: var(--danger-light);
+            border-color: var(--danger);
         }
     }
 
     &--success.button--outline {
         &:hover {
-            border-color: var(--success-light);
+            border-color: var(--success);
         }
     }
 }

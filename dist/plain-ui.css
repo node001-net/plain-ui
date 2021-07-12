@@ -1696,12 +1696,12 @@ body {
   color: var(--text);
   background-color: var(--body);
   direction: ltr;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.618;
 }
 @media only screen and (min-width: 992px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -1845,7 +1845,7 @@ kbd,
 pre,
 samp {
   font-family: "IBM Plex Mono", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /**
@@ -2036,7 +2036,7 @@ h1, .h1 {
 }
 @media only screen and (min-width: 992px) {
   h1, .h1 {
-    font-size: 2.7rem;
+    font-size: 2.82rem;
   }
 }
 
@@ -2045,7 +2045,7 @@ h2, .h2 {
 }
 @media only screen and (min-width: 992px) {
   h2, .h2 {
-    font-size: 2.4rem;
+    font-size: 2.52rem;
   }
 }
 
@@ -2054,7 +2054,7 @@ h3, .h3 {
 }
 @media only screen and (min-width: 992px) {
   h3, .h3 {
-    font-size: 2.16rem;
+    font-size: 2.28rem;
   }
 }
 
@@ -2063,7 +2063,7 @@ h4, .h4 {
 }
 @media only screen and (min-width: 992px) {
   h4, .h4 {
-    font-size: 1.92rem;
+    font-size: 2.04rem;
   }
 }
 
@@ -2072,7 +2072,7 @@ h5, .h5 {
 }
 @media only screen and (min-width: 992px) {
   h5, .h5 {
-    font-size: 1.68rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -2081,7 +2081,7 @@ h6, .h6 {
 }
 @media only screen and (min-width: 992px) {
   h6, .h6 {
-    font-size: 1.44rem;
+    font-size: 1.56rem;
   }
 }
 
@@ -7790,147 +7790,147 @@ svg.field-choice__checked {
 }
 
 .size-default {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 @media only screen and (min-width: 576px) {
   .size-xs-default {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .size-sm-default {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .size-md-default {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .size-lg-default {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 1600px) {
   .size-xlg-default {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 .size-small {
-  font-size: 0.75rem;
+  font-size: 0.675rem;
 }
 
 @media only screen and (min-width: 576px) {
   .size-xs-small {
-    font-size: 0.75rem;
+    font-size: 0.675rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .size-sm-small {
-    font-size: 0.75rem;
+    font-size: 0.675rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .size-md-small {
-    font-size: 0.75rem;
+    font-size: 0.675rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .size-lg-small {
-    font-size: 0.75rem;
+    font-size: 0.675rem;
   }
 }
 @media only screen and (min-width: 1600px) {
   .size-xlg-small {
-    font-size: 0.75rem;
+    font-size: 0.675rem;
   }
 }
 .size-medium {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 @media only screen and (min-width: 576px) {
   .size-xs-medium {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .size-sm-medium {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .size-md-medium {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .size-lg-medium {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
 @media only screen and (min-width: 1600px) {
   .size-xlg-medium {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
 .size-large {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 576px) {
   .size-xs-large {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .size-sm-large {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .size-md-large {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .size-lg-large {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 1600px) {
   .size-xlg-large {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 .size-big {
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 
 @media only screen and (min-width: 576px) {
   .size-xs-big {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .size-sm-big {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .size-md-big {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .size-lg-big {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 @media only screen and (min-width: 1600px) {
   .size-xlg-big {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }

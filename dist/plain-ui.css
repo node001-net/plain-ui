@@ -1,16 +1,16 @@
 @charset "UTF-8";
 @font-face {
   font-family: "IBM Plex Mono";
-  src: url("IBMPlexMono.eot");
-  src: url("IBMPlexMono.eot?#iefix") format("embedded-opentype"), url("IBMPlexMono.woff2") format("woff2"), url("IBMPlexMono.woff") format("woff"), url("IBMPlexMono.ttf") format("truetype");
+  src: url("fonts/IBMPlexMono.eot");
+  src: url("fonts/IBMPlexMono.eot?#iefix") format("embedded-opentype"), url("fonts/IBMPlexMono.woff2") format("woff2"), url("fonts/IBMPlexMono.woff") format("woff"), url("fonts/IBMPlexMono.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "IBM Plex Mono";
-  src: url("IBMPlexMono-Bold.eot");
-  src: url("IBMPlexMono-Bold.eot?#iefix") format("embedded-opentype"), url("IBMPlexMono-Bold.woff2") format("woff2"), url("IBMPlexMono-Bold.woff") format("woff"), url("IBMPlexMono-Bold.ttf") format("truetype");
+  src: url("fonts/IBMPlexMono-Bold.eot");
+  src: url("fonts/IBMPlexMono-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/IBMPlexMono-Bold.woff2") format("woff2"), url("fonts/IBMPlexMono-Bold.woff") format("woff"), url("fonts/IBMPlexMono-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -1614,23 +1614,27 @@
  *
  */
 :root {
+  --body: #f9f9f9;
+  --text: #363636;
+  --text-contrast: #ffffff;
   --primary: #3e3e3e;
-  --primary-active: #717171;
-  --primary-active-secondary: #ffffff;
-  --link: #3e3e3e;
+  --primary-contrast: #3e3e3e;
+  --active: #717171;
+  --active-contrast: #ffffff;
+  --link: #363636;
   --link-hover: #d95959;
   --danger: #d95959;
-  --danger-light: #d95959;
+  --danger-contrast: #ecacac;
+  --info: #0090d4;
+  --info-constrast: #ecacac;
   --success: #64ac64;
-  --white: #ffffff;
-  --black: #212121;
-  --text: #363636;
-  --text-secondary: #ffffff;
-  --background: #3e3e3e;
-  --background-secondary: #ffffff;
-  --body: #f9f9f9;
+  --success-contrast: #a6d0a6;
+  --warning: #f0ad4e;
+  --warning-contrast: #f8d9ac;
+  --background: #f9f9f9;
+  --background-contrast: #ffffff;
   --border: #3e3e3e;
-  --border-secondary: #ffffff;
+  --border-contrast: #ffffff;
 }
 
 /**
@@ -1960,7 +1964,7 @@ samp {
   overflow-x: auto;
   border: 1px solid var(--primary);
   border-radius: 2px;
-  background-color: var(--background-secondary);
+  background-color: var(--background-contrast);
   margin: 0 0 1rem;
   padding: 0.6rem 0.8rem;
 }
@@ -1978,7 +1982,7 @@ samp {
 .highlight {
   padding: 0.15rem 0.4rem 0.25rem;
   background: var(--primary);
-  color: var(--text-secondary);
+  color: var(--text-contrast);
   border-radius: 2px;
 }
 
@@ -2088,7 +2092,7 @@ h6, .h6 {
 .badge {
   display: inline-block;
   background-color: var(--background);
-  color: var(--text-secondary);
+  color: var(--text-contrast);
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
   border: 1px solid var(--primary);
@@ -2407,7 +2411,7 @@ svg.field-choice__checked {
 .tabs__item:hover {
   cursor: pointer;
   background-color: var(--primary-active);
-  color: var(--text-secondary);
+  color: var(--text-contrast);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
@@ -2415,19 +2419,19 @@ svg.field-choice__checked {
   color: var(--text);
   border-color: var(--border);
 }
-.tabs--secondary {
+.tabs--contrast {
   border: 0;
 }
-.tabs--secondary .tabs__item {
-  color: var(--text-secondary);
+.tabs--contrast .tabs__item {
+  color: var(--text-contrast);
 }
-.tabs--secondary .tabs__item:hover {
-  background-color: var(--primary-active-secondary);
+.tabs--contrast .tabs__item:hover {
+  background-color: var(--primary-active-contrast);
   color: var(--text);
   border-radius: 0;
 }
-.tabs--secondary .tabs__item--selected {
-  border-color: var(--border-secondary);
+.tabs--contrast .tabs__item--selected {
+  border-color: var(--border-contrast);
 }
 
 /**
@@ -2438,7 +2442,7 @@ svg.field-choice__checked {
 .panel {
   border: 1px solid var(--border);
   border-radius: 2px;
-  background-color: var(--background-secondary);
+  background-color: var(--background-contrast);
 }
 .panel__body {
   padding: 0.6rem 0.8rem;
@@ -2475,7 +2479,7 @@ svg.field-choice__checked {
   background: var(--background);
   line-height: 1.618;
   margin: 0;
-  color: var(--text-secondary);
+  color: var(--text-contrast);
 }
 .figure .media {
   border: 0;
@@ -2566,7 +2570,7 @@ svg.field-choice__checked {
   display: flex;
   min-height: 2.8em;
   background-color: var(--primary);
-  color: var(--text-secondary);
+  color: var(--text-contrast);
   border: 1px solid var(--primary);
   border-radius: 2px;
 }
@@ -7382,52 +7386,340 @@ svg.field-choice__checked {
  *
  *
  */
+.color-body {
+  color: var(--body);
+}
+
+.color-text {
+  color: var(--text);
+}
+
+.color-text-contrast {
+  color: var(--text-contrast);
+}
+
 .color-primary {
   color: var(--primary);
+}
+
+.color-primary-contrast {
+  color: var(--primary-contrast);
+}
+
+.color-active {
+  color: var(--active);
+}
+
+.color-active-contrast {
+  color: var(--active-contrast);
+}
+
+.color-link {
+  color: var(--link);
+}
+
+.color-link-hover {
+  color: var(--link-hover);
+}
+
+.color-danger {
+  color: var(--danger);
+}
+
+.color-danger-contrast {
+  color: var(--danger-contrast);
+}
+
+.color-info {
+  color: var(--info);
+}
+
+.color-info-constrast {
+  color: var(--info-constrast);
 }
 
 .color-success {
   color: var(--success);
 }
 
-.color-white {
-  color: var(--white);
+.color-success-contrast {
+  color: var(--success-contrast);
+}
+
+.color-warning {
+  color: var(--warning);
+}
+
+.color-warning-contrast {
+  color: var(--warning-contrast);
+}
+
+.color-background {
+  color: var(--background);
+}
+
+.color-background-contrast {
+  color: var(--background-contrast);
+}
+
+.color-border {
+  color: var(--border);
+}
+
+.color-border-contrast {
+  color: var(--border-contrast);
+}
+
+.fill-body {
+  fill: var(--body);
+}
+
+.fill-text {
+  fill: var(--text);
+}
+
+.fill-text-contrast {
+  fill: var(--text-contrast);
 }
 
 .fill-primary {
   fill: var(--primary);
 }
 
+.fill-primary-contrast {
+  fill: var(--primary-contrast);
+}
+
+.fill-active {
+  fill: var(--active);
+}
+
+.fill-active-contrast {
+  fill: var(--active-contrast);
+}
+
+.fill-link {
+  fill: var(--link);
+}
+
+.fill-link-hover {
+  fill: var(--link-hover);
+}
+
+.fill-danger {
+  fill: var(--danger);
+}
+
+.fill-danger-contrast {
+  fill: var(--danger-contrast);
+}
+
+.fill-info {
+  fill: var(--info);
+}
+
+.fill-info-constrast {
+  fill: var(--info-constrast);
+}
+
 .fill-success {
   fill: var(--success);
 }
 
-.fill-white {
-  fill: var(--white);
+.fill-success-contrast {
+  fill: var(--success-contrast);
+}
+
+.fill-warning {
+  fill: var(--warning);
+}
+
+.fill-warning-contrast {
+  fill: var(--warning-contrast);
+}
+
+.fill-background {
+  fill: var(--background);
+}
+
+.fill-background-contrast {
+  fill: var(--background-contrast);
+}
+
+.fill-border {
+  fill: var(--border);
+}
+
+.fill-border-contrast {
+  fill: var(--border-contrast);
+}
+
+.border-color-body {
+  border-color: var(--body);
+}
+
+.border-color-text {
+  border-color: var(--text);
+}
+
+.border-color-text-contrast {
+  border-color: var(--text-contrast);
 }
 
 .border-color-primary {
   border-color: var(--primary);
 }
 
+.border-color-primary-contrast {
+  border-color: var(--primary-contrast);
+}
+
+.border-color-active {
+  border-color: var(--active);
+}
+
+.border-color-active-contrast {
+  border-color: var(--active-contrast);
+}
+
+.border-color-link {
+  border-color: var(--link);
+}
+
+.border-color-link-hover {
+  border-color: var(--link-hover);
+}
+
+.border-color-danger {
+  border-color: var(--danger);
+}
+
+.border-color-danger-contrast {
+  border-color: var(--danger-contrast);
+}
+
+.border-color-info {
+  border-color: var(--info);
+}
+
+.border-color-info-constrast {
+  border-color: var(--info-constrast);
+}
+
 .border-color-success {
   border-color: var(--success);
 }
 
-.border-color-white {
-  border-color: var(--white);
+.border-color-success-contrast {
+  border-color: var(--success-contrast);
+}
+
+.border-color-warning {
+  border-color: var(--warning);
+}
+
+.border-color-warning-contrast {
+  border-color: var(--warning-contrast);
+}
+
+.border-color-background {
+  border-color: var(--background);
+}
+
+.border-color-background-contrast {
+  border-color: var(--background-contrast);
+}
+
+.border-color-border {
+  border-color: var(--border);
+}
+
+.border-color-border-contrast {
+  border-color: var(--border-contrast);
+}
+
+.background-color-body {
+  background-color: var(--body);
+}
+
+.background-color-text {
+  background-color: var(--text);
+}
+
+.background-color-text-contrast {
+  background-color: var(--text-contrast);
 }
 
 .background-color-primary {
   background-color: var(--primary);
 }
 
+.background-color-primary-contrast {
+  background-color: var(--primary-contrast);
+}
+
+.background-color-active {
+  background-color: var(--active);
+}
+
+.background-color-active-contrast {
+  background-color: var(--active-contrast);
+}
+
+.background-color-link {
+  background-color: var(--link);
+}
+
+.background-color-link-hover {
+  background-color: var(--link-hover);
+}
+
+.background-color-danger {
+  background-color: var(--danger);
+}
+
+.background-color-danger-contrast {
+  background-color: var(--danger-contrast);
+}
+
+.background-color-info {
+  background-color: var(--info);
+}
+
+.background-color-info-constrast {
+  background-color: var(--info-constrast);
+}
+
 .background-color-success {
   background-color: var(--success);
 }
 
-.background-color-white {
-  background-color: var(--white);
+.background-color-success-contrast {
+  background-color: var(--success-contrast);
+}
+
+.background-color-warning {
+  background-color: var(--warning);
+}
+
+.background-color-warning-contrast {
+  background-color: var(--warning-contrast);
+}
+
+.background-color-background {
+  background-color: var(--background);
+}
+
+.background-color-background-contrast {
+  background-color: var(--background-contrast);
+}
+
+.background-color-border {
+  background-color: var(--border);
+}
+
+.background-color-border-contrast {
+  background-color: var(--border-contrast);
 }
 
 /**

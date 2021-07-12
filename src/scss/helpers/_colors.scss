@@ -6,26 +6,34 @@
  *
  */
 
-@each $name, $color in $plain-ui__colors {
-    .color-#{$name} {
-        color: var(#{$color});
+@each $name in $plain-ui__colors {
+    $class: str-replace($name, '--', '');
+
+    .color-#{$class} {
+        color: var(#{$name});
     }
 }
 
-@each $name, $color in $plain-ui__colors {
-    .fill-#{$name} {
-        fill: var(#{$color});
+@each $name in $plain-ui__colors {
+    $class: str-replace($name, '--', '');
+
+    .fill-#{$class} {
+        fill: var(#{$name});
     }
 }
 
-@each $name, $color in $plain-ui__colors {
-    .border-color-#{$name} {
-        border-color: var(#{$color});
+@each $name in $plain-ui__colors {
+    $class: str-replace($name, '--', '');
+
+    .border-color-#{$class} {
+        border-color: var(#{$name});
     }
 }
 
-@each $name, $color in $plain-ui__colors {
-    .background-color-#{$name} {
-        background-color: var(#{$color});
+@each $name in $plain-ui__colors {
+    $class: str-replace($name, '--', '');
+
+    .background-color-#{$class} {
+        background-color: var(#{$name});
     }
 }

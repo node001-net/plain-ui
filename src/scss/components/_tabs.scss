@@ -39,7 +39,7 @@
         &:hover {
             cursor: pointer;
             background-color: var(--primary-active);
-            color: var(--text-secondary);
+            color: var(--text-contrast);
 
             border-top-left-radius: $plain-ui__border-radius;
             border-top-right-radius: $plain-ui__border-radius;
@@ -51,21 +51,21 @@
         }
     }
 
-    &--secondary {
+    &--contrast {
         border: 0;
 
         .tabs__item {
-            color: var(--text-secondary);
+            color: var(--text-contrast);
 
             &:hover {
-                background-color: var(--primary-active-secondary);
+                background-color: var(--primary-active-contrast);
                 color: var(--text);
                 border-radius: 0;
             }
         }
 
         .tabs__item--selected {
-            border-color: var(--border-secondary);
+            border-color: var(--border-contrast);
         }
     }
 }

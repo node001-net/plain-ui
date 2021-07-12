@@ -135,7 +135,7 @@
         overflow-x: auto;
         border: $plain-ui__border;
         border-radius: $plain-ui__border-radius;
-        background-color: var(--background-secondary);
+        background-color: var(--background-contrast);
 
         margin: $plain-ui__margin;
         @include media-breakpoints('margin', $plain-ui__margin-breakpoints);
@@ -148,7 +148,7 @@
 .highlight {
     padding: 0.15rem 0.4rem 0.25rem;
     background: var(--primary);
-    color: var(--text-secondary);
+    color: var(--text-contrast);
     border-radius: $plain-ui__border-radius;
 }
 

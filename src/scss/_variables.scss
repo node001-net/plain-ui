@@ -55,62 +55,83 @@ $plain-ui__line-height__breakpoints: (
  *
  */
 
+$plain-ui__white: #ffffff !default;
+$plain-ui__black: #212121 !default;
+
 $plain-ui__primary: #3e3e3e !default;
-$plain-ui__primary-secondary: #ffffff !default;
+$plain-ui__primary-contrast: $plain-ui__primary !default;
 
-$plain-ui__primary-active: lighten($plain-ui__primary, 20%) !default;
-$plain-ui__secondary: #b3b2af !default;
+$plain-ui__active: lighten($plain-ui__primary, 20%) !default;
+$plain-ui__active-contrast: #ffffff !default;
 
-$plain-ui__success: #64ac64 !default;
-$plain-ui__success-light: lighten($plain-ui__success, 20%) !default;
-$plain-ui__warning: #f0ad4e !default;
-$plain-ui__warning-light: lighten($plain-ui__warning, 20%) !default;
-$plain-ui__danger: #d95959 !default;
-$plain-ui__danger-light: lighten($plain-ui__danger, 20%) !default;
-$plain-ui__info: #0090d4 !default;
-$plain-ui__info-light: lighten($plain-ui__info, 20%) !default;
+$plain-ui__background: #f9f9f9 !default;
+$plain-ui__background-contrast: #ffffff !default;
 
 $plain-ui__body: #f9f9f9 !default;
 $plain-ui__text: #363636 !default;
-$plain-ui__text-secondary: #ffffff !default;
-$plain-ui__background: #f9f9f9 !default;
-$plain-ui__background--secondary: #ffffff !default;
+$plain-ui__text-contrast: #ffffff !default;
+
 $plain-ui__border: $plain-ui__primary !default;
-$plain-ui__border-secondary: #ffffff !default;
+$plain-ui__border-contrast: #ffffff !default;
+
+$plain-ui__success: #64ac64 !default;
+$plain-ui__success-contrast: lighten($plain-ui__success, 20%) !default;
+$plain-ui__warning: #f0ad4e !default;
+$plain-ui__warning-contrast: lighten($plain-ui__warning, 20%) !default;
+$plain-ui__danger: #d95959 !default;
+$plain-ui__danger-contrast: lighten($plain-ui__danger, 20%) !default;
+$plain-ui__info: #0090d4 !default;
+$plain-ui__info-contrast: lighten($plain-ui__info, 20%) !default;
+
 $plain-ui__link: $plain-ui__text !default;
 $plain-ui__link-hover: $plain-ui__danger !default;
 
 $plain-ui__colors: (
-    'primary' : --primary,
-    'success' : --success,
-    'white'   : --white
+    --body,
+    --text,
+    --text-contrast,
+    --primary,
+    --primary-contrast,
+    --active,
+    --active-contrast,
+    --link,
+    --link-hover,
+    --danger,
+    --danger-contrast,
+    --info,
+    --info-constrast,
+    --success,
+    --success-contrast,
+    --warning,
+    --warning-contrast,
+    --background,
+    --background-contrast,
+    --border,
+    --border-contrast
 ) !default;
 
 :root {
     --body: #{$plain-ui__body};
     --text: #{$plain-ui__text};
-    --text-secondary: #{$plain-ui__text-secondary};
+    --text-contrast: #{$plain-ui__text-contrast};
     --primary: #{$plain-ui__primary};
-    --primary-secondary: #{$plain-ui__primary-secondary};
+    --primary-contrast: #{$plain-ui__primary-contrast};
     --active: #{$plain-ui__active};
-    --active-secondary: #{$plain-ui__active-secondary};
+    --active-contrast: #{$plain-ui__active-contrast};
     --link: #{$plain-ui__link};
     --link-hover: #{$plain-ui__link-hover};
     --danger: #{$plain-ui__danger};
-    --danger-activ: #{$plain-ui__danger-activ};
-    --danger-secondary: #{$plain-ui__danger-secondary};
-    --info: #{$plain-ui__danger};
-    --info-activ: #{$plain-ui__danger-activ};
-    --info-secondary: #{$plain-ui__danger-secondary};
+    --danger-contrast: #{$plain-ui__danger-contrast};
+    --info: #{$plain-ui__info};
+    --info-constrast: #{$plain-ui__danger-contrast};
     --success: #{$plain-ui__success};
-    --success-activ: #{$plain-ui__success-activ};
-    --success-secondary: #{$plain-ui__success-secondary};
-    --white: #ffffff;
-    --black: #212121;
-    --background: #{$plain-ui__primary};
-    --background-secondary: #{$plain-ui__border-secondary};
+    --success-contrast: #{$plain-ui__success-contrast};
+    --warning: #{$plain-ui__warning};
+    --warning-contrast: #{$plain-ui__warning-contrast};
+    --background: #{$plain-ui__background};
+    --background-contrast: #{$plain-ui__background-contrast};
     --border: #{$plain-ui__border};
-    --border-secondary: #{$plain-ui__border-secondary};
+    --border-contrast: #{$plain-ui__border-contrast};
 }
 
 /**

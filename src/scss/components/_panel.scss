@@ -7,7 +7,7 @@
 .panel {
     border: 1px solid var(--border);
     border-radius: $plain-ui__border-radius;
-    background-color: var(--background-secondary);
+    background-color: var(--background-contrast);
 
     &__body {
         padding: $plain-ui__padding;

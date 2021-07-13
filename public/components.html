@@ -50,50 +50,61 @@
 
     <div class="container">
         <div class="grid">
-            <div class="col-6">
+            <div class="col-12">
+                <h2 class="highlight">
+                    Components
+                </h2>
+
+                <h3>
+                    Buttons
+                </h3>
+
                 <div class="content">
-                    <p>
-                        Some Text
-                    <p>
+<code>&lt;button class=&quot;button&quot;&gt;
+    Default
+&lt;/button&gt;
+</code>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2>Components</h2>
 
-                <h3>Buttons</h3>
+                <div class="m-bottom-4">
+                    <button class="button">
+                        Default
+                    </button>
+                    <button class="button">
+                        Icon
+                        <svg class="icon fill-success" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-check"></use>
+                        </svg>
+                    </button>
+                    <button class="button button--selected">
+                        Selected
+                    </button>
+                    <button class="button" disabled>
+                        Disabled
+                    </button>
+                </div>
 
-                <button class="button">
-                    Default
-                </button>
-                <button class="button">
-                    Default
-                    <svg class="icon fill-success" aria-hidden="true">
-                        <use xlink:href="symbol-defs.svg#icon-check"></use>
-                    </svg>
-                </button>
-                <button class="button button--danger">
-                    Danger
-                </button>
-                <button class="button button--selected">
-                    Hover
-                </button>
-                <button class="button button--outline">
-                    Outline
-                </button>
-                <button class="button button--danger button--outline">
-                    Danger Outline
-                </button>
-            </div>
-            <div class="col-12">
-                <button class="button" disabled>
-                    Disabled
-                </button>
-            </div>
-            <div class="col-12">
+                <div class="m-bottom-4">
+                    <button class="button button--danger">
+                        danger
+                    </button>
+                    <button class="button button--success">
+                        success
+                    </button>
+                    <button class="button button--warning">
+                        warning
+                    </button>
+                    <button class="button button--info">
+                        info
+                    </button>
+                </div>
+
+                <div class="m-bottom-4">
+                    <button class="button button--outline">
+                        outline
+                    </button>
+                </div>
+
                 <button class="button button--small">
                     Small
                 </button>
@@ -408,11 +419,14 @@
                 <h2>
                     Hero
                 </h2>
-                <div class="hero">
-                    <img style="max-height: 400px;" src="/image.jpg" />
-                </div>
+                <code>
+
+                </code>
             </div>
         </div>
+    </div>
+    <div class="hero">
+        <img style="max-height: 400px;" src="/image.jpg" />
     </div>
 
     <div class="container">

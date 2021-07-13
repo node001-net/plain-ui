@@ -44,14 +44,8 @@ mix
     .sass('src/scss/plain-ui.scss', 'public/plain-ui.css')
     .purgeCss({
         extend: {
-            enabled: true,
             content: [
                 path.join(__dirname, 'public/*.html'),
             ]
-        }
-    })
-    .options({
-        terser: {
-            extractComments: false,
         }
     })

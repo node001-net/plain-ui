@@ -84,15 +84,39 @@
         }
     }
 
+    &--info {
+        border-color: var(--info);
+
+        &:hover {
+            background-color: var(--info);
+        }
+
+        &:focus, &:active {
+            outline: 2px solid var(--info);
+        }
+    }
+
+    &--warning {
+        border-color: var(--warning);
+
+        &:hover {
+            background-color: var(--warning);
+        }
+
+        &:focus, &:active {
+            outline: 2px solid var(--warning);
+        }
+    }
+
     &--success {
         border-color: var(--success);
 
         &:hover {
-            background-color: var(--sucess);
+            background-color: var(--success);
         }
 
         &:focus, &:active {
-            outline: 2px solid var(--active);
+            outline: 2px solid var(--success);
         }
     }
 
@@ -101,20 +125,26 @@
 
         &:hover {
             color: var(--border);
-            border-color: var(--border-contrast);
+            border-color: lighten($plain-ui__primary, 40%);
             background-color: transparent;
         }
     }
 
     &--danger.button--outline {
         &:hover {
-            border-color: var(--danger);
+            border-color: lighten($plain-ui__danger, 20%);
+        }
+    }
+
+    &--info.button--outline {
+        &:hover {
+            border-color: lighten($plain-ui__info, 20%);
         }
     }
 
     &--success.button--outline {
         &:hover {
-            border-color: var(--success);
+            border-color: lighten($plain-ui__success, 20%);
         }
     }
 }

@@ -7,7 +7,46 @@
  *
  */
 
-$plain-ui__helpers__height-steps: 50;
+$plain-ui__sizing_steps: 50 !default;
+
+/**
+ *  mixin: sizing
+ *
+ */
+@mixin sizing($class, $style, $i, $value)
+{
+    .#{$class}-#{$i} {
+        #{$style}: $value;
+    }
+}
+
+/**
+ *  mixin: sizing for each breakpoint
+ *
+ *
+ */
+@mixin sizing_breakpoints($class, $style, $i, $value)
+{
+    @include plain-ui__media-xs() {
+        @include sizing($class, $style, 'xs-' + $i, $value);
+    }
+
+    @include plain-ui__media-sm() {
+        @include sizing($class, $style, 'sm-' + $i, $value);
+    }
+
+    @include plain-ui__media-md() {
+        @include sizing($class, $style, 'md-' + $i, $value);
+    }
+
+    @include plain-ui__media-lg() {
+        @include sizing($class, $style, 'lg-' + $i, $value);
+    }
+
+    @include plain-ui__media-xlg() {
+        @include sizing($class, $style, 'xlg-' + $i, $value);
+    }
+}
 
 .w-0 { width: 0; }
 .h-0 { height: 0; }
@@ -16,24 +55,31 @@ $plain-ui__helpers__height-steps: 50;
 .w-100 { width: 100%; }
 .h-100 { height: 100%; }
 
-@for $i from 1 through $reflex-columns {
-    .w-col-#{$i} {
-        width: percentage(($i / $reflex-columns));
-    }
+@for $i from 1 through $reflex-columns
+{
+    $value: percentage(($i / $reflex-columns));
 
-    .h-col-#{$i} {
-        height: percentage(($i / $reflex-columns));
-    }
+    @include sizing('w-col', 'width', $i, $value);
+    @include sizing_breakpoints('w-col', 'width', $i, $value);
+
+    $value: percentage(($i / $reflex-columns));
+
+    @include sizing('h-col', 'height', $i, $value);
+    @include sizing_breakpoints('h-col', 'height', $i, $value);
 }
 
-@for $i from 1 through $plain-ui__helpers__height-steps {
-    .w-#{$i} {
-        width: #{($i * 0.5)}rem;
-    }
+@for $i from 1 through $plain-ui__sizing_steps
+{
+    $value: #{($i * 0.5)}rem;
+
+    @include sizing('w', 'width', $i, $value);
+    @include sizing_breakpoints('w', 'width', $i, $value);
 }
 
-@for $i from 1 through $plain-ui__helpers__height-steps {
-    .h-#{$i} {
-        height: #{($i * 0.5)}rem;
-    }
+@for $i from 1 through $plain-ui__sizing_steps
+{
+    $value: #{($i * 0.5)}rem;
+
+    @include sizing('h', 'height', $i, $value);
+    @include sizing_breakpoints('h', 'height', $i, $value);
 }

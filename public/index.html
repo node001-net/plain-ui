@@ -66,7 +66,7 @@
                 <div class="content">
                     <div class="panel panel--border-highlight border-color-danger m-bottom-4">
                         <div class="panel__body">
-                            <div class="content marginless-last-child">
+                            <div class="content m-bottom-last-child-0">
                                 <p>
                                     On development, a few styles and names will be change until release
                                 </p>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <p>
-                        <span class="bold">Plain UI</span> is a simple UI Framework. 
+                        <span class="bold">Plain UI</span> is a simple UI Framework.
                     </p>
                     <p>
 
@@ -118,7 +118,18 @@
 
                         <a href="https://purgecss.com/" target="_blank">PurgeCSS</a>
                     </p>
-<code></code>
+<code>mix
+    .setPublicPath('./public')
+    .sass('src/scss/plain-ui.scss', 'public/plain-ui.css')
+    .purgeCss({
+        extend: {
+            enabled: true,
+            content: [
+                path.join(__dirname, 'public/*.html'),
+            ]
+        }
+    })
+</code>
                 </div>
             </div>
         </div>

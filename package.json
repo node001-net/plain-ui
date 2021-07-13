@@ -22,6 +22,7 @@
     "svgo": "^1.3.2"
   },
   "dependencies": {
+    "laravel-mix-purgecss": "^6.0.0",
     "normalize.css": "^8.0.1",
     "reflex-grid": "^2.0.7"
   }

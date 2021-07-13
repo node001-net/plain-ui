@@ -1,14 +1,4 @@
 {
     "/spritemap.js": "/spritemap.js",
-    "/dist/plain-ui.css": "/dist/plain-ui.css",
-    "/dist/fonts/demo.html": "/dist/fonts/demo.html",
-    "/dist/fonts/IBMPlexMono-Bold.eot": "/dist/fonts/IBMPlexMono-Bold.eot",
-    "/dist/fonts/IBMPlexMono-Bold.ttf": "/dist/fonts/IBMPlexMono-Bold.ttf",
-    "/dist/fonts/IBMPlexMono-Bold.woff": "/dist/fonts/IBMPlexMono-Bold.woff",
-    "/dist/fonts/IBMPlexMono-Bold.woff2": "/dist/fonts/IBMPlexMono-Bold.woff2",
-    "/dist/fonts/IBMPlexMono.eot": "/dist/fonts/IBMPlexMono.eot",
-    "/dist/fonts/IBMPlexMono.ttf": "/dist/fonts/IBMPlexMono.ttf",
-    "/dist/fonts/IBMPlexMono.woff": "/dist/fonts/IBMPlexMono.woff",
-    "/dist/fonts/IBMPlexMono.woff2": "/dist/fonts/IBMPlexMono.woff2",
-    "/dist/fonts/stylesheet.css": "/dist/fonts/stylesheet.css"
+    "/dist/plain-ui.css": "/dist/plain-ui.css"
 }

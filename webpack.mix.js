@@ -1,5 +1,8 @@
 const mix = require('laravel-mix')
 const SvgSpritemapPlugin = require('svg-spritemap-webpack-plugin')
+const path = require('path')
+
+require('laravel-mix-purgecss')
 
 /*
  |--------------------------------------------------------------------------
@@ -16,7 +19,7 @@ mix.webpackConfig({
     plugins: [
         new SvgSpritemapPlugin('src/icons/*.svg', {
             output: {
-                filename: 'dist/symbol-defs.svg',
+                filename: 'symbol-defs.svg',
                 chunk: {
                     keep: true
                 },
@@ -37,11 +40,18 @@ mix.webpackConfig({
 })
 
 mix
-    .sass('src/scss/plain-ui.scss', 'dist/plain-ui.css')
-    .copy('src/fonts/*', 'dist/fonts')
+    .setPublicPath('./public')
+    .sass('src/scss/plain-ui.scss', 'public/plain-ui.css')
+    .purgeCss({
+        extend: {
+            enabled: true,
+            content: [
+                path.join(__dirname, 'public/*.html'),
+            ]
+        }
+    })
     .options({
         terser: {
             extractComments: false,
-        },
-        processCssUrls: false
+        }
     })

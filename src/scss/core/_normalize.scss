@@ -9,6 +9,12 @@
  *
  */
 
+:root {
+    @each $var, $color in $plain-ui__colors {
+        #{$var}: $color;
+    }
+}
+
 html {
     font-size: 100%;
     line-height: 1.15; // Correct the line height in all browsers.

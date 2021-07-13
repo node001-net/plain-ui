@@ -87,52 +87,28 @@ $plain-ui__link: $plain-ui__text !default;
 $plain-ui__link-hover: $plain-ui__danger !default;
 
 $plain-ui__colors: (
-    --body,
-    --text,
-    --text-contrast,
-    --primary,
-    --primary-contrast,
-    --active,
-    --active-contrast,
-    --link,
-    --link-hover,
-    --danger,
-    --danger-contrast,
-    --info,
-    --info-constrast,
-    --success,
-    --success-contrast,
-    --warning,
-    --warning-contrast,
-    --background,
-    --background-contrast,
-    --border,
-    --border-contrast
+    '--body': $plain-ui__body,
+    '--text': $plain-ui__text,
+    '--text-contrast': $plain-ui__text-contrast,
+    '--primary': $plain-ui__primary,
+    '--primary-contrast': $plain-ui__primary-contrast,
+    '--active': #{$plain-ui__active},
+    '--active-contrast': $plain-ui__active-contrast,
+    '--link': $plain-ui__link,
+    '--link-hover': $plain-ui__link-hover,
+    '--danger': $plain-ui__danger,
+    '--danger-contrast': $plain-ui__danger-contrast,
+    '--info': $plain-ui__info,
+    '--info-constrast': $plain-ui__info-contrast,
+    '--success': $plain-ui__success,
+    '--success-contrast': $plain-ui__success-contrast,
+    '--warning': $plain-ui__warning,
+    '--warning-contrast': $plain-ui__warning-contrast,
+    '--background': $plain-ui__background,
+    '--background-contrast': $plain-ui__background-contrast,
+    '--border': $plain-ui__border,
+    '--border-contrast': $plain-ui__border-contrast
 ) !default;
-
-:root {
-    --body: #{$plain-ui__body};
-    --text: #{$plain-ui__text};
-    --text-contrast: #{$plain-ui__text-contrast};
-    --primary: #{$plain-ui__primary};
-    --primary-contrast: #{$plain-ui__primary-contrast};
-    --active: #{$plain-ui__active};
-    --active-contrast: #{$plain-ui__active-contrast};
-    --link: #{$plain-ui__link};
-    --link-hover: #{$plain-ui__link-hover};
-    --danger: #{$plain-ui__danger};
-    --danger-contrast: #{$plain-ui__danger-contrast};
-    --info: #{$plain-ui__info};
-    --info-constrast: #{$plain-ui__danger-contrast};
-    --success: #{$plain-ui__success};
-    --success-contrast: #{$plain-ui__success-contrast};
-    --warning: #{$plain-ui__warning};
-    --warning-contrast: #{$plain-ui__warning-contrast};
-    --background: #{$plain-ui__background};
-    --background-contrast: #{$plain-ui__background-contrast};
-    --border: #{$plain-ui__border};
-    --border-contrast: #{$plain-ui__border-contrast};
-}
 
 /**
  *  margin

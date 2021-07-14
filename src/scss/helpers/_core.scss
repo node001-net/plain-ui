@@ -6,11 +6,11 @@
  */
 
 .border {
-    border: $plain-ui__border;
+    border: $border;
 }
 
 .border-round {
-    border-radius: $plain-ui__border-radius;
+    border-radius: $border-radius;
 }
 
 .border-0 {
@@ -31,9 +31,9 @@
  *
  */
 
-$plain-ui__z-index: 20;
+$z-index: 20;
 
-@for $i from 1 through $plain-ui__z-index {
+@for $i from 1 through $z-index {
     .z-index-#{$i} {
         z-index: $i;
     }
@@ -63,7 +63,7 @@ $plain-ui__z-index: 20;
 }
 
 .clearfix {
-    @include plain-ui__clearfix();
+    @include clearfix();
 }
 
 /**

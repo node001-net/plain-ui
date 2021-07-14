@@ -6,7 +6,7 @@
  *
  */
 
-@each $name, $color in $plain-ui__colors {
+@each $name, $color in $colors {
     $class: str-replace($name, '--', '');
 
     .color-#{$class} {
@@ -14,7 +14,7 @@
     }
 }
 
-@each $name, $color in $plain-ui__colors {
+@each $name, $color in $colors {
     $class: str-replace($name, '--', '');
 
     .fill-#{$class} {
@@ -22,7 +22,7 @@
     }
 }
 
-@each $name, $color in $plain-ui__colors {
+@each $name, $color in $colors {
     $class: str-replace($name, '--', '');
 
     .border-color-#{$class} {
@@ -30,7 +30,7 @@
     }
 }
 
-@each $name, $color in $plain-ui__colors {
+@each $name, $color in $colors {
     $class: str-replace($name, '--', '');
 
     .background-color-#{$class} {

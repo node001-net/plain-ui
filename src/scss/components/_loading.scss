@@ -22,7 +22,7 @@
 
         background-color: var(--background);
 
-        animation-name: plain-ui__loading-animation;
+        animation-name: loading-animation;
         animation-duration: 0.5s;
         animation-iteration-count: infinite;
 
@@ -43,7 +43,7 @@
     }
 }
 
-@keyframes plain-ui__loading-animation {
+@keyframes loading-animation {
     0%   {  height: 60px; }
     50%  {  height: 40px; }
     100% {  height: 60px; }

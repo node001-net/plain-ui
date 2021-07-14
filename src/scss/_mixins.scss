@@ -16,7 +16,7 @@
  *
  */
 
-@mixin plain-ui__clearfix() {
+@mixin clearfix() {
     &::before,
     &::after {
         display: table;
@@ -35,7 +35,7 @@
  *
  */
 
-@mixin plain-ui__clearlist() {
+@mixin clearlist() {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -55,74 +55,74 @@
  *
  */
 
-@mixin plain-ui__media-xs() {
-    @media only screen and (min-width:$plain-ui__xs) {
+@mixin media-xs() {
+    @media only screen and (min-width: $breakpoint__xs) {
         @content;
     }
 }
 
-@mixin plain-ui__media-sm() {
-    @media only screen and (min-width: $plain-ui__sm) {
+@mixin media-sm() {
+    @media only screen and (min-width: $breakpoint__sm) {
         @content;
     }
 }
 
-@mixin plain-ui__media-md() {
-    @media only screen and (min-width: $plain-ui__md) {
+@mixin media-md() {
+    @media only screen and (min-width: $breakpoint__md) {
         @content;
     }
 }
 
-@mixin plain-ui__media-lg() {
-    @media only screen and (min-width: $plain-ui__lg) {
+@mixin media-lg() {
+    @media only screen and (min-width: $breakpoint__lg) {
         @content;
     }
 }
 
-@mixin plain-ui__media-xlg() {
-    @media only screen and (min-width: $plain-ui__xlg) {
+@mixin media-xlg() {
+    @media only screen and (min-width: $breakpoint__xlg) {
         @content;
     }
 }
 
-@mixin plain-ui__media-xxs-only() {
-    @media only screen and (max-width: $plain-ui__xs) {
+@mixin media-xxs-only() {
+    @media only screen and (max-width: $breakpoint__xs) {
         @content;
     }
 }
 
-@mixin plain-ui__media-xxs-only() {
-    @media only screen and (max-width: $plain-ui__xs - 1) {
+@mixin media-xxs-only() {
+    @media only screen and (max-width: $breakpoint__xs - 1) {
         @content;
     }
 }
 
-@mixin plain-ui__media-xs-only() {
-    @media only screen and (min-width: $plain-ui__xs) and (max-width: $plain-ui__sm - 1) {
+@mixin media-xs-only() {
+    @media only screen and (min-width: $breakpoint__xs) and (max-width: $breakpoint__sm - 1) {
         @content;
     }
 }
 
-@mixin plain-ui__media-sm-only() {
-    @media only screen and (min-width: $plain-ui__sm) and (max-width: $plain-ui__md - 1) {
+@mixin media-sm-only() {
+    @media only screen and (min-width: $breakpoint__sm) and (max-width: $breakpoint__md - 1) {
         @content;
     }
 }
 
-@mixin plain-ui__media-md-only() {
-    @media only screen and (min-width: $plain-ui__md) and (max-width: $plain-ui__lg - 1) {
+@mixin media-md-only() {
+    @media only screen and (min-width: $breakpoint__md) and (max-width: $breakpoint__lg - 1) {
         @content;
     }
 }
 
-@mixin plain-ui__media-lg-only() {
-    @media only screen and (min-width: $plain-ui__lg) and (max-width: $plain-ui__xlg - 1) {
+@mixin media-lg-only() {
+    @media only screen and (min-width: $breakpoint__lg) and (max-width: $breakpoint__xlg - 1) {
         @content;
     }
 }
 
-@mixin plain-ui__media-xlg-only() {
-    @media only screen and (min-width: $plain-ui__xlg) {
+@mixin media-xlg-only() {
+    @media only screen and (min-width: $breakpoint__xlg) {
         @content;
     }
 }
@@ -132,7 +132,7 @@
  *  Set property and his value for each Breakpoint
  *
  *  (
- *      $plain-ui__md: 10px
+ *      $md: 10px
  *  )
  *
  *
@@ -142,7 +142,7 @@
  *
  */
 
-@mixin plain-ui__breakpoints($property, $breakpoints, $important: false) {
+@mixin breakpoints($property, $breakpoints, $important: false) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
             @if $important == false {
@@ -171,7 +171,7 @@
  *  Set property and his value with an factor for each Breakpoint
  *
  *  (
- *      $plain-ui__md: 10px
+ *      $md: 10px
  *  )
  *
  *  @param  {css} $property
@@ -181,7 +181,7 @@
  *
  */
 
-@mixin plain-ui__breakpoints-calculate($property, $factor, $breakpoints, $important: false) {
+@mixin breakpoints-calculate($property, $factor, $breakpoints, $important: false) {
     @each $breakpoint, $value in $breakpoints {
         @media only screen and (min-width: $breakpoint) {
             @if $important == false {
@@ -197,7 +197,7 @@
  *  Set font-size from Breakpoints, use for calculating difference from font-size and default font-size
  *
  *  (
- *      $plain-ui__md: 1rem
+ *      $md: 1rem
  *  )
  *
  *  @param  {map}  $breakpoints
@@ -206,7 +206,7 @@
  *  @param  {Boolean} $important   [false]
  *
  */
-@mixin plain-ui__breakpoints-font-size($breakpoints, $font-size, $default, $important: false) {
+@mixin breakpoints-font-size($breakpoints, $font-size, $default, $important: false) {
     @each $breakpoint, $value in $breakpoints {
 
         // getting diff

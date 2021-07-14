@@ -66,26 +66,26 @@
     }
 }
 
-@each $name, $font-size in $plain-ui__font-sizes {
+@each $name, $font-size in $font-sizes {
     @include add_font_size($name, $font-size);
 
-    @include plain-ui__media-xs() {
+    @include media-xs() {
         @include add_font_size('xs-' + $name, $font-size);
     }
 
-    @include plain-ui__media-sm() {
+    @include media-sm() {
         @include add_font_size('sm-' + $name, $font-size);
     }
 
-    @include plain-ui__media-md() {
+    @include media-md() {
         @include add_font_size('md-' + $name, $font-size);
     }
 
-    @include plain-ui__media-lg() {
+    @include media-lg() {
         @include add_font_size('lg-' + $name, $font-size);
     }
 
-    @include plain-ui__media-xlg() {
+    @include media-xlg() {
         @include add_font_size('xlg-' + $name, $font-size);
     }
 }

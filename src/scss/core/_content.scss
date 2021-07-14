@@ -12,8 +12,8 @@
 
     // paragraphs
     p {
-        margin: $plain-ui__margin;
-        @include media-breakpoints('margin', $plain-ui__margin-breakpoints);
+        margin: $margin;
+        @include media-breakpoints('margin', $margin-breakpoints);
     }
 
     // Semantic text elements
@@ -74,9 +74,9 @@
      *
      */
     blockquote {
-        border-left: $plain-ui__border;
+        border-left: $border;
         margin-left: 0;
-        padding: $plain-ui__padding;
+        padding: $padding;
 
         p:last-child {
             margin-bottom: 0;
@@ -91,8 +91,8 @@
     ol,
     ul {
         padding: 0;
-        margin: $plain-ui__margin;
-        @include media-breakpoints('margin', $plain-ui__margin-breakpoints);
+        margin: $margin;
+        @include media-breakpoints('margin', $margin-breakpoints);
     }
 
     ol,
@@ -133,15 +133,15 @@
 
         overflow-y: hidden;
         overflow-x: auto;
-        border: $plain-ui__border;
-        border-radius: $plain-ui__border-radius;
+        border: $border;
+        border-radius: $border-radius;
         background-color: var(--background-contrast);
 
-        margin: $plain-ui__margin;
-        @include media-breakpoints('margin', $plain-ui__margin-breakpoints);
+        margin: $margin;
+        @include media-breakpoints('margin', $margin-breakpoints);
 
-        padding: $plain-ui__padding;
-        @include media-breakpoints('padding', $plain-ui__padding-breakpoints);
+        padding: $padding;
+        @include media-breakpoints('padding', $padding-breakpoints);
     }
 }
 
@@ -149,6 +149,6 @@
     padding: 0.15rem 0.4rem 0.25rem;
     background: var(--primary);
     color: var(--text-contrast);
-    border-radius: $plain-ui__border-radius;
+    border-radius: $border-radius;
 }
 

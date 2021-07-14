@@ -15,14 +15,14 @@
     align-items: center;
     text-decoration: none;
 
-    font-family: $plain-ui__font-family;
+    font-family: $font-family;
     font-size: 1rem;
 
     border: 1px solid var(--border);
     background-color: var(--background-contrast);
     color: var(--text);
 
-    border-radius: $plain-ui__border-radius;
+    border-radius: $border-radius;
     transition: background-color 0.1s;
 
     margin-bottom: 0.5em;
@@ -30,7 +30,7 @@
     min-height: 2.8em;
     width: 100%;
 
-    @include plain-ui__media-sm() {
+    @include media-sm() {
         width: auto;
     }
 
@@ -125,26 +125,26 @@
 
         &:hover {
             color: var(--border);
-            border-color: lighten($plain-ui__primary, 40%);
+            border-color: lighten($color__primary, 40%);
             background-color: transparent;
         }
     }
 
     &--danger.button--outline {
         &:hover {
-            border-color: lighten($plain-ui__danger, 20%);
+            border-color: lighten($color__danger, 20%);
         }
     }
 
     &--info.button--outline {
         &:hover {
-            border-color: lighten($plain-ui__info, 20%);
+            border-color: lighten($color__info, 20%);
         }
     }
 
     &--success.button--outline {
         &:hover {
-            border-color: lighten($plain-ui__success, 20%);
+            border-color: lighten($color__success, 20%);
         }
     }
 }

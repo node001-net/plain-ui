@@ -21,8 +21,8 @@
     background-color: var(--background);
     color: var(--text-contrast);
 
-    border: $plain-ui__border;
-    border-radius: $plain-ui__border-radius;
+    border: $border;
+    border-radius: $border-radius;
 
     &__start {
         justify-content: start;

@@ -6,12 +6,12 @@
 
 .panel {
     border: 1px solid var(--border);
-    border-radius: $plain-ui__border-radius;
+    border-radius: $border-radius;
     background-color: var(--background-contrast);
 
     &__body {
-        padding: $plain-ui__padding;
-        @include media-breakpoints('padding', $plain-ui__padding-breakpoints);
+        padding: $padding;
+        @include media-breakpoints('padding', $padding-breakpoints);
     }
 
     &--border-highlight {

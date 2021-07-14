@@ -9,9 +9,9 @@
     flex-direction: column;
 
     width: 100%;
-    border-bottom: $plain-ui__border;
+    border-bottom: $border;
 
-    @include plain-ui__media-sm() {
+    @include media-sm() {
         width: auto;
         flex-direction: row;
     }
@@ -31,7 +31,7 @@
 
         width: 100%;
 
-        @include plain-ui__media-sm() {
+        @include media-sm() {
             width: auto;
             display: inline-flex;
         }
@@ -41,8 +41,8 @@
             background-color: var(--active);
             color: var(--text-contrast);
 
-            border-top-left-radius: $plain-ui__border-radius;
-            border-top-right-radius: $plain-ui__border-radius;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
         }
 
         &--selected {

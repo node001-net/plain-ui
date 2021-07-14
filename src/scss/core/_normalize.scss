@@ -10,7 +10,7 @@
  */
 
 :root {
-    @each $var, $color in $plain-ui__colors {
+    @each $var, $color in $colors {
         #{$var}: $color;
     }
 }
@@ -33,16 +33,16 @@ legend {
 }
 
 body {
-    font-family: $plain-ui__font-family;
+    font-family: $font-family;
     color: var(--text);
 
     background-color: var(--body);
-    direction: $plain-ui__direction;
+    direction: $direction;
 
-    font-size: $plain-ui__font-size;
-    @include media-breakpoints('font-size', $plain-ui__font-size-breakpoints);
+    font-size: $font-size;
+    @include media-breakpoints('font-size', $font-size-breakpoints);
 
-    line-height: $plain-ui__line-height;
+    line-height: $line-height;
     //@include crispy__media-breakpoints('font-size', $crispy__font-size-breakpoints);
 }
 
@@ -103,7 +103,7 @@ textarea {
 }
 
 fieldset {
-    margin: $plain-ui__margin;
+    margin: $margin;
 }
 
 // Remove the inheritance of text transform in Firefox
@@ -176,7 +176,7 @@ hr {
     overflow: visible; // Show the overflow in Edge and IE.
     border: 0;
     border-top: 1px solid var(--border);
-    margin: $plain-ui__margin;
+    margin: $margin;
 }
 
 // Add the correct vertical alignment in Chrome, Firefox, and Opera.
@@ -198,7 +198,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $plain-ui__font-family;
-    font-size: $plain-ui__font-size;
+    font-family: $font-family;
+    font-size: $font-size;
     // @TODO
 }

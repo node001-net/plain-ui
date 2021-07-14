@@ -15,37 +15,37 @@
  *
  */
 
-$plain-ui__xs : 576px !default;
-$plain-ui__sm : 768px !default;
-$plain-ui__md : 992px !default;
-$plain-ui__lg : 1200px !default;
-$plain-ui__xlg: 1600px !default;
+$breakpoint__xs : 576px !default;
+$breakpoint__sm : 768px !default;
+$breakpoint__md : 992px !default;
+$breakpoint__lg : 1200px !default;
+$breakpoint__xlg: 1600px !default;
 
 /**
  *  fonts
  *
  */
 
-$plain-ui__direction: ltr !default;
+$direction: ltr !default;
 
-$plain-ui__font-family: 'IBM Plex Mono', sans-serif !default;
-$plain-ui__font-weight: normal !default;
-$plain-ui__font-size: 0.9rem !default;
-$plain-ui__font-size-breakpoints: (
-    $plain-ui__md: 1rem
+$font-family: 'IBM Plex Mono', sans-serif !default;
+$font-weight: normal !default;
+$font-size: 0.9rem !default;
+$font-size-breakpoints: (
+    $breakpoint__md: 1rem
 ) !default;
 
-$plain-ui__font-sizes: (
-    'default': $plain-ui__font-size,
-    'small'  : $plain-ui__font-size * 0.75,
-    'medium' : $plain-ui__font-size * 1.5,
-    'large'  : $plain-ui__font-size * 2,
-    'big'    : $plain-ui__font-size * 3
+$font-sizes: (
+    'default': $font-size,
+    'small'  : $font-size * 0.75,
+    'medium' : $font-size * 1.5,
+    'large'  : $font-size * 2,
+    'big'    : $font-size * 3
 ) !default;
 
-$plain-ui__line-height: 1.618;
-$plain-ui__line-height__breakpoints: (
-    $plain-ui__md: 1.8
+$line-height: 1.618;
+$line-height__breakpoints: (
+    $breakpoint__md: 1.8
 ) !default;
 
 
@@ -55,59 +55,59 @@ $plain-ui__line-height__breakpoints: (
  *
  */
 
-$plain-ui__white: #ffffff !default;
-$plain-ui__black: #212121 !default;
+$color__white: #ffffff !default;
+$color__black: #212121 !default;
 
-$plain-ui__primary: #3e3e3e !default;
-$plain-ui__primary-contrast: $plain-ui__primary !default;
+$color__primary: #3e3e3e !default;
+$color__primary-contrast: $color__primary !default;
 
-$plain-ui__active: lighten($plain-ui__primary, 20%) !default;
-$plain-ui__active-contrast: #ffffff !default;
+$color__active: lighten($color__primary, 20%) !default;
+$color__active-contrast: #ffffff !default;
 
-$plain-ui__background: $plain-ui__primary !default;
-$plain-ui__background-contrast: #ffffff !default;
+$color__background: $color__primary !default;
+$color__background-contrast: #ffffff !default;
 
-$plain-ui__body: #f9f9f9 !default;
-$plain-ui__text: #363636 !default;
-$plain-ui__text-contrast: #ffffff !default;
+$color__body: #f9f9f9 !default;
+$color__text: #363636 !default;
+$color__text-contrast: #ffffff !default;
 
-$plain-ui__border: $plain-ui__primary !default;
-$plain-ui__border-contrast: #ffffff !default;
+$color__border: $color__primary !default;
+$color__border-contrast: #ffffff !default;
 
-$plain-ui__success: #64ac64 !default;
-$plain-ui__success-contrast: lighten($plain-ui__success, 20%) !default;
-$plain-ui__warning: #f0ad4e !default;
-$plain-ui__warning-contrast: lighten($plain-ui__warning, 20%) !default;
-$plain-ui__danger: #d95959 !default;
-$plain-ui__danger-contrast: lighten($plain-ui__danger, 20%) !default;
-$plain-ui__info: #0090d4 !default;
-$plain-ui__info-contrast: lighten($plain-ui__info, 20%) !default;
+$color__success: #64ac64 !default;
+$color__success-contrast: lighten($color__success, 20%) !default;
+$color__warning: #f0ad4e !default;
+$color__warning-contrast: lighten($color__warning, 20%) !default;
+$color__danger: #d95959 !default;
+$color__danger-contrast: lighten($color__danger, 20%) !default;
+$color__info: #0090d4 !default;
+$color__info-contrast: lighten($color__info, 20%) !default;
 
-$plain-ui__link: $plain-ui__text !default;
-$plain-ui__link-hover: $plain-ui__danger !default;
+$color__link: $color__text !default;
+$color__link-hover: $color__danger !default;
 
-$plain-ui__colors: (
-    '--body': $plain-ui__body,
-    '--text': $plain-ui__text,
-    '--text-contrast': $plain-ui__text-contrast,
-    '--primary': $plain-ui__primary,
-    '--primary-contrast': $plain-ui__primary-contrast,
-    '--active': #{$plain-ui__active},
-    '--active-contrast': $plain-ui__active-contrast,
-    '--link': $plain-ui__link,
-    '--link-hover': $plain-ui__link-hover,
-    '--danger': $plain-ui__danger,
-    '--danger-contrast': $plain-ui__danger-contrast,
-    '--info': $plain-ui__info,
-    '--info-constrast': $plain-ui__info-contrast,
-    '--success': $plain-ui__success,
-    '--success-contrast': $plain-ui__success-contrast,
-    '--warning': $plain-ui__warning,
-    '--warning-contrast': $plain-ui__warning-contrast,
-    '--background': $plain-ui__background,
-    '--background-contrast': $plain-ui__background-contrast,
-    '--border': $plain-ui__border,
-    '--border-contrast': $plain-ui__border-contrast
+$colors: (
+    '--body': $color__body,
+    '--text': $color__text,
+    '--text-contrast': $color__text-contrast,
+    '--primary': $color__primary,
+    '--primary-contrast': $color__primary-contrast,
+    '--active': #{$color__active},
+    '--active-contrast': $color__active-contrast,
+    '--link': $color__link,
+    '--link-hover': $color__link-hover,
+    '--danger': $color__danger,
+    '--danger-contrast': $color__danger-contrast,
+    '--info': $color__info,
+    '--info-constrast': $color__info-contrast,
+    '--success': $color__success,
+    '--success-contrast': $color__success-contrast,
+    '--warning': $color__warning,
+    '--warning-contrast': $color__warning-contrast,
+    '--background': $color__background,
+    '--background-contrast': $color__background-contrast,
+    '--border': $color__border,
+    '--border-contrast': $color__border-contrast
 ) !default;
 
 /**
@@ -115,9 +115,9 @@ $plain-ui__colors: (
  *
  */
 
-$plain-ui__margin: 0 0 1rem !default;
-$plain-ui__margin-breakpoints: (
-    $plain-ui__md: 0 0 0.8rem
+$margin: 0 0 1rem !default;
+$margin-breakpoints: (
+    $breakpoint__md: 0 0 0.8rem
 ) !default;
 
 /**
@@ -125,9 +125,9 @@ $plain-ui__margin-breakpoints: (
  *
  */
 
-$plain-ui__padding: 0.6rem 0.8rem !default;
-$plain-ui__padding-breakpoints: (
-    $plain-ui__md: 0.8rem 1rem
+$padding: 0.6rem 0.8rem !default;
+$padding-breakpoints: (
+    $breakpoint__md: 0.8rem 1rem
 ) !default;
 
 /**
@@ -135,5 +135,5 @@ $plain-ui__padding-breakpoints: (
  *
  */
 
-$plain-ui__border-radius: 2px;
-$plain-ui__border: 1px solid var(--border);
+$border-radius: 2px;
+$border: 1px solid var(--border);

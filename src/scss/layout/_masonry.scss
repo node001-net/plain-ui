@@ -13,7 +13,7 @@
  *
  */
 
-$plain-ui__masonry_sizes: (
+$masonry_sizes: (
     1: 25%,
     2: 55%,
     3: 20%,
@@ -21,28 +21,28 @@ $plain-ui__masonry_sizes: (
     5: 33%
 ) !default;
 
-$plain-ui__masonry_height: 200px !default;
-$plain-ui__masonry_height--sm: 300px !default;
-$plain-ui__masonry_gap: 15px !default;
-$plain-ui__masonry_gap-offset: 10px !default;
+$masonry_height: 200px !default;
+$masonry_height--sm: 300px !default;
+$masonry_gap: 15px !default;
+$masonry_gap-offset: 10px !default;
 
 .masonry {
     display: flex;
     width: 100%;
     flex-flow: row wrap;
-    gap: $plain-ui__masonry_gap;
+    gap: $masonry_gap;
 
     &__item {
         width: 100%;
-        height: $plain-ui__masonry_height;
+        height: $masonry_height;
 
-        @include plain-ui__media-sm() {
-            height: $plain-ui__masonry_height--sm;
+        @include media-sm() {
+            height: $masonry_height--sm;
 
             // add width from data
-            @each $index, $size in $plain-ui__masonry_sizes {
+            @each $index, $size in $masonry_sizes {
                 &:nth-child(4n+#{$index}) {
-                    width: calc(#{$size} - #{$plain-ui__masonry_gap-offset});
+                    width: calc(#{$size} - #{$masonry_gap-offset});
                 }
             }
         }

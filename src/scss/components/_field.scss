@@ -6,7 +6,7 @@
  */
 
 .field-group {
-    margin: $plain-ui__margin;
+    margin: $margin;
 
     &--valid {
         input.field-text, textarea.field-text {
@@ -31,7 +31,7 @@
 
 .field-label {
     font-size: 1rem;
-    font-family: $plain-ui__font-family;
+    font-family: $font-family;
 
     .icon {
         vertical-align: text-bottom;
@@ -43,14 +43,14 @@
 }
 
 input.field-text, textarea.field-text, select.field-choice {
-    font-family: $plain-ui__font-family;
+    font-family: $font-family;
     font-size: 0.95rem;
 
     width: 100%;
 
     border: 1px solid var(--active);
     background-color: var(--background-contrast);
-    border-radius: $plain-ui__border-radius;
+    border-radius: $border-radius;
 
     margin: 0.7rem 0 0;
 

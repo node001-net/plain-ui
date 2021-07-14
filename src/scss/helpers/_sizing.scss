@@ -7,7 +7,7 @@
  *
  */
 
-$plain-ui__sizing_steps: 50 !default;
+$sizing_steps: 50 !default;
 
 /**
  *  mixin: sizing
@@ -27,23 +27,23 @@ $plain-ui__sizing_steps: 50 !default;
  */
 @mixin sizing_breakpoints($class, $style, $i, $value)
 {
-    @include plain-ui__media-xs() {
+    @include media-xs() {
         @include sizing($class, $style, 'xs-' + $i, $value);
     }
 
-    @include plain-ui__media-sm() {
+    @include media-sm() {
         @include sizing($class, $style, 'sm-' + $i, $value);
     }
 
-    @include plain-ui__media-md() {
+    @include media-md() {
         @include sizing($class, $style, 'md-' + $i, $value);
     }
 
-    @include plain-ui__media-lg() {
+    @include media-lg() {
         @include sizing($class, $style, 'lg-' + $i, $value);
     }
 
-    @include plain-ui__media-xlg() {
+    @include media-xlg() {
         @include sizing($class, $style, 'xlg-' + $i, $value);
     }
 }
@@ -68,7 +68,7 @@ $plain-ui__sizing_steps: 50 !default;
     @include sizing_breakpoints('h-col', 'height', $i, $value);
 }
 
-@for $i from 1 through $plain-ui__sizing_steps
+@for $i from 1 through $sizing_steps
 {
     $value: #{($i * 0.5)}rem;
 
@@ -76,7 +76,7 @@ $plain-ui__sizing_steps: 50 !default;
     @include sizing_breakpoints('w', 'width', $i, $value);
 }
 
-@for $i from 1 through $plain-ui__sizing_steps
+@for $i from 1 through $sizing_steps
 {
     $value: #{($i * 0.5)}rem;
 

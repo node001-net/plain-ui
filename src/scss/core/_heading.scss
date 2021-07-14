@@ -8,7 +8,7 @@
  *
  */
 
-$plain-ui__heading__font-sizes: (
+$heading__font-sizes: (
     'h1': 2.25rem,
     'h2': 2rem,
     'h3': 1.8rem,
@@ -17,18 +17,18 @@ $plain-ui__heading__font-sizes: (
     'h6': 1.2rem
 ) !default;
 
-$plain-ui__heading__font-sizes__breakpoints: (
-    $plain-ui__md: 1.2rem
+$heading__font-sizes__breakpoints: (
+    $breakpoint__md: 1.2rem
 ) !default;
 
-$plain-ui__heading__font-weight: bold!default;
-$plain-ui__heading__font-family: $plain-ui__font-family !default;
+$heading__font-weight: bold!default;
+$heading__font-family: $font-family !default;
 
-$plain-ui__heading__line-height: 1.2 !default;
+$heading__line-height: 1.2 !default;
 
-$plain-ui__heading__margin: 0.6rem 0 1.2rem !default;
-$plain-ui__heading__margin-breakpoints: (
-    $plain-ui__md: 0.7rem 0 1.4rem
+$heading__margin: 0.6rem 0 1.2rem !default;
+$heading__margin-breakpoints: (
+    $breakpoint__md: 0.7rem 0 1.4rem
 ) !default;
 
 h1, .h1,
@@ -37,21 +37,21 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    font-family: $plain-ui__heading__font-family;
-    font-weight: $plain-ui__heading__font-weight;
-    line-height: $plain-ui__heading__line-height;
+    font-family: $heading__font-family;
+    font-weight: $heading__font-weight;
+    line-height: $heading__line-height;
 
-    margin: $plain-ui__heading__margin;
-    @include plain-ui__breakpoints('margin', $plain-ui__heading__margin-breakpoints);
+    margin: $heading__margin;
+    @include breakpoints('margin', $heading__margin-breakpoints);
 
     &.highlight {
         display: table;
     }
 }
 
-@each $h, $font-size in $plain-ui__heading__font-sizes {
+@each $h, $font-size in $heading__font-sizes {
     #{$h}, .#{$h} {
         font-size: $font-size;
-        @include plain-ui__breakpoints-font-size($plain-ui__heading__font-sizes__breakpoints, $font-size, $plain-ui__font-size);
+        @include breakpoints-font-size($heading__font-sizes__breakpoints, $font-size, $font-size);
     }
 }

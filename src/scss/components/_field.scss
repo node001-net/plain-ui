@@ -141,6 +141,52 @@ svg.field-choice__checked {
 }
 
 /**
+ *
+ *
+ */
+
+.field-switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 35px;
+
+    border: $border;
+    border-radius: $border-radius;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        content: '';
+
+        border: $border;
+        border-color: var(--border-contrast);
+        border-radius: $border-radius;
+        background-color: var(--active);
+
+        transition: transform 0.25s;
+    }
+}
+
+input[type=checkbox].field-choice {
+    ~ .field-switch:after {
+        left: 0;
+    }
+
+    &:checked ~ .field-switch {
+        border-color: var(--success);
+
+        &:after {
+            background-color: var(--success);
+            transform: translateX(100%);
+        }
+    }
+}
+
+/**
  * display error for fields
  *
  */

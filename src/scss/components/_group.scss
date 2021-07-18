@@ -12,17 +12,16 @@
  *
  */
 
-@mixin component__group()
-{
-    .group {
-        &__item {
-            width: auto;
-            display: inline-block;
-            margin: 0 1rem 1rem;
+.group {
+    &__item {
+        width: auto;
+        display: inline-block;
+        margin: $margin;
 
-            &:last-child {
-                margin-right: 0;
-            }
+        margin-right: 0.25rem;
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 }

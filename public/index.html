@@ -27,7 +27,7 @@
                         <use xlink:href="symbol-defs.svg#icon-github"></use>
                     </svg>
                 </a>
-                <a class="button button--small m-left-sm-3 m-bottom-0" href="https://gitea.tentakelfabrik.de/">
+                <a class="button button--small m-left-sm-3 m-bottom-0" href="https://gitea.tentakelfabrik.de/" rel="noopener" target="_blank">
                     Gitea
                     <svg class="m-left-3 icon fill-text" aria-hidden="true">
                         <use xlink:href="symbol-defs.svg#icon-gitea"></use>
@@ -68,11 +68,12 @@
                         <div class="panel__body">
                             <div class="content m-last-child-0">
                                 <p>
-                                    On development, a few styles and names will be change until release
+                                    Plain UI is currently under development, Styles, Names and Documentation may change until Release!
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <p>
                         <span class="bold">Plain UI</span> is a simple UI Framework.
                     </p>
@@ -83,9 +84,18 @@
                         Contribution
                     </h3>
                     <ul>
-                        <li><span class="bold">TailwindCSS</span> for showing new ideas and concepts to handle handle Helper-Classes</li>
-                        <li><span class="bold">Reflex Grid</span> </li>
-                        <li><span class="bold">Reflex Grid</span> </li>
+                        <li>
+                            <a href="https://tailwindcss.com/" class="strong" rel="noopener" target="_blank">TailwindCSS</a> for showing new ideas and concepts to handle Helper-Classes</li>
+                        </li>
+                        <li>
+                            <a href="https://reflexgrid.com/" class="strong" rel="noopener" target="_blank">Reflex Grid</a> for a great flex grid
+                        </li>
+                        <li>
+                            <a href="https://necolas.github.io/normalize.css/" class="strong" rel="noopener" target="_blank">normalize.css</a> for resetting styles in all Browsers.
+                        </li>
+                        <li>
+                            <a href="https://necolas.github.io/normalize.css/" class="strong" rel="noopener" target="_blank">normalize.css</a> for resetting styles in all Browsers.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -113,10 +123,10 @@
                 </h2>
                 <div class="content">
                     <p>
-                        For Buildung use Webpack or a similiar System. Plain UI is build by Laravel-Mix. Consider to use PurgeCSS,
-                        with all Helper-Classes the CSS is really growning. PurgeCSS, with Laravel Mix it looks like this,
-
-                        <a href="https://purgecss.com/" target="_blank">PurgeCSS</a>
+                        Plain UI is build by <a href="https://purgecss.com/" class="strong" rel="noopener" target="_blank">Laravel-Mix</a>.
+                        For this Site also <a href="https://purgecss.com/" class="strong" rel="noopener" target="_blank">PurgeCSS</a> was used. This is Important
+                        to reduce the amount of Helper-Classes. For Laravel-Mix there is also a <a href="https://github.com/spatie/laravel-mix-purgecss" class="strong" rel="noopener" target="_blank">Wrapper</a>
+                        available.
                     </p>
 <code>mix
     .setPublicPath('./public')
@@ -139,33 +149,21 @@
         <div class="grid">
             <div class="col-12">
                 <h2 class="highlight">
-                    Variables + Themes
-                </h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2 class="highlight">
-                    Basic Styles
+                    Core
                 </h2>
 
-                <h3>
+                <h3 class="m-top-5">
                     Normalize
                 </h3>
-
                 <div class="content">
                     <p>
-                        For all elements is the same, try set a basic style without anything, no margin, no padding. The Reason is to use Components, Layout and
-                        Helpers for the styling or make your own rules for the elements.
+                        This is mainly done by <a href="https://necolas.github.io/normalize.css/" rel="noopener" target="_blank">normalize.css</a> with a few Modification.
                     </p>
                 </div>
 
-                <h2>
+                <h3 class="m-top-5">
                     Heading
-                </h2>
+                </h3>
                 <h1>Heading 1</h1>
                 <h2>Heading 2</h2>
                 <h3>Heading 3</h3>
@@ -173,19 +171,50 @@
                 <h5>Heading 5</h5>
                 <h6>Heading 6</h6>
 
-                <h3>
+                <h3 class="m-top-5">
                     Content
                 </h3>
-                <div class="panel panel--border-highlight border-color-info m-bottom-4">
-                    <div class="panel__body">
-                        <div class="content m-last-child-0">
-                            <p>
-                                The Class "content" will trigger a few styles for
-                            </p>
-                        </div>
-                    </div>
+                <div class="content m-bottom-4">
+<code>&#x3C;div class=&#x22;content&#x22;&#x3E;
+    &#x3C;p&#x3E;
+        Y&#x27;know this time it wasn&#x27;t my fault. The Doc set all of his clocks twenty-five minutes slow.
+        Listen, this is very important, I forgot my video camera, could you stop by my place and pick it up on
+        your way to the mall? whoa, this is it, this is the part coming up, Doc. I&#x27;m really gonna miss you.
+        Doc, about the future- Thank you, don&#x27;t forget to take a flyer.
+    &#x3C;/p&#x3E;
+    &#x3C;p&#x3E;
+        Dear Doctor Brown, on the night that I go back in time, you will be shot by terrorists. Please take
+        whatever precautions are necessary to prevent this terrible disaster. Your friend, Marty.
+        Well, safe and sound, now, n good old 1955. I&#x27;ve gotta go. Look, George, I&#x27;m telling you George,
+        if you do not ask Lorraine to that dance, I&#x27;m gonna regret it for the rest of my life. Hey George,
+        heard you laid out Biff, nice going.
+    &#x3C;/p&#x3E;
+    &#x3C;ul&#x3E;
+        &#x3C;li&#x3E;item 1&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;
+            item 2
+            &#x3C;ul&#x3E;
+                &#x3C;li&#x3E;child item 1&#x3C;/li&#x3E;
+                &#x3C;li&#x3E;child item 2&#x3C;/li&#x3E;
+            &#x3C;/ul&#x3E;
+         &#x3C;/li&#x3E;
+     &#x3C;/ul&#x3E;
+     &#x3C;ol&#x3E;
+         &#x3C;li&#x3E;item 1&#x3C;/li&#x3E;
+         &#x3C;li&#x3E;item 2&#x3C;/li&#x3E;
+     &#x3C;/ol&#x3E;
+     &#x3C;dl&#x3E;
+         &#x3C;dt&#x3E;defined title 1&#x3C;/dt&#x3E;
+         &#x3C;dd&#x3E;defined item 1&#x3C;/dd&#x3E;
+     &#x3C;/dl&#x3E;
+     &#x3C;blockquote&#x3E;
+         I&#x27;m telling you George, if you do not ask Lorraine to that dance, I&#x27;m gonna
+         regret it for the rest of my life. Hey George, heard you laid out Biff, nice going.
+     &#x3C;/blockquote&#x3E;
+     &#x3C;mark&#x3E;Mark&#x3C;/mark&#x3E;
+&#x3C;/div&#x3E;
+</code>
                 </div>
-
                 <div class="content">
                     <p>
                         Y'know this time it wasn't my fault. The Doc set all of his clocks twenty-five minutes slow. Listen, this is very important, I forgot my video camera, could you stop by my place and pick it up on your way to the mall? whoa, this is it, this is the part coming up, Doc. I'm really gonna miss you. Doc, about the future- Thank you, don't forget to take a flyer.
@@ -194,17 +223,47 @@
                         Dear Doctor Brown, on the night that I go back in time, you will be shot by terrorists. Please take whatever precautions are necessary to prevent this terrible disaster. Your friend, Marty. Well, safe and sound, now, n good old 1955. I've gotta go. Look, George, I'm telling you George, if you do not ask Lorraine to that dance, I'm gonna regret it for the rest of my life. Hey George, heard you laid out Biff, nice going.
                     </p>
                     <ul>
-                        <li>Anyway, if Grandpa hadn't hit him</li>
-                        <li>Yeah, well history is gonna change</li>
-                        <li>Children</li>
+                        <li>item 1</li>
+                        <li>
+                            item 2
+                            <ul>
+                                <li>child item 1</li>
+                                <li>child item 2</li>
+                            </ul>
+                        </li>
                     </ul>
+                    <ol>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                    </ol>
+                    <dl>
+                        <dt>defined title 1</dt>
+                        <dd>defined item 1</dd>
+                    </dl>
                     <blockquote>
                          I'm telling you George, if you do not ask Lorraine to that dance, I'm gonna regret it for the rest of my life. Hey George, heard you laid out Biff, nice going.
                     </blockquote>
+                    <mark>Mark</mark>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer class="site-footer m-top-5">
+        <div class="bar">
+            <div class="bar__main">
+
+            </div>
+            <div class="bar__end">
+                <a class="color-text-contrast m-right-4" href="/imprint.html">
+                    Imprint
+                </a>
+                <a class="color-text-contrast" href="/private-policy.html">
+                    Privacy Policy
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html

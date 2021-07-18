@@ -16,43 +16,52 @@ $spacing-direction: (
 $spacing-gap: 0.25 !default;
 $spacing-steps: 10 !default;
 
+
 /**
  *  mixin: spacing for single padding or margin
  *
  *
  */
-@mixin spacing($class, $style, $direction, $name, $value)
+
+@mixin spacing($class, $style, $name, $value, $direction: null)
 {
-    .#{$class}-#{$direction}-#{$name} {
-        #{$style}-#{$direction}: $value;
+    @if ($direction != null) {
+        $class: $class + '-' + $direction;
+        $style: $style + '-' + $direction;
+    }
+
+    .#{$class}-#{$name} {
+        #{$style}: $value;
     }
 }
+
 
 /**
  *  mixin: spacing for each breakpoint
  *
  *
  */
-@mixin spacing_breakpoints($class, $style, $direction, $i, $value)
+
+@mixin spacing_breakpoints($class, $style, $i, $value, $direction: null)
 {
     @include media-xs() {
-        @include spacing($class, $style, $direction, 'xs-' + $i, $value);
+        @include spacing($class, $style, 'xs-' + $i, $value, $direction);
     }
 
     @include media-sm() {
-        @include spacing($class, $style, $direction, 'sm-' + $i, $value);
+        @include spacing($class, $style, 'sm-' + $i, $value, $direction);
     }
 
     @include media-md() {
-        @include spacing($class, $style, $direction, 'md-' + $i, $value);
+        @include spacing($class, $style, 'md-' + $i, $value, $direction);
     }
 
     @include media-lg() {
-        @include spacing($class, $style, $direction, 'lg-' + $i, $value);
+        @include spacing($class, $style, 'lg-' + $i, $value, $direction);
     }
 
     @include media-xlg() {
-        @include spacing($class, $style, $direction, 'xlg-' + $i, $value);
+        @include spacing($class, $style, 'xlg-' + $i, $value, $direction);
     }
 }
 
@@ -89,26 +98,44 @@ $spacing-steps: 10 !default;
     }
 }
 
-@each $direction in $spacing-direction
-{
-    @include spacing('m', 'margin', $direction, 0, 0);
-    @include spacing('m', 'margin', $direction, 1, 1px);
+@include spacing('m', 'margin', 0, 0);
+@include spacing('m', 'margin', 1, 1px);
 
-    @for $i from 2 through $spacing-steps {
-        $value: $spacing-gap * factor($i - 1) * 1rem;
-        @include spacing('m', 'margin', $direction, $i, $value);
-        @include spacing_breakpoints('m', 'margin', $direction, $i, $value);
-    }
+@for $i from 2 through $spacing-steps {
+    $value: $spacing-gap * factor($i - 1) * 1rem;
+    @include spacing('m', 'margin', $i, $value);
+    @include spacing_breakpoints('m', 'margin', $i, $value);
 }
 
 @each $direction in $spacing-direction
 {
-    @include spacing('p', 'padding', $direction, 0, 0);
-    @include spacing('p', 'padding', $direction, 1, 1px);
+    @include spacing('m', 'margin', 0, 0, $direction);
+    @include spacing('m', 'margin', 1, 1px, $direction);
+
+    @for $i from 2 through $spacing-steps {
+        $value: $spacing-gap * factor($i - 1) * 1rem;
+        @include spacing('m', 'margin', $i, $value, $direction);
+        @include spacing_breakpoints('m', 'margin', $i, $value, $direction);
+    }
+}
+
+@include spacing('p', 'padding', 0, 0);
+@include spacing('p', 'padding', 1, 1px);
+
+@for $i from 0 through $spacing-steps {
+    $value: $spacing-gap * factor($i - 1) * 1rem;
+    @include spacing('p', 'padding', $i, $value);
+    @include spacing_breakpoints('p', 'padding', $i, $value);
+}
+
+@each $direction in $spacing-direction
+{
+    @include spacing('p', 'padding', 0, 0, $direction);
+    @include spacing('p', 'padding', 1, 1px, $direction);
 
     @for $i from 0 through $spacing-steps {
         $value: $spacing-gap * factor($i - 1) * 1rem;
-        @include spacing('p', 'padding', $direction, $i, $value);
-        @include spacing_breakpoints('p', 'padding', $direction, $i, $value);
+        @include spacing('p', 'padding', $i, $value, $direction);
+        @include spacing_breakpoints('p', 'padding', $i, $value, $direction);
     }
 }

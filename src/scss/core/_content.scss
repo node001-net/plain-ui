@@ -65,7 +65,8 @@
     }
 
     mark {
-        padding: 0.25em;
+        padding: 0.25rem;
+        background-color: var(--warning);
     }
 
     /**
@@ -95,15 +96,18 @@
         @include media-breakpoints('margin', $margin-breakpoints);
     }
 
-    ol,
     ul {
-        margin-left: 1.5em;
+        margin-left: 1.5rem;
+    }
+
+    ol {
+        margin-left: 2.5rem;
     }
 
     ol ol,
     ul ul {
         margin-top: 0;
-        margin-left: 1em;
+        margin-left: 1.5rem;
     }
 
     ol {
@@ -111,11 +115,11 @@
     }
 
     ul {
-        list-style: disc outside;
+        list-style: square outside;
     }
 
     dl {
-        margin-left: 0.5em;
+        margin-left: 0.5rem;
     }
 
     dd,

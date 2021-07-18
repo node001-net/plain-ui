@@ -6,6 +6,11 @@
  *      </figcaption>
  *  </figure>
  *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui
+ *
  */
 
 .figure {
@@ -25,10 +30,13 @@
         line-height: $line-height;
         margin: 0;
         color: var(--text-contrast);
+
+        border-top: 1px solid var(--border-contrast);
     }
 
     .media {
         border: 0;
+        border-radius: 0;
     }
 }
 

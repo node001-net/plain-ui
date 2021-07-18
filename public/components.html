@@ -55,6 +55,16 @@
                     Components
                 </h1>
 
+                <div class="panel panel--border-highlight border-color-danger m-bottom-4">
+                    <div class="panel__body">
+                        <div class="content m-last-child-0">
+                            <p>
+                                Plain UI is currently under development, a few Styles, Concepts and Names could be changing until Release!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <h2>Badge</h2>
                 <div class="content m-bottom-4">
 <code>&#x3C;span class=&#x22;badge&#x22;&#x3E;
@@ -162,7 +172,6 @@
 &#x3C;/div&#x3E;
 </code>
                 </div>
-
                 <div class="field-group">
                     <label class="field-label">
                         Name
@@ -192,149 +201,222 @@
                     </label>
                 </div>
 
-                    <div class="field-group field-group--error">
-                        <label class="field-label">
-                            <svg class="icon" aria-hidden="true">
-                                <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
-                            </svg>
-                            E-Mail
-                            <input class="field-text" />
-                        </label>
-                        <span class="field-error">
-                            String is not valid
-                        </span>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            Towns
-                            <select class="field-choice">
-                                <option></option>
-                                <option value="lonytown">Lonytown</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            <input class="field-choice" type="checkbox" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            Do it!
-                        </label>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            <input class="field-choice" type="radio" name="radio" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            A
-                        </label>
-                        <label class="field-label">
-                            <input class="field-choice" type="radio" name="radio" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            B
-                        </label>
-                    </div>
-
-
-
-                <h2 class="m-top-5">Icon</h2>
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-check"></use>
-                </svg>
-                <svg class="icon icon--danger" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-camera"></use>
-                </svg>
-                <svg class="icon icon--success" aria-hidden="true">
-                    <use xlink:href="symbol-defs.svg#icon-clock"></use>
-                </svg>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h3>
-                    Tabs
-                </h3>
-                <div class="tabs">
-                    <a class="tabs__item tabs__item--selected">
-                        Tab A
-                    </a>
-                    <a class="tabs__item">
-                        Tab B
-                    </a>
-                    <a class="tabs__item">
-                        Tab C
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h3>
-                    Tabs + Bar
-                </h3>
-                <div class="bar">
-                    <div class="bar__start marginless">
-                        <div class="tabs tabs--contrast">
-                            <a class="tabs__item tabs__item--selected">
-                                Tab A
-                            </a>
-                            <a class="tabs__item">
-                                Tab B
-                            </a>
-                            <a class="tabs__item">
-                                Tab C
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h2>
-                    Progress
-                </h2>
-                <div class="content m-last-child-0 m-bottom-4">
-<code>&#x3C;div class=&#x22;progress&#x22;&#x3E;
-    &#x3C;div class=&#x22;progress__inner&#x22; style=&#x22;width: 20%;&#x22;&#x3E;&#x3C;/div&#x3E;
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group field-group--error&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        &#x3C;svg class=&#x22;icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use class=&#x22;test&#x22; xlink:href=&#x22;symbol-defs.svg#icon-warning&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        E-Mail
+        &#x3C;input class=&#x22;field-text&#x22; /&#x3E;
+    &#x3C;/label&#x3E;
+    &#x3C;span class=&#x22;field-error&#x22;&#x3E;
+        String is not valid
+    &#x3C;/span&#x3E;
 &#x3C;/div&#x3E;
 </code>
                 </div>
-                <div class="progress">
-                    <div class="progress__inner" style="width: 20%;"></div>
+                <div class="field-group field-group--error">
+                    <label class="field-label">
+                        <svg class="icon" aria-hidden="true">
+                            <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
+                        </svg>
+                        E-Mail
+                        <input class="field-text" />
+                    </label>
+                    <span class="field-error">
+                        String is not valid
+                    </span>
+                </div>
+
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        Towns
+        &#x3C;select class=&#x22;field-choice&#x22;&#x3E;
+            &#x3C;option&#x3E;&#x3C;/option&#x3E;
+            &#x3C;option value=&#x22;lonytown&#x22;&#x3E;Lonytown&#x3C;/option&#x3E;
+        &#x3C;/select&#x3E;
+    &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="field-group">
+                    <label class="field-label">
+                        Towns
+                        <select class="field-choice">
+                            <option></option>
+                            <option value="lonytown">Lonytown</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;checkbox&#x22; value=&#x22;true&#x22; /&#x3E;
+        &#x3C;svg class=&#x22;icon field-choice__unchecked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-checkbox&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        &#x3C;svg class=&#x22;icon field-choice__checked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-checkbox-checked&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        Checkbox
+    &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="field-group">
+                    <label class="field-label">
+                        <input class="field-choice" type="checkbox" value="true" />
+                        <svg class="icon field-choice__unchecked" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-checkbox"></use>
+                        </svg>
+                        <svg class="icon field-choice__checked" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-checkbox-checked"></use>
+                        </svg>
+                        Checkbox
+                    </label>
+                </div>
+
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;true&#x22; /&#x3E;
+        &#x3C;svg class=&#x22;icon field-choice__unchecked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        &#x3C;svg class=&#x22;icon field-choice__checked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle-check&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        Radio A
+    &#x3C;/label&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;true&#x22; /&#x3E;
+        &#x3C;svg class=&#x22;icon field-choice__unchecked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        &#x3C;svg class=&#x22;icon field-choice__checked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle-check&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        Radio B
+    &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="field-group">
+                    <label class="field-label">
+                        <input class="field-choice" type="radio" name="radio" value="true" />
+                        <svg class="icon field-choice__unchecked" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-circle"></use>
+                        </svg>
+                        <svg class="icon field-choice__checked" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
+                        </svg>
+                        Radio A
+                    </label>
+                    <label class="field-label">
+                        <input class="field-choice" type="radio" name="radio" value="true" />
+                        <svg class="icon field-choice__unchecked" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-circle"></use>
+                        </svg>
+                        <svg class="icon field-choice__checked" aria-hidden="true">
+                            <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
+                        </svg>
+                        Radio B
+                    </label>
+                </div>
+
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;checkbox&#x22; name=&#x22;radio&#x22; value=&#x22;true&#x22; /&#x3E;
+        &#x3C;span class=&#x22;field-switch&#x22;&#x3E;&#x3C;/span&#x3E;
+    &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="field-group">
+                    <label class="field-label">
+                        <input class="field-choice" type="checkbox" name="radio" value="true" />
+                        <span class="field-switch"></span>
+                    </label>
+                </div>
+
+                <h2 class="m-top-5">
+                    Group
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;group&#x22;&#x3E;
+    &#x3C;div class=&#x22;group__item background-color-primary color-text-contrast p-3&#x22;&#x3E;
+        One
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;group__item background-color-primary color-text-contrast p-3&#x22;&#x3E;
+        Two
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="group">
+                    <div class="group__item background-color-primary color-text-contrast p-3">
+                        One
+                    </div>
+                    <div class="group__item background-color-primary color-text-contrast p-3">
+                        Two
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2>Loading</h2>
-                <div class="content m-last-child-0 m-bottom-4">
+                <h2>
+                    Hero
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;hero&#x22;&#x3E;
+    &#x3C;img style=&#x22;max-height: 400px;&#x22; src=&#x22;/image.jpg&#x22; /&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero">
+        <img style="max-height: 400px;" src="/image.jpg" />
+    </div>
+
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <h2 class="m-top-5">Icon</h2>
+                <div class="content">
+<code>&#x3C;svg class=&#x22;icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-check&#x22;&#x3E;&#x3C;/use&#x3E;
+&#x3C;/svg&#x3E;
+&#x3C;svg class=&#x22;icon fill-danger&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-camera&#x22;&#x3E;&#x3C;/use&#x3E;
+&#x3C;/svg&#x3E;
+&#x3C;svg class=&#x22;icon fill-success&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-clock&#x22;&#x3E;&#x3C;/use&#x3E;
+&#x3C;/svg&#x3E;
+</code>
+                </div>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-check"></use>
+                </svg>
+                <svg class="icon fill-danger" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-camera"></use>
+                </svg>
+                <svg class="icon fill-success" aria-hidden="true">
+                    <use xlink:href="symbol-defs.svg#icon-clock"></use>
+                </svg>
+
+                <!-- Loading -->
+                <h2 class="m-top-5">Loading</h2>
+                <div class="content">
 <code>&#x3C;div class=&#x22;loading&#x22;&#x3E;
     &#x3C;span&#x3E;&#x3C;/span&#x3E;
     &#x3C;span&#x3E;&#x3C;/span&#x3E;
@@ -347,49 +429,55 @@
                     <span></span>
                     <span></span>
                 </div>
-            </div>
-        </div>
 
-        <div class="grid">
-            <div class="col-12">
-                <h2>Panel</h2>
-                <div class="panel">
-                    <div class="bar">
-                        <div class="bar__start">
-                            <button type="button" class="button button--transparent">
-                                <svg class="icon fill-text-contrast" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-expand"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="bar__main">Test</div>
-                        <div class="bar__end">
-                            <button type="button" class="button button--transparent">
-                                <svg class="icon fill-text-contrast" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-edit"></use>
-                                </svg>
-                            </button>
-                            <button type="button" class="button button--transparent">
-                                <svg class="icon fill-text-contrast" aria-hidden="true">
-                                    <use xlink:href="symbol-defs.svg#icon-close"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="panel__body">
-                        <div class="content">
-                            <p>
-                                Hallo
-                            </p>
-                        </div>
-                    </div>
+                <h2 class="m-top-5">
+                    Media
+                </h2>
+                <div class="content">
+<code>&#x3C;figure class=&#x22;figure&#x22;&#x3E;
+    &#x3C;img class=&#x22;media&#x22; src=&#x22;/image.jpg&#x22; /&#x3E;
+    &#x3C;figcaption class=&#x22;figure__caption&#x22;&#x3E;
+        food truck yr franzen pabst
+    &#x3C;/figcaption&#x3E;
+&#x3C;/figure&#x3E;
+</code>
                 </div>
-            </div>
-        </div>
+                <figure class="figure">
+                    <img class="media" src="/image.jpg" />
+                    <figcaption class="figure__caption">
+                        food truck yr franzen pabst
+                    </figcaption>
+                </figure>
 
-        <div class="grid">
-            <div class="col-12">
-                <h2>Modal</h2>
+
+                <!-- modal -->
+                <h2 class="m-top-5">
+                    Modal
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;modal&#x22;&#x3E;
+    &#x3C;div class=&#x22;modal__inner&#x22;&#x3E;
+        &#x3C;div class=&#x22;modal__title t-center&#x22;&#x3E;
+            &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+                &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
+             &#x3C;/svg&#x3E;
+             Delete
+          &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;modal__body&#x22;&#x3E;
+          Do you really wan&#x27;t to delete all files?
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;modal__footer&#x22;&#x3E;
+          &#x3C;button class=&#x22;button button--outline button--danger&#x22; onclick=&#x22;closeModal()&#x22;&#x3E;
+              Confirm
+          &#x3C;/button&#x3E;
+          &#x3C;button class=&#x22;button button--outline float-right&#x22; onclick=&#x22;closeModal()&#x22;&#x3E;
+              Reject
+          &#x3C;/button&#x3E;
+       &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
                 <button class="button" onclick="openModal()">
                     Click me!
                 </button>
@@ -423,19 +511,130 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="grid">
-            <div class="col-12">
 
-            </div>
-        </div>
+                <!-- panel -->
+                <h2 class="m-top-5">
+                    Panel
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;panel&#x22;&#x3E;
+    &#x3C;div class=&#x22;bar&#x22;&#x3E;
+        &#x3C;div class=&#x22;bar__start&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;button button--transparent&#x22;&#x3E;
+                &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+                    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-expand&#x22;&#x3E;&#x3C;/use&#x3E;
+                &#x3C;/svg&#x3E;
+             &#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;bar__main&#x22;&#x3E;Panel&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;bar__end&#x22;&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;button button--transparent&#x22;&#x3E;
+                &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+                    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-edit&#x22;&#x3E;&#x3C;/use&#x3E;
+                &#x3C;/svg&#x3E;
+            &#x3C;/button&#x3E;
+            &#x3C;button type=&#x22;button&#x22; class=&#x22;button button--transparent&#x22;&#x3E;
+                &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+                     &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
+                &#x3C;/svg&#x3E;
+            &#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;panel__body&#x22;&#x3E;
+        &#x3C;div class=&#x22;content m-last-child-0&#x22;&#x3E;
+             &#x3C;p&#x3E;
+                 Content
+             &#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="panel">
+                    <div class="bar">
+                        <div class="bar__start">
+                            <button type="button" class="button button--transparent">
+                                <svg class="icon fill-text-contrast" aria-hidden="true">
+                                    <use xlink:href="symbol-defs.svg#icon-expand"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bar__main">Panel</div>
+                        <div class="bar__end">
+                            <button type="button" class="button button--transparent">
+                                <svg class="icon fill-text-contrast" aria-hidden="true">
+                                    <use xlink:href="symbol-defs.svg#icon-edit"></use>
+                                </svg>
+                            </button>
+                            <button type="button" class="button button--transparent">
+                                <svg class="icon fill-text-contrast" aria-hidden="true">
+                                    <use xlink:href="symbol-defs.svg#icon-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="panel__body">
+                        <div class="content m-last-child-0">
+                            <p>
+                                Hallo
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="grid">
-            <div class="col-12">
-                <h2>Table</h2>
 
+                <!-- progress -->
+                <h2 class="m-top-5">
+                    Progress
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;progress&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress__inner&#x22; style=&#x22;width: 20%;&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="progress">
+                    <div class="progress__inner" style="width: 20%;"></div>
+                </div>
+
+                <!-- table -->
+                <h2 class="m-top-5">
+                    Table
+                </h2>
+                <div class="content">
+<code>&#x3C;table class=&#x22;table table--striped&#x22;&#x3E;
+    &#x3C;thead&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;th&#x3E;A&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;B&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;C&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;D&#x3C;/th&#x3E;
+        &#x3C;/tr&#x3E;
+    &#x3C;/thead&#x3E;
+    &#x3C;tbody&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;td&#x3E;1&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;2&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;3&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;td&#x3E;1&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;2&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;3&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;td&#x3E;1&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;2&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;3&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+    &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;
+</code>
+                </div>
                 <table class="table table--striped">
                     <thead>
                         <tr>
@@ -466,94 +665,85 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2>
-                    Hero
+
+                <!--- tabs -->
+                <h2 class="m-top-5">
+                    Tabs
                 </h2>
-                <code>
+                <div class="content">
+<code>&#x3C;div class=&#x22;tabs&#x22;&#x3E;
+    &#x3C;a class=&#x22;tabs__item tabs__item--selected&#x22;&#x3E;
+        Tab A
+    &#x3C;/a&#x3E;
+    &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
+        Tab B
+    &#x3C;/a&#x3E;
+    &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
+        Tab C
+    &#x3C;/a&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="tabs">
+                    <a class="tabs__item tabs__item--selected">
+                        Tab A
+                    </a>
+                    <a class="tabs__item">
+                        Tab B
+                    </a>
+                    <a class="tabs__item">
+                        Tab C
+                    </a>
+                </div>
 
-                </code>
-            </div>
-        </div>
-    </div>
-    <div class="hero">
-        <img style="max-height: 400px;" src="/image.jpg" />
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2>
-                    Media
+                <h2 class="m-top-5">
+                    Tabs + Bar
                 </h2>
-                <figure class="figure">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
+                <div class="content">
+<code>&#x3C;div class=&#x22;bar&#x22;&#x3E;
+    &#x3C;div class=&#x22;tabs tabs--contrast&#x22;&#x3E;
+        &#x3C;a class=&#x22;tabs__item tabs__item--selected&#x22;&#x3E;
+            Tab A
+        &#x3C;/a&#x3E;
+        &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
+            Tab B
+        &#x3C;/a&#x3E;
+        &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
+            Tab C
+        &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+</div>
+                <div class="bar">
+                    <div class="tabs tabs--contrast">
+                        <a class="tabs__item tabs__item--selected">
+                            Tab A
+                        </a>
+                        <a class="tabs__item">
+                            Tab B
+                        </a>
+                        <a class="tabs__item">
+                            Tab C
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="grid">
-            <div class="col-12">
-                <h2>Slider</h3>
+    <footer class="site-footer m-top-5">
+        <div class="bar">
+            <div class="bar__main">
+                <a class="color-text-contrast m-right-4" href="/imprint.html">
+                    Imprint
+                </a>
+                <a class="color-text-contrast" href="/private-policy.html">
+                    Privacy Policy
+                </a>
             </div>
         </div>
-    </div>
-
-    <div class="slider">
-        <div class="slider__inner">
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="slider__item w-col-12">
-                <figure class="figure w-col-12">
-                    <img class="media" src="/image.jpg" />
-                    <figcaption class="figure__caption">
-                        food truck yr franzen pabst
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-
+    </footer>
 </body>
 </html

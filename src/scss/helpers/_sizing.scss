@@ -49,11 +49,28 @@ $sizing_steps: 50 !default;
 }
 
 .w-0 { width: 0; }
+@include sizing_breakpoints('w', 'width', '1', 0);
+
 .h-0 { height: 0; }
+@include sizing_breakpoints('h', 'height', '1', 0);
+
 .w-1 { width: 1px;}
+@include sizing_breakpoints('w', 'width', '1', 1px);
+
 .h-1 { height: 1px; }
+@include sizing_breakpoints('h', 'height', '1', 1px);
+
 .w-100 { width: 100%; }
+@include sizing_breakpoints('w', 'width', '100', 100%);
+
+.w-auto { width: auto; }
+@include sizing_breakpoints('w', 'width', 'auto', auto);
+
 .h-100 { height: 100%; }
+@include sizing_breakpoints('h', 'height', '100', 100%);
+
+.h-auto { height: auto; }
+@include sizing_breakpoints('h', 'height', 'auto', auto);
 
 @for $i from 1 through $reflex-columns
 {

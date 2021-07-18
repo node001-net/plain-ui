@@ -2261,7 +2261,6 @@ input.field-text, textarea.field-text, select.field-choice {
   font-size: 0.95rem;
   width: 100%;
   border: 1px solid #a4a4a4;
-  background-color: var(--background-contrast);
   border-radius: 2px;
   margin: 0.7rem 0 0;
 }
@@ -2284,17 +2283,13 @@ select.field-choice {
      -moz-appearance: none;
           appearance: none;
   padding: 0.8em;
-  position: relative;
+  background-image: linear-gradient(to right, #717171, #717171);
+  background-position: 100%;
+  background-size: 1.5rem 100%;
+  background-repeat: no-repeat;
 }
-select.field-choice::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  content: " ";
-  width: 10px;
-  height: 10px;
-  background: red;
+select.field-choice:active, select.field-choice:focus {
+  background-image: linear-gradient(to right, #3e3e3e, #3e3e3e);
 }
 
 /**

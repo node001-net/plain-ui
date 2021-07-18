@@ -7,8 +7,30 @@
     'mixins',
     'variables',
 
-    'core',
-    
-    'components',
-    'layouts',
-    'helpers';
+    'core/normalize',
+    'core/content',
+    'core/heading',
+
+    'components/badge',
+    'components/button',
+    'components/field',
+    'components/icon',
+    'components/hero',
+    'components/tabs',
+    'components/panel',
+    'components/progress',
+    'components/media',
+    'components/table',
+    'components/slider',
+    'components/bar',
+    'components/modal',
+    'components/loading',
+
+    'layouts/masonry',
+    'layouts/flex',
+
+    'helpers/core',
+    'helpers/sizing',
+    'helpers/spacing',
+    'helpers/colors',
+    'helpers/typography';

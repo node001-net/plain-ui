@@ -1632,15 +1632,6 @@
  *
  */
 /**
- *  core
- *
- *
- *  @author Björn Hase, Tentakelfabrik
- *  @license http://opensource.org/licenses/MIT The MIT License
- *  @link https://github.com/tentakelfabrik/crispy-css
- *
- */
-/**
  *  normalize
  *
  *  Thanks to https://necolas.github.io/normalize.css/, use a lot from them
@@ -1759,7 +1750,7 @@ textarea {
 }
 
 fieldset {
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 }
 
 button,
@@ -1826,7 +1817,7 @@ hr {
   overflow: visible;
   border: 0;
   border-top: 1px solid var(--border);
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 }
 
 progress {
@@ -1874,11 +1865,11 @@ samp {
    */
 }
 .content p {
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 }
 @media only screen and (min-width: 992px) {
   .content p {
-    margin: 0.6rem 0 1.2rem;
+    margin: 0 0 1.2rem;
   }
 }
 .content a,
@@ -1930,13 +1921,13 @@ samp {
 .content ol,
 .content ul {
   padding: 0;
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 }
 @media only screen and (min-width: 992px) {
   .content dl,
 .content ol,
 .content ul {
-    margin: 0.6rem 0 1.2rem;
+    margin: 0 0 1.2rem;
   }
 }
 .content ol,
@@ -1973,12 +1964,12 @@ samp {
   border: 1px solid var(--border);
   border-radius: 2px;
   background-color: var(--background);
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
   padding: 0.6rem 0.8rem;
 }
 @media only screen and (min-width: 992px) {
   .content code {
-    margin: 0.6rem 0 1.2rem;
+    margin: 0 0 1.2rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -2017,7 +2008,7 @@ h6, .h6 {
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 }
 h1.highlight, .h1.highlight,
 h2.highlight, .h2.highlight,
@@ -2134,7 +2125,7 @@ h6, .h6 {
   color: var(--text);
   border-radius: 2px;
   transition: background-color 0.1s;
-  margin-bottom: 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 1.3rem;
   min-height: 2.8rem;
   width: 100%;
@@ -2239,7 +2230,7 @@ h6, .h6 {
  *
  */
 .field-group {
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 }
 .field-group--valid input.field-text, .field-group--valid textarea.field-text {
   border-color: var(--success);
@@ -2484,6 +2475,27 @@ svg.field-choice__checked {
 }
 .panel--border-highlight {
   border-left-width: 12px;
+}
+
+/**
+ *  <div class="progress">
+ *     <div class="progress__inner" style="width: 20%"></div>
+ *  </div>
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui
+ *
+ */
+.progress {
+  height: 40px;
+  width: 100%;
+  border: 1px solid var(--border);
+}
+.progress__inner {
+  height: 100%;
+  border: 1px solid var(--background-contrast);
+  background-color: var(--background);
 }
 
 /**

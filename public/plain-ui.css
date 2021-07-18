@@ -2454,6 +2454,9 @@ svg.field-choice__checked {
 .tabs--contrast .tabs__item--selected {
   border-color: var(--border-contrast);
 }
+.tabs--contrast .tabs__item--selected:hover {
+  border-color: var(--active);
+}
 
 /**
  *

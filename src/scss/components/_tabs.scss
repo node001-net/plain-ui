@@ -66,6 +66,10 @@
 
         .tabs__item--selected {
             border-color: var(--border-contrast);
+
+            &:hover {
+                border-color: var(--active);
+            }
         }
     }
 }

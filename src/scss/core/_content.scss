@@ -131,11 +131,12 @@
         white-space: pre;
         display: block;
 
+        color: var(--text-contrast);
         overflow-y: hidden;
         overflow-x: auto;
         border: $border;
         border-radius: $border-radius;
-        background-color: var(--background-contrast);
+        background-color: var(--background);
 
         margin: $margin;
         @include media-breakpoints('margin', $margin-breakpoints);

@@ -13,6 +13,7 @@
     @each $var, $color in $colors {
         #{$var}: $color;
     }
+    --font-family: #{$font-family};
 }
 
 html {
@@ -33,7 +34,7 @@ legend {
 }
 
 body {
-    font-family: $font-family;
+    font-family: var(--font-family);
     color: var(--text);
 
     background-color: var(--body);
@@ -198,7 +199,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: $font-family;
+    font-family: var(--font-family);
     font-size: $font-size;
     // @TODO
 }

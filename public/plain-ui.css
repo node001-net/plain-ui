@@ -1672,6 +1672,7 @@
   --background-contrast: #ffffff;
   --border: #3e3e3e;
   --border-contrast: #ffffff;
+  --font-family: IBM Plex Mono, sans-serif;
 }
 
 html {
@@ -1692,7 +1693,7 @@ legend {
 }
 
 body {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
   color: var(--text);
   background-color: var(--body);
   direction: ltr;
@@ -1758,7 +1759,7 @@ textarea {
 }
 
 fieldset {
-  margin: 0 0 1rem;
+  margin: 0.5rem 0 1rem;
 }
 
 button,
@@ -1825,7 +1826,7 @@ hr {
   overflow: visible;
   border: 0;
   border-top: 1px solid var(--border);
-  margin: 0 0 1rem;
+  margin: 0.5rem 0 1rem;
 }
 
 progress {
@@ -1844,7 +1845,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
   font-size: 0.9rem;
 }
 
@@ -1873,11 +1874,11 @@ samp {
    */
 }
 .content p {
-  margin: 0 0 1rem;
+  margin: 0.5rem 0 1rem;
 }
 @media only screen and (min-width: 992px) {
   .content p {
-    margin: 0 0 0.8rem;
+    margin: 0.6rem 0 1.2rem;
   }
 }
 .content a,
@@ -1929,13 +1930,13 @@ samp {
 .content ol,
 .content ul {
   padding: 0;
-  margin: 0 0 1rem;
+  margin: 0.5rem 0 1rem;
 }
 @media only screen and (min-width: 992px) {
   .content dl,
 .content ol,
 .content ul {
-    margin: 0 0 0.8rem;
+    margin: 0.6rem 0 1.2rem;
   }
 }
 .content ol,
@@ -1966,22 +1967,23 @@ samp {
 .content code {
   white-space: pre;
   display: block;
+  color: var(--text-contrast);
   overflow-y: hidden;
   overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: 2px;
-  background-color: var(--background-contrast);
-  margin: 0 0 1rem;
+  background-color: var(--background);
+  margin: 0.5rem 0 1rem;
   padding: 0.6rem 0.8rem;
 }
 @media only screen and (min-width: 992px) {
   .content code {
-    margin: 0 0 0.8rem;
+    margin: 0.6rem 0 1.2rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .content code {
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem 0.9rem;
   }
 }
 
@@ -2001,6 +2003,11 @@ samp {
  *  @link https://github.com/tentakelfabrik/crispy-css
  *
  */
+/**
+ * add font-size for heading as class and element
+ *
+ *
+ */
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -2010,17 +2017,7 @@ h6, .h6 {
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  margin: 0.6rem 0 1.2rem;
-}
-@media only screen and (min-width: 992px) {
-  h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-    margin: 0.7rem 0 1.4rem;
-  }
+  margin: 0.5rem 0 1rem;
 }
 h1.highlight, .h1.highlight,
 h2.highlight, .h2.highlight,
@@ -2032,59 +2029,54 @@ h6.highlight, .h6.highlight {
 }
 
 h1, .h1 {
-  font-size: 2.25rem;
-}
-@media only screen and (min-width: 992px) {
-  h1, .h1 {
-    font-size: 1.2rem;
-  }
+  font-size: 2.5rem;
 }
 
 h2, .h2 {
   font-size: 2rem;
 }
-@media only screen and (min-width: 992px) {
-  h2, .h2 {
-    font-size: 1.2rem;
-  }
-}
 
 h3, .h3 {
-  font-size: 1.8rem;
-}
-@media only screen and (min-width: 992px) {
-  h3, .h3 {
-    font-size: 1.2rem;
-  }
+  font-size: 1.75rem;
 }
 
 h4, .h4 {
-  font-size: 1.6rem;
-}
-@media only screen and (min-width: 992px) {
-  h4, .h4 {
-    font-size: 1.2rem;
-  }
+  font-size: 1.5rem;
 }
 
 h5, .h5 {
-  font-size: 1.4rem;
-}
-@media only screen and (min-width: 992px) {
-  h5, .h5 {
-    font-size: 1.2rem;
-  }
+  font-size: 1.25rem;
 }
 
 h6, .h6 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
+
 @media only screen and (min-width: 992px) {
+  h1, .h1 {
+    font-size: 2.75rem;
+  }
+
+  h2, .h2 {
+    font-size: 2.5rem;
+  }
+
+  h3, .h3 {
+    font-size: 2rem;
+  }
+
+  h4, .h4 {
+    font-size: 1.75rem;
+  }
+
+  h5, .h5 {
+    font-size: 1.5rem;
+  }
+
   h6, .h6 {
     font-size: 1.2rem;
   }
 }
-
 /**
  *  <span class="badge">
  *     A
@@ -2112,11 +2104,19 @@ h6, .h6 {
 }
 
 /**
- *
+ *  Button
  *
  *  @author Björn Hase, Tentakelfabrik
  *  @license http://opensource.org/licenses/MIT The MIT License
  *  @link https://github.com/tentakelfabrik/plain-ui
+ *
+ */
+/**
+ *
+ *
+ */
+/**
+ *
  *
  */
 .button {
@@ -2127,16 +2127,16 @@ h6, .h6 {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
   font-size: 1rem;
   border: 1px solid var(--border);
   background-color: var(--background-contrast);
   color: var(--text);
   border-radius: 2px;
   transition: background-color 0.1s;
-  margin-bottom: 0.5em;
-  padding: 0 1.3em;
-  min-height: 2.8em;
+  margin-bottom: 0.5rem;
+  padding: 0 1.3rem;
+  min-height: 2.8rem;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
@@ -2182,7 +2182,7 @@ h6, .h6 {
   background-color: var(--danger);
 }
 .button--danger:focus, .button--danger:active {
-  outline: 2px solid var(--active);
+  outline: 2px solid var(--danger);
 }
 .button--info {
   border-color: var(--info);
@@ -2225,6 +2225,9 @@ h6, .h6 {
 .button--info.button--outline:hover {
   border-color: #3bc0ff;
 }
+.button--warning.button--outline:hover {
+  border-color: #f8d9ac;
+}
 .button--success.button--outline:hover {
   border-color: #a6d0a6;
 }
@@ -2236,7 +2239,7 @@ h6, .h6 {
  *
  */
 .field-group {
-  margin: 0 0 1rem;
+  margin: 0.5rem 0 1rem;
 }
 .field-group--valid input.field-text, .field-group--valid textarea.field-text {
   border-color: var(--success);
@@ -2253,7 +2256,7 @@ h6, .h6 {
 
 .field-label {
   font-size: 1rem;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
 }
 .field-label .icon {
   vertical-align: text-bottom;
@@ -2263,7 +2266,7 @@ h6, .h6 {
 }
 
 input.field-text, textarea.field-text, select.field-choice {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-family);
   font-size: 0.95rem;
   width: 100%;
   border: 1px solid var(--active);
@@ -2476,7 +2479,7 @@ svg.field-choice__checked {
 }
 @media only screen and (min-width: 992px) {
   .panel__body {
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem 0.9rem;
   }
 }
 .panel--border-highlight {
@@ -8137,6 +8140,10 @@ svg.field-choice__checked {
 
 .paddingless {
   padding: 0;
+}
+
+.m-last-child-0 > *:last-child {
+  margin: 0;
 }
 
 .m-top-last-child-0 > *:last-child {

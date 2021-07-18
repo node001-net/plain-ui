@@ -51,21 +51,64 @@
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2 class="highlight">
+                <h1 class="highlight m-bottom-5">
                     Components
+                </h1>
+
+                <h2>Badge</h2>
+                <div class="content m-bottom-4">
+<code>&#x3C;span class=&#x22;badge&#x22;&#x3E;
+    Category
+&#x3C;/span&#x3E;
+</code>
+                </div>
+                <span class="badge">
+                    Category
+                </span>
+                <span class="badge badge--round">
+                    99+
+                </span>
+
+                <h2 class="m-top-5">
+                    Bar
                 </h2>
+                <div class="content m-bottom-4">
+<code>&#x3C;div class=&#x22;bar&#x22;&#x3E;
+    &#x3C;div class=&#x22;bar__start&#x22;&#x3E;
+        &#x3C;button class=&#x22;button button--transparent&#x22;&#x3E;
+            &#x3C;svg class=&#x22;icon fill-text-contrast marginless&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+                &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
+            &#x3C;/svg&#x3E;
+        &#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;bar__main&#x22;&#x3E;
+        Bar
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="bar">
+                    <div class="bar__start">
+                        <button class="button button--transparent">
+                            <svg class="icon fill-text-contrast marginless" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="bar__main">
+                        Bar
+                    </div>
+                </div>
 
-                <h3>
+                <h2 class="m-top-5">
                     Buttons
-                </h3>
-
+                </h2>
                 <div class="content">
 <code>&lt;button class=&quot;button&quot;&gt;
     Default
 &lt;/button&gt;
 </code>
                 </div>
-
                 <div>
                     <button class="button">
                         Default
@@ -108,12 +151,109 @@
                 <button class="button button--small">
                     Small
                 </button>
-            </div>
-        </div>
 
-        <div class="grid">
-            <div class="col-12">
-                <h2>Icon</h2>
+                <h2 class="m-top-5">Field</h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        Name
+        &#x3C;input class=&#x22;field-text&#x22; /&#x3E;
+    &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">
+                        Name
+                        <input class="field-text" />
+                    </label>
+                </div>
+
+                <div class="content">
+<code>&#x3C;div class=&#x22;field-group field-group--valid&#x22;&#x3E;
+    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
+        &#x3C;svg class=&#x22;icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
+            &#x3C;use class=&#x22;test&#x22; xlink:href=&#x22;symbol-defs.svg#icon-check&#x22;&#x3E;&#x3C;/use&#x3E;
+        &#x3C;/svg&#x3E;
+        Surname
+        &#x3C;input class=&#x22;field-text&#x22; /&#x3E;
+     &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <div class="field-group field-group--valid">
+                    <label class="field-label">
+                        <svg class="icon" aria-hidden="true">
+                            <use class="test" xlink:href="symbol-defs.svg#icon-check"></use>
+                        </svg>
+                        Surname
+                        <input class="field-text" />
+                    </label>
+                </div>
+
+                    <div class="field-group field-group--error">
+                        <label class="field-label">
+                            <svg class="icon" aria-hidden="true">
+                                <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
+                            </svg>
+                            E-Mail
+                            <input class="field-text" />
+                        </label>
+                        <span class="field-error">
+                            String is not valid
+                        </span>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">
+                            Towns
+                            <select class="field-choice">
+                                <option></option>
+                                <option value="lonytown">Lonytown</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">
+                            <input class="field-choice" type="checkbox" value="true" />
+                            <svg class="icon field-choice__unchecked" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
+                            </svg>
+                            <svg class="icon field-choice__checked" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
+                            </svg>
+                            Do it!
+                        </label>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">
+                            <input class="field-choice" type="radio" name="radio" value="true" />
+                            <svg class="icon field-choice__unchecked" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
+                            </svg>
+                            <svg class="icon field-choice__checked" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
+                            </svg>
+                            A
+                        </label>
+                        <label class="field-label">
+                            <input class="field-choice" type="radio" name="radio" value="true" />
+                            <svg class="icon field-choice__unchecked" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
+                            </svg>
+                            <svg class="icon field-choice__checked" aria-hidden="true">
+                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
+                            </svg>
+                            B
+                        </label>
+                    </div>
+
+
+
+                <h2 class="m-top-5">Icon</h2>
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="symbol-defs.svg#icon-check"></use>
                 </svg>
@@ -123,26 +263,6 @@
                 <svg class="icon icon--success" aria-hidden="true">
                     <use xlink:href="symbol-defs.svg#icon-clock"></use>
                 </svg>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="col-12">
-                <h3>
-                    Bar
-                </h3>
-                <div class="bar">
-                    <div class="bar__start">
-                        <button class="button button--transparent">
-                            <svg class="icon fill-text-contrast marginless" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="bar__main">
-                        Bar
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -190,13 +310,7 @@
 
         <div class="grid">
             <div class="col-12">
-                <h2>Badge</h2>
-                <span class="badge">
-                    Category
-                </span>
-                <span class="badge badge--round">
-                    99+
-                </span>
+
             </div>
         </div>
 
@@ -314,86 +428,6 @@
 
         <div class="grid">
             <div class="col-12">
-                <h2>Field</h2>
-
-                <form>
-                    <div class="field-group">
-                        <label class="field-label">
-                            Name
-                            <input class="field-text" />
-                        </label>
-                    </div>
-
-                    <div class="field-group field-group--valid">
-                        <label class="field-label">
-                            <svg class="icon" aria-hidden="true">
-                                <use class="test" xlink:href="symbol-defs.svg#icon-check"></use>
-                            </svg>
-                            Surname
-                            <input class="field-text" />
-                        </label>
-                    </div>
-
-                    <div class="field-group field-group--error">
-                        <label class="field-label">
-                            <svg class="icon" aria-hidden="true">
-                                <use class="test" xlink:href="symbol-defs.svg#icon-warning"></use>
-                            </svg>
-                            E-Mail
-                            <input class="field-text" />
-                        </label>
-                        <span class="field-error">
-                            String is not valid
-                        </span>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            Towns
-                            <select class="field-choice">
-                                <option></option>
-                                <option value="lonytown">Lonytown</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            <input class="field-choice" type="checkbox" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            Do it!
-                        </label>
-                    </div>
-
-                    <div class="field-group">
-                        <label class="field-label">
-                            <input class="field-choice" type="radio" name="radio" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            A
-                        </label>
-                        <label class="field-label">
-                            <input class="field-choice" type="radio" name="radio" value="true" />
-                            <svg class="icon field-choice__unchecked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle"></use>
-                            </svg>
-                            <svg class="icon field-choice__checked" aria-hidden="true">
-                                <use xlink:href="symbol-defs.svg#icon-circle-check"></use>
-                            </svg>
-                            B
-                        </label>
-                    </div>
-
-                </form>
 
             </div>
         </div>

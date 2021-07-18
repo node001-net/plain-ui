@@ -2260,7 +2260,7 @@ input.field-text, textarea.field-text, select.field-choice {
   font-family: var(--font-family);
   font-size: 0.95rem;
   width: 100%;
-  border: 1px solid var(--active);
+  border: 1px solid #a4a4a4;
   background-color: var(--background-contrast);
   border-radius: 2px;
   margin: 0.7rem 0 0;
@@ -2709,6 +2709,11 @@ svg.field-choice__checked {
 }
 
 /**
+ *  <div class="loading">
+ *      <span></span>
+ *      <span></span>
+ *      <span></span>
+ *  </div>
  *
  *
  *  @author Björn Hase, Tentakelfabrik

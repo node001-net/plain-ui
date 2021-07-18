@@ -48,7 +48,7 @@ input.field-text, textarea.field-text, select.field-choice {
 
     width: 100%;
 
-    border: 1px solid var(--active);
+    border: 1px solid lighten($color__primary, 40%);
     background-color: var(--background-contrast);
     border-radius: $border-radius;
 

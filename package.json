@@ -4,7 +4,7 @@
   "description": "Simple UI Framework for Building Apps and Websites",
   "repository": {
     "type": "git",
-    "url": "git@gitea.tentakelfabrik.de:herrhase/plain-ui.git"
+    "url": "gitea.tentakelfabrik.de/tentakelfabrik/plain-ui.git"
   },
   "author": "Björn Hase",
   "license": "MIT",

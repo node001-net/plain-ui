@@ -22,6 +22,19 @@
     }
 }
 
+// @TODO ?
+@each $name, $color in $colors {
+    $class: str-replace($name, '--', '');
+
+    .hover-fill-#{$class} {
+        &:hover {
+            svg {
+                fill: var(#{$name});
+            }
+        }
+    }
+}
+
 @each $name, $color in $colors {
     $class: str-replace($name, '--', '');
 

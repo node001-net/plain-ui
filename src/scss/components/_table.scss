@@ -4,9 +4,13 @@
  *
  */
 
+$table__padding-breakpoints: (
+    $breakpoint__md: 0.5em 1.25em
+) !default;
+
 .table {
     width: 100%;
-    border: 1px solid lighten($color__primary, 55%);
+    border: $border;
     background: var(--white);
 
     &--striped {
@@ -21,29 +25,31 @@
         overflow-x: auto;
     }
 
-    td {
+    &__td {
         color: var(--text);
     }
 
-    td,
-    th {
+    &__td,
+    &__th {
         text-align: left;
-        border-bottom: 1px solid lighten($color__primary, 55%);
+        border-bottom: $border;
 
-        padding: 0.5em 1.25em;
-        //@include crispy__media-breakpoints('padding', $crispy__table__padding-breakpoints);
+        padding: 0.25em 0.75em;
+        @include media-breakpoints('padding', $table__padding-breakpoints);
     }
 
-    th {
+    &__th {
         color: white;
-        background-color: $color__primary;
+        background-color: var(--background);
     }
 
-    tr:hover {
-        background-color: lighten($color__primary, 10%);
+    &--hover {
+        .table__tr:hover {
+            background-color: lighten($color__primary, 10%);
 
-        td {
-            color: white;
+            .table__td {
+                color: white;
+            }
         }
     }
 }

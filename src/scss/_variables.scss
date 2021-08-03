@@ -68,6 +68,7 @@ $color__active-contrast: #ffffff !default;
 
 $color__background: $color__primary !default;
 $color__background-contrast: #ffffff !default;
+$color__background-alpha: rgba(0,0,0,.7) !default;
 
 $color__body: #f9f9f9 !default;
 $color__text: #363636 !default;
@@ -108,6 +109,7 @@ $colors: (
     '--warning-contrast': $color__warning-contrast,
     '--background': $color__background,
     '--background-contrast': $color__background-contrast,
+    '--background-alpha': $color__background-alpha,
     '--border': $color__border,
     '--border-contrast': $color__border-contrast
 ) !default;

@@ -598,6 +598,90 @@
                     <div class="progress__inner" style="width: 20%;"></div>
                 </div>
 
+                <!-- sidebar -->
+                <h2 class="m-top-5">
+                    Sidebar
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;progress&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress__inner&#x22; style=&#x22;width: 20%;&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <button class="button" onclick="openSidebar()">
+                    Click me!
+                </button>
+                <script type="text/javascript">
+                    function openSidebar() {
+                        document.querySelector('.sidebar').classList.add('sidebar--open')
+                    }
+
+                    function closeSidebar() {
+                        document.querySelector('.sidebar').classList.remove('sidebar--open')
+                    }
+                </script>
+                <div class="sidebar">
+                    <div class="sidebar__inner">
+                        <div class="sidebar__body">
+
+                        </div>
+                        <div class="sidebar__footer">
+                            <button type="button" class="button m-bottom-0" onclick="closeSidebar()">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sidebar -->
+                <h2 class="m-top-5">
+                    Sidebar + Bar
+                </h2>
+                <div class="content">
+<code>&#x3C;div class=&#x22;progress&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress__inner&#x22; style=&#x22;width: 20%;&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code>
+                </div>
+                <button class="button" onclick="openSidebarBar()">
+                    Click me!
+                </button>
+                <script type="text/javascript">
+                    function openSidebarBar() {
+                        document.querySelector('#sidebar-bar').classList.add('sidebar--open')
+                    }
+
+                    function closeSidebarBar() {
+                        document.querySelector('#sidebar-bar').classList.remove('sidebar--open')
+                    }
+                </script>
+                <div id="sidebar-bar" class="sidebar">
+                    <div class="sidebar__inner">
+
+                        <div class="bar">
+                            <div class="bar__main">
+                                Sidebar
+                            </div>
+                            <div class="bar__end">
+                                <button class="button button--transparent" type="button" onclick="closeSidebarBar()">
+                                    <svg class="icon fill-text-contrast" aria-hidden="true">
+                                        <use xlink:href="/symbol-defs.svg#icon-close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="sidebar__body">
+
+                        </div>
+                        <div class="sidebar__footer">
+                            <button type="button" class="button m-bottom-0" onclick="closeSidebarBar()">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- table -->
                 <h2 class="m-top-5">
                     Table

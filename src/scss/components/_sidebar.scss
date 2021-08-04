@@ -1,0 +1,85 @@
+/**
+ *  <div class="sidebar">
+ *      <div class="sidebar__inner">
+ *          <div class="sidebar__body">
+ *          </div>
+ *          <div class="sidebar__footer">
+ *          </div>
+ *      </div>
+ *  </div>
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://gitea.com/tentakelfabrik/plain-ui
+ *
+ */
+
+.sidebar {
+    position: fixed;
+    z-index: 9;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 95%;
+
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s;
+
+    // adding overlay with transition for open / close
+    &:before {
+        @include overlay($z-index: 9);
+        transition: background-color 0.5s;
+    }
+
+    // extends from panel
+    &__body {
+        @extend .panel__body;
+    }
+
+    // extends from panel
+    &__inner {
+        @extend .panel;
+
+        position: relative;
+        height: 100%;
+        z-index: 10;
+
+        transition: transform 0.2s;
+        transform: translateX(-100%);
+    }
+
+    &__footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+
+        display: flex;
+        justify-content: space-between;
+
+        background: var(--background);
+        width: 100%;
+        padding: 1rem;
+    }
+
+    // open sidebar and slide in display
+    &--open {
+        visibility: visible;
+        transition: visibility 0s linear 0s;
+
+        .sidebar__inner {
+            transform: translateX(0);
+        }
+
+        &:before {
+            background: var(--background-alpha);
+        }
+    }
+
+    @include media-md() {
+        max-width: 33%;
+    }
+}

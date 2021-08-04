@@ -1,33 +1,86 @@
 /**
- *  display
- *  
+ *  visibility
+ *
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://github.com/tentakelfabrik/plain-ui-css
  *
  */
+
+
+/**
+ *  display
+ *
+ *
+ */
+
+@mixin display($breakpoint, $class, $value)
+{
+    .display-#{ $class }-#{ $breakpoint } {
+        display: #{ $value };
+    }
+}
+
+@mixin display-breakpoints($class, $value)
+{
+    @include media-xs() {
+        @include display('xs', $class, $value);
+    }
+
+    @include media-sm() {
+        @include display('sm', $class, $value);
+    }
+
+    @include media-md() {
+        @include display('md', $class, $value);
+    }
+
+    @include media-lg() {
+         @include display('lg', $class, $value);
+     }
+
+    @include media-xlg() {
+        @include display('xlg', $class, $value);
+    }
+}
 
 
 .display-block {
     display: block;
 }
 
+@include display-breakpoints('block', 'block');
+
 .display-inline {
     display: inline;
 }
+
+@include display-breakpoints('inline', 'inline');
 
 .display-inline-block {
     display: inline-block;
 }
 
+@include display-breakpoints('inline-block', 'inline-block');
+
 .display-flex {
     display: flex;
 }
+
+@include display-breakpoints('flex', 'flex');
 
 .display-inline-flex {
     display: inline-flex;
 }
 
+@include display-breakpoints('inline-flex', 'inline-flex');
+
 .display-table {
     display: table;
 }
+
+@include display-breakpoints('table', 'table');
 
 
 /**

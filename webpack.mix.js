@@ -17,7 +17,10 @@ require('laravel-mix-purgecss')
 
 mix.webpackConfig({
     plugins: [
-        new SvgSpritemapPlugin('src/icons/mono-icons/svg/*.svg', {
+        new SvgSpritemapPlugin([
+                'src/icons/mono-icons/svg/*.svg',
+                'src/icons/brands/*.svg'
+            ], {
             output: {
                 filename: 'symbol-defs.svg',
                 chunk: {
@@ -49,4 +52,3 @@ mix
             ]
         }
     })
-    

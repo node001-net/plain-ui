@@ -60,32 +60,68 @@
     font-weight: bolder;
 }
 
-@mixin add_font_size($name, $font-size) {
+/**
+ *  font-sizes
+ *
+ *
+ */
+
+@mixin add-font-size($name, $font-size) {
     .size-#{$name} {
-        font-size: $font-size;
+        font-size: #{$font-size};
     }
 }
 
 @each $name, $font-size in $font-sizes {
-    @include add_font_size($name, $font-size);
+    @include add-font-size($name, $font-size);
 
     @include media-xs() {
-        @include add_font_size('xs-' + $name, $font-size);
+        @include add-font-size('xs-' + $name, $font-size);
     }
 
     @include media-sm() {
-        @include add_font_size('sm-' + $name, $font-size);
+        @include add-font-size('sm-' + $name, $font-size);
     }
 
     @include media-md() {
-        @include add_font_size('md-' + $name, $font-size);
+        @include add-font-size('md-' + $name, $font-size);
     }
 
     @include media-lg() {
-        @include add_font_size('lg-' + $name, $font-size);
+        @include add-font-size('lg-' + $name, $font-size);
     }
 
     @include media-xlg() {
-        @include add_font_size('xlg-' + $name, $font-size);
+        @include add-font-size('xlg-' + $name, $font-size);
     }
+}
+
+/**
+ *  white-space
+ *
+ *
+ */
+
+.white-space-normal {
+    white-space: normal;
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+.white-space-pre {
+    white-space: pre;
+}
+
+.white-space-preline {
+    white-space: preline;
+}
+
+.white-space-preline {
+    white-space: pre-line;
+}
+
+.white-space-prewrap {
+    white-space: pre-wrap;
 }

@@ -1,0 +1,95 @@
+/**
+ *  <div class="toast-wrapper">
+ *      <div class="toast">
+ *          <div class="toast__icon">
+ *               <svg class="icon fill-text-contrast" aria-hidden="true">
+ *                   <use xlink:href="/symbol-defs.svg#icon-warning"></use>
+ *               </svg>
+ *          </div>
+ *          <div class="toast__body">
+ *
+ *          </div>
+ *          <div class="toast__button">
+ *              <svg class="icon fill-text-contrast" aria-hidden="true">
+ *                   <use xlink:href="/symbol-defs.svg#icon-close"></use>
+ *              </svg>
+ *          </div>
+ *      </div>
+ *  </div>
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://gitea.com/tentakelfabrik/plain-ui
+ *
+ */
+
+@mixin toast-color($name)
+{
+    &--#{$name} {
+        background: var(--#{$name});
+
+        .toast__button {
+            background: var(--#{$name});
+        }
+    }
+}
+
+.toast {
+    display: flex;
+    background: var(--background);
+    border: 1px solid var(--border);
+
+    max-width: 800px;
+    width: max-content;
+    margin-top: 1.25rem;
+
+    position: relative;
+    left: calc(-100% - 2rem);
+    transition: left 0.1s;
+
+    &--animation {
+        left: 0;
+    }
+
+    &__body {
+        width: 100%;
+        padding: 1em 1.25em;
+    }
+
+    &__button {
+        border: 0;
+        appearance: none;
+        background: var(--background);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__body, &__button {
+        color: var(--text-contrast);
+    }
+
+    &__icon, &__button {
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        padding: 0 1em;
+
+        svg {
+            font-size: 2rem;
+        }
+    }
+
+    @include toast-color('danger');
+    @include toast-color('info');
+    @include toast-color('success');
+    @include toast-color('warning');
+
+    &-wrapper {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin: 2rem;
+    }
+}

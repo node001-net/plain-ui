@@ -851,6 +851,52 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- toast -->
+                <h2 class="m-top-5">
+                    Toast
+                </h2>
+
+                <script type="text/javascript">
+                    function addToast() {
+                        document.querySelector('#toast').style.display = 'block'
+
+                        setTimeout(function() {
+                            document.querySelector('#toast .toast').classList.add('toast--animation')
+                        }, 100)
+                    }
+
+                    function closeToast() {
+                        setTimeout(function() {
+                            document.querySelector('#toast').style.display = 'none'
+                        }, 1000)
+
+                        document.querySelector('#toast .toast').classList.remove('toast--animation')
+                    }
+                </script>
+
+                <button class="button" onclick="addToast()">
+                    Click me!
+                </button>
+
+                <div id="toast" class="toast-wrapper" style="display: none;">
+                    <div class="toast toast--danger">
+                        <div class="toast__icon">
+                            <svg class="icon fill-text-contrast" aria-hidden="true">
+                                <use xlink:href="/symbol-defs.svg#icon-warning"></use>
+                            </svg>
+                        </div>
+                        <div class="toast__body">
+                            Warning! Action not Working!
+                        </div>
+                        <button class="toast__button" onclick="closeToast()">
+                            <svg class="icon fill-text-contrast" aria-hidden="true">
+                                <use xlink:href="/symbol-defs.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

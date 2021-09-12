@@ -2928,6 +2928,99 @@ input[type=checkbox].field-choice:checked ~ .field-switch:after {
 }
 
 /**
+ *  <div class="toast-wrapper">
+ *      <div class="toast">
+ *          <div class="toast__icon">
+ *
+ *          </div>
+ *          <div class="toast__body">
+ *
+ *          </div>
+ *          <div class="toast__button">
+ *
+ *          </div>
+ *      </div>
+ *  </div>
+ *
+ *  @author Björn Hase, Tentakelfabrik
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://gitea.com/tentakelfabrik/plain-ui
+ *
+ */
+.toast {
+  display: flex;
+  background: var(--background);
+  border: 1px solid var(--border);
+  max-width: 800px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 1.25rem;
+  position: relative;
+  left: calc(-100% - 2rem);
+  transition: left 0.1s;
+}
+.toast--animation {
+  left: 0;
+}
+.toast__body {
+  width: 100%;
+  padding: 1em 1.25em;
+}
+.toast__button {
+  border: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: var(--background);
+}
+.toast__button:hover {
+  cursor: pointer;
+}
+.toast__body, .toast__button {
+  color: var(--text-contrast);
+}
+.toast__icon, .toast__button {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  padding: 0 1em;
+}
+.toast__icon svg, .toast__button svg {
+  font-size: 2rem;
+}
+.toast--danger {
+  background: var(--danger);
+}
+.toast--danger .toast__button {
+  background: var(--danger);
+}
+.toast--info {
+  background: var(--info);
+}
+.toast--info .toast__button {
+  background: var(--info);
+}
+.toast--success {
+  background: var(--success);
+}
+.toast--success .toast__button {
+  background: var(--success);
+}
+.toast--warning {
+  background: var(--warning);
+}
+.toast--warning .toast__button {
+  background: var(--warning);
+}
+.toast-wrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 2rem;
+}
+
+/**
  *  masonry
  *
  *  <div class="masonry">

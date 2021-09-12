@@ -2298,6 +2298,10 @@ input.field-text, textarea.field-text {
   padding: 0.8em 1.1em;
 }
 
+textarea.field-text {
+  height: 180px;
+}
+
 /**
  * field-choice
  *

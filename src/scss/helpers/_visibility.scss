@@ -107,3 +107,18 @@
 .visibility-collapse {
     visibility: collapse;
 }
+
+
+/**
+ *  Opacity
+ *
+ *
+ */
+
+$opacity-steps: 10;
+
+@for $i from 1 through $opacity-steps {
+    .opacity-#{ $i } {
+        opacity: ($i / 10);
+    }
+}

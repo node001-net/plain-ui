@@ -2754,6 +2754,7 @@ input[type=checkbox].field-choice:checked ~ .field-switch:after {
   transition: transform 0.5s;
   transform: scale(0);
   max-width: 600px;
+  width: 100%;
 }
 .modal__title {
   font-size: 2rem;

@@ -81,6 +81,7 @@
         }
     }
 
+    // adding colors
     @include toast-color('danger');
     @include toast-color('info');
     @include toast-color('success');
@@ -93,5 +94,27 @@
         margin: 2rem;
 
         z-index: 30;
+
+        // position modificators
+        &--right {
+            left: inherit;
+            right: 0;
+
+            .toast {
+                left: inherit;
+                right: calc(-100% - 2rem);
+                transition: right 0.1s;
+
+                &--animation {
+                    left: inherit;
+                    right: 0;
+                }
+            }
+        }
+
+        &--top {
+            bottom: inherit;
+            top: 0;
+        }
     }
 }

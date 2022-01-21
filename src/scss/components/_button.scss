@@ -30,6 +30,26 @@
  *
  *
  */
+@mixin button-full-color($name)
+{
+    &--#{$name}.button--full {
+        background-color: var(--#{$name});
+
+        &:hover {
+            background-color: var(--background-contrast);
+            border-color: var(--#{$name});
+        }
+
+        &:focus, &:active {
+            outline: 2px solid var(--#{$name});
+        }
+    }
+}
+
+/**
+ *
+ *
+ */
 @mixin button-outline-color($name, $color)
 {
     &--#{$name}.button--outline {
@@ -58,7 +78,7 @@
     transition: background-color 0.1s;
 
     margin: $margin;
-    
+
     padding: 0 1.3rem;
     min-height: 2.8rem;
     width: 100%;
@@ -124,4 +144,19 @@
     @include button-outline-color('info', lighten($color__info, 20%));
     @include button-outline-color('warning', lighten($color__warning, 20%));
     @include button-outline-color('success', lighten($color__success, 20%));
+
+    &--full {
+        background-color: var(--active);
+        color: white;
+
+        &:hover {
+            background-color: var(--background-contrast);
+            color: var(--text);
+        }
+    }
+
+    @include button-full-color('danger');
+    @include button-full-color('info');
+    @include button-full-color('warning');
+    @include button-full-color('success');
 }

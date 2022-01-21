@@ -47,6 +47,9 @@
     left: calc(-100% - 2rem);
     transition: left 0.1s;
 
+    // make sure only single item is clickable
+    pointer-events: auto;
+
     &--animation {
         left: 0;
     }
@@ -94,6 +97,9 @@
         margin: 2rem;
 
         z-index: 30;
+
+        // make sure that conainter is not clickable
+        pointer-events: none;
 
         // position modificators
         &--right {

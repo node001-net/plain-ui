@@ -110,7 +110,10 @@ $spacing-steps: 10 !default;
 @each $direction in $spacing-direction
 {
     @include spacing('m', 'margin', 0, 0, $direction);
+    @include spacing_breakpoints('m', 'margin', 0, 0, $direction);
+
     @include spacing('m', 'margin', 1, 1px, $direction);
+    @include spacing_breakpoints('m', 'margin', 1, 1px, $direction);
 
     @for $i from 2 through $spacing-steps {
         $value: $spacing-gap * factor($i - 1) * 1rem;
@@ -131,7 +134,10 @@ $spacing-steps: 10 !default;
 @each $direction in $spacing-direction
 {
     @include spacing('p', 'padding', 0, 0, $direction);
+    @include spacing_breakpoints('p', 'padding', 0, 0, $direction);
+
     @include spacing('p', 'padding', 1, 1px, $direction);
+    @include spacing_breakpoints('p', 'padding', 1, 1px, $direction);
 
     @for $i from 0 through $spacing-steps {
         $value: $spacing-gap * factor($i - 1) * 1rem;

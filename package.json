@@ -1,10 +1,10 @@
 {
-  "name": "@tentakelfabrik/plain-ui",
-  "version": "0.4.0",
+  "name": "@tiny-components/plain-ui",
+  "version": "0.5.0",
   "description": "Simple UI Framework for Building Apps and Websites",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tentakelfabrik/plain-ui.git"
+    "url": "git@gitea.node001.net:tiny-components/plain-ui.git"
   },
   "author": "Björn Hase",
   "license": "MIT",

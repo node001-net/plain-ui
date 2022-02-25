@@ -7,5 +7,5 @@
 ## Install
 
 ```
-npm install @tentakelfabrik/plain-ui --save
+npm install @tiny-components/plain-ui --save
 ```

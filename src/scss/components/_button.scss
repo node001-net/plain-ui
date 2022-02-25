@@ -79,8 +79,7 @@
 
     margin: $margin;
 
-    padding: 0 1.3rem;
-    min-height: 2.8rem;
+    padding: 0.5rem 1.3rem;
     width: 100%;
 
     @include media-sm() {
@@ -88,6 +87,7 @@
     }
 
     &--small {
+        padding: 0.3rem 1.1rem;
         font-size: 0.8rem;
     }
 

@@ -1,5 +1,6 @@
 /**
  *
+ *  table
  *
  *
  */
@@ -8,18 +9,13 @@ $table__padding-breakpoints: (
     $breakpoint__md: 0.5em 1.25em
 ) !default;
 
+$table__striped-background-color: lighten($color__primary, 65%) !default;
+$table__hover-background-color: lighten($color__primary, 10%) !default;
+
 .table {
     width: 100%;
     border: $border;
     background: var(--white);
-
-    &--striped {
-        tr {
-            &:nth-child(even) {
-                background-color: lighten($color__primary, 75%);
-            }
-        }
-    }
 
     &--scroll {
         overflow-x: auto;
@@ -43,12 +39,21 @@ $table__padding-breakpoints: (
         background-color: var(--background);
     }
 
+    &--striped {
+        .table__tr {
+            &:nth-child(even) {
+                .table__td {
+                    background-color: $table__striped-background-color;
+                }
+            }
+        }
+    }
+
     &--hover {
         .table__tr:hover {
-            background-color: lighten($color__primary, 10%);
-
             .table__td {
                 color: white;
+                background-color: $table__hover-background-color;
             }
         }
     }

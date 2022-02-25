@@ -2685,6 +2685,7 @@ input[type=checkbox].field-choice:checked ~ .field-switch:after {
 
 /**
  *
+ *  table
  *
  *
  */
@@ -2692,9 +2693,6 @@ input[type=checkbox].field-choice:checked ~ .field-switch:after {
   width: 100%;
   border: 1px solid var(--border);
   background: var(--white);
-}
-.table--striped tr:nth-child(even) {
-  background-color: #fdfdfd;
 }
 .table--scroll {
   overflow-x: auto;
@@ -2716,11 +2714,12 @@ input[type=checkbox].field-choice:checked ~ .field-switch:after {
   color: white;
   background-color: var(--background);
 }
-.table--hover .table__tr:hover {
-  background-color: #585858;
+.table--striped .table__tr:nth-child(even) .table__td {
+  background-color: #e4e4e4;
 }
 .table--hover .table__tr:hover .table__td {
   color: white;
+  background-color: #585858;
 }
 
 /**

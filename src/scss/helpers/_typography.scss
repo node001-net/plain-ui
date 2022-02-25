@@ -4,59 +4,96 @@
  *
  */
 
-.left {
+
+@mixin media-add-typography($class) {
+    .#{$class} {
+        @content;
+    }
+
+    @include media-xs() {
+        .#{$class}-xs {
+            @content;
+        }
+    }
+
+    @include media-sm() {
+        .#{$class}-sm {
+            @content;
+         }
+     }
+
+     @include media-md() {
+        .#{$class}-md {
+            @content;
+        }
+     }
+
+     @include media-lg() {
+        .#{$class}-lg {
+            @content;
+        }
+     }
+
+     @include media-xlg() {
+        .#{$class}-xlg {
+            @content;
+        }
+     }
+ }
+
+@include media-add-typography('left') {
     text-align: left;
 }
 
-.right {
+@include media-add-typography('right') {
     text-align: right;
 }
 
-.center {
+@include media-add-typography('center') {
     text-align: center;
 }
 
-.justify {
+@include media-add-typography('justify') {
     text-align: justify;
 }
 
-.uppercase {
+@include media-add-typography('uppercase') {
     text-transform: uppercase;
 }
 
-.lowercase {
+@include media-add-typography('lowercase') {
     text-transform: lowercase;
 }
 
-.crossed {
+@include media-add-typography('crossed') {
     text-decoration: line-through;
 }
 
-.underline {
+@include media-add-typography('underline') {
     text-decoration: underline;
 }
 
-.capitalize {
+@include media-add-typography('capitalize') {
     text-transform: capitalize;
 }
 
-.italic {
+@include media-add-typography('italic') {
     font-style: italic;
 }
 
-.light {
+@include media-add-typography('light') {
     font-weight: lighter;
 }
 
-.normal {
+@include media-add-typography('normal') {
     font-weight: normal;
 }
 
-.medium {
+@include media-add-typography('medium') {
     font-weight: medium;
 }
 
-.bold {
+@include media-add-typography('bold') {
     font-weight: bolder;
 }
 
@@ -102,26 +139,26 @@
  *
  */
 
-.white-space-normal {
+@include media-add-typography('white-space-normal') {
     white-space: normal;
 }
 
-.white-space-nowrap {
+@include media-add-typography('white-space-nowrap') {
     white-space: nowrap;
 }
 
-.white-space-pre {
+@include media-add-typography('white-space-pre') {
     white-space: pre;
 }
 
-.white-space-preline {
+@include media-add-typography('white-space-preline') {
     white-space: preline;
 }
 
-.white-space-preline {
+@include media-add-typography('white-space-preline') {
     white-space: pre-line;
 }
 
-.white-space-prewrap {
+@include media-add-typography('white-space-prewrap') {
     white-space: pre-wrap;
 }

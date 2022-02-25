@@ -1,5 +1,6 @@
 /**
  *
+ *  fields
  *
  *
  *
@@ -9,7 +10,7 @@
     margin: $margin;
 
     &--valid {
-        input.field-text, textarea.field-text {
+        .field-text {
             border-color: var(--success);
         }
 
@@ -19,7 +20,7 @@
     }
 
     &--error {
-        input.field-text, textarea.field-text {
+        .field-text {
             border-color: var(--danger);
         }
 
@@ -42,7 +43,7 @@
     }
 }
 
-input.field-text, textarea.field-text, select.field-choice {
+.field-text, .field-choice {
     font-family: var(--font-family);
     font-size: 0.95rem;
 
@@ -59,7 +60,7 @@ input.field-text, textarea.field-text, select.field-choice {
     }
 }
 
-input.field-text, textarea.field-text {
+.field-text {
     padding: 0.8em 1.1em;
 }
 
@@ -74,21 +75,17 @@ textarea.field-text {
  *
  */
 
-select.field-choice {
+.field-choice {
     appearance: none;
     padding: 0.8em;
 
-    background-image:
-        linear-gradient(to right, $color__active, $color__active);
-    background-position:
-        100%;
-    background-size:
-        1.5rem 100%;
+    background-image: linear-gradient(to right, $color__active, $color__active);
+    background-position: 100%;
+    background-size: 1.5rem 100%;
     background-repeat: no-repeat;
 
     &:active, &:focus {
-        background-image:
-            linear-gradient(to right, $color__border, $color__border);
+        background-image: linear-gradient(to right, $color__border, $color__border);
     }
 }
 
@@ -110,8 +107,8 @@ select.field-choice {
  *
  */
 
-input[type=checkbox].field-choice,
-input[type=radio].field-choice {
+[type=checkbox].field-choice,
+[type=radio].field-choice {
     position: relative;
     display: none;
 
@@ -175,7 +172,7 @@ svg.field-choice__checked {
     }
 }
 
-input[type=checkbox].field-choice {
+[type=checkbox].field-choice {
     ~ .field-switch:after {
         left: 0;
     }

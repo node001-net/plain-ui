@@ -2302,6 +2302,7 @@ h6, .h6 {
 
 /**
  *
+ *  fields
  *
  *
  *
@@ -2309,13 +2310,13 @@ h6, .h6 {
 .field-group {
   margin: 0 0 1rem;
 }
-.field-group--valid input.field-text, .field-group--valid textarea.field-text {
+.field-group--valid .field-text {
   border-color: var(--success);
 }
 .field-group--valid .icon {
   fill: var(--success);
 }
-.field-group--error input.field-text, .field-group--error textarea.field-text {
+.field-group--error .field-text {
   border-color: var(--danger);
 }
 .field-group--error .icon {
@@ -2333,7 +2334,7 @@ h6, .h6 {
   cursor: pointer;
 }
 
-input.field-text, textarea.field-text, select.field-choice {
+.field-text, .field-choice {
   font-family: var(--font-family);
   font-size: 0.95rem;
   width: 100%;
@@ -2341,12 +2342,12 @@ input.field-text, textarea.field-text, select.field-choice {
   border-radius: 2px;
   margin: 0.7rem 0 0;
 }
-input.field-text:focus, input.field-text:active, textarea.field-text:focus, textarea.field-text:active, select.field-choice:focus, select.field-choice:active {
+.field-text:focus, .field-text:active, .field-choice:focus, .field-choice:active {
   outline: 0;
   border-color: var(--border);
 }
 
-input.field-text, textarea.field-text {
+.field-text {
   padding: 0.8em 1.1em;
 }
 
@@ -2359,7 +2360,7 @@ textarea.field-text {
  *
  *
  */
-select.field-choice {
+.field-choice {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2369,7 +2370,7 @@ select.field-choice {
   background-size: 1.5rem 100%;
   background-repeat: no-repeat;
 }
-select.field-choice:active, select.field-choice:focus {
+.field-choice:active, .field-choice:focus {
   background-image: linear-gradient(to right, #3e3e3e, #3e3e3e);
 }
 
@@ -2390,21 +2391,21 @@ select.field-choice:active, select.field-choice:focus {
  * </div>
  *
  */
-input[type=checkbox].field-choice,
-input[type=radio].field-choice {
+[type=checkbox].field-choice,
+[type=radio].field-choice {
   position: relative;
   display: none;
 }
-input[type=checkbox].field-choice ~ .field-choice__checked,
-input[type=radio].field-choice ~ .field-choice__checked {
+[type=checkbox].field-choice ~ .field-choice__checked,
+[type=radio].field-choice ~ .field-choice__checked {
   display: none;
 }
-input[type=checkbox].field-choice:checked ~ .field-choice__checked,
-input[type=radio].field-choice:checked ~ .field-choice__checked {
+[type=checkbox].field-choice:checked ~ .field-choice__checked,
+[type=radio].field-choice:checked ~ .field-choice__checked {
   display: inline-block;
 }
-input[type=checkbox].field-choice:checked ~ .field-choice__unchecked,
-input[type=radio].field-choice:checked ~ .field-choice__unchecked {
+[type=checkbox].field-choice:checked ~ .field-choice__unchecked,
+[type=radio].field-choice:checked ~ .field-choice__unchecked {
   display: none;
 }
 
@@ -2449,13 +2450,13 @@ svg.field-choice__checked {
   transition: transform 0.25s;
 }
 
-input[type=checkbox].field-choice ~ .field-switch:after {
+[type=checkbox].field-choice ~ .field-switch:after {
   left: 0;
 }
-input[type=checkbox].field-choice:checked ~ .field-switch {
+[type=checkbox].field-choice:checked ~ .field-switch {
   border-color: var(--success);
 }
-input[type=checkbox].field-choice:checked ~ .field-switch:after {
+[type=checkbox].field-choice:checked ~ .field-switch:after {
   background-color: var(--success);
   transform: translateX(100%);
 }
@@ -2686,6 +2687,7 @@ input[type=checkbox].field-choice:checked ~ .field-switch:after {
 /**
  *
  *  table
+ *  
  *
  *
  */

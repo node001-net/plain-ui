@@ -1,6 +1,7 @@
 /**
  *
  *  table
+ *  
  *
  *
  */
@@ -39,6 +40,7 @@ $table__hover-background-color: lighten($color__primary, 10%) !default;
         background-color: var(--background);
     }
 
+    // other background-color for even td inside tr
     &--striped {
         .table__tr {
             &:nth-child(even) {
@@ -49,6 +51,7 @@ $table__hover-background-color: lighten($color__primary, 10%) !default;
         }
     }
 
+    // if hover tr change background color for all tr inside
     &--hover {
         .table__tr:hover {
             .table__td {

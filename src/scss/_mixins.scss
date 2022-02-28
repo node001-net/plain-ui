@@ -56,73 +56,73 @@
  */
 
 @mixin media-xs() {
-    @media only screen and (min-width: $breakpoint__xs) {
+    @media only screen and (min-width: $grid__xs) {
         @content;
     }
 }
 
 @mixin media-sm() {
-    @media only screen and (min-width: $breakpoint__sm) {
+    @media only screen and (min-width: $grid__sm) {
         @content;
     }
 }
 
 @mixin media-md() {
-    @media only screen and (min-width: $breakpoint__md) {
+    @media only screen and (min-width: $grid__md) {
         @content;
     }
 }
 
 @mixin media-lg() {
-    @media only screen and (min-width: $breakpoint__lg) {
+    @media only screen and (min-width: $grid__lg) {
         @content;
     }
 }
 
 @mixin media-xlg() {
-    @media only screen and (min-width: $breakpoint__xlg) {
+    @media only screen and (min-width: $grid__xlg) {
         @content;
     }
 }
 
 @mixin media-xxs-only() {
-    @media only screen and (max-width: $breakpoint__xs) {
+    @media only screen and (max-width: $grid__xs) {
         @content;
     }
 }
 
 @mixin media-xxs-only() {
-    @media only screen and (max-width: $breakpoint__xs - 1) {
+    @media only screen and (max-width: $grid__xs - 1) {
         @content;
     }
 }
 
 @mixin media-xs-only() {
-    @media only screen and (min-width: $breakpoint__xs) and (max-width: $breakpoint__sm - 1) {
+    @media only screen and (min-width: $grid__xs) and (max-width: $grid__sm - 1) {
         @content;
     }
 }
 
 @mixin media-sm-only() {
-    @media only screen and (min-width: $breakpoint__sm) and (max-width: $breakpoint__md - 1) {
+    @media only screen and (min-width: $grid__sm) and (max-width: $grid__md - 1) {
         @content;
     }
 }
 
 @mixin media-md-only() {
-    @media only screen and (min-width: $breakpoint__md) and (max-width: $breakpoint__lg - 1) {
+    @media only screen and (min-width: $grid__md) and (max-width: $grid__lg - 1) {
         @content;
     }
 }
 
 @mixin media-lg-only() {
-    @media only screen and (min-width: $breakpoint__lg) and (max-width: $breakpoint__xlg - 1) {
+    @media only screen and (min-width: $grid__lg) and (max-width: $grid__xlg - 1) {
         @content;
     }
 }
 
 @mixin media-xlg-only() {
-    @media only screen and (min-width: $breakpoint__xlg) {
+    @media only screen and (min-width: $grid__xlg) {
         @content;
     }
 }

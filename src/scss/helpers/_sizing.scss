@@ -72,14 +72,14 @@ $sizing_steps: 99 !default;
 .h-auto { height: auto; }
 @include sizing_breakpoints('h', 'height', 'auto', auto);
 
-@for $i from 1 through $reflex-columns
+@for $i from 1 through $grid__columns
 {
-    $value: percentage(($i / $reflex-columns));
+    $value: percentage(($i / $grid__columns));
 
     @include sizing('w-col', 'width', $i, $value);
     @include sizing_breakpoints('w-col', 'width', $i, $value);
 
-    $value: percentage(($i / $reflex-columns));
+    $value: percentage(($i / $grid__columns));
 
     @include sizing('h-col', 'height', $i, $value);
     @include sizing_breakpoints('h-col', 'height', $i, $value);

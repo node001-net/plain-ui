@@ -4,7 +4,6 @@
  *
  */
 
-
 @mixin media-add-typography($class) {
     .#{$class} {
         @content;

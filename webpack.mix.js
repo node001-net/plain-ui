@@ -15,6 +15,17 @@ require('laravel-mix-purgecss')
  |
  */
 
+
+/**
+ *  svgo: {
+*     plugins: [{
+*         removeAttrs: {
+*             attrs: 'fill'
+    *     }
+    * }]
+ *},*
+ *  @type {Array}
+ */
 mix.webpackConfig({
     plugins: [
         new SvgSpritemapPlugin([
@@ -25,13 +36,6 @@ mix.webpackConfig({
                 filename: 'symbol-defs.svg',
                 chunk: {
                     keep: true
-                },
-                svgo: {
-                    plugins: [{
-                        removeAttrs: {
-                            attrs: 'fill'
-                        }
-                    }]
                 },
                 svg4everybody: false
             },

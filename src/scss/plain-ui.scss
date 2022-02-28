@@ -1,13 +1,11 @@
 @import
 
     '../fonts/stylesheet',
-    'node_modules/reflex-grid/scss/reflex',
 
     'functions',
     'mixins',
     'variables',
 
-    'core/container',
     'core/normalize',
     'core/content',
     'core/heading',
@@ -31,7 +29,7 @@
 
     'layouts/masonry',
     'layouts/slider',
-    'layouts/flex',
+    'layouts/grid',
 
     'helpers/core',
     'helpers/sizing',

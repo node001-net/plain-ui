@@ -1,0 +1,215 @@
+
+// --------------------------------------------------
+// grid modifiers
+// --------------------------------------------------
+
+// --------------------------------------------------
+// flex-wrap
+// --------------------------------------------------
+
+.wrap {
+    @include flex-wrap(wrap);
+}
+
+.no-wrap {
+    @include flex-wrap(nowrap);
+
+    // This is mostly needed to stop the grid contents overflowing in the
+    // ie10 implementation of flexbox but it can't hurt in other browsers
+    // as it is the desired behaviour of non wrapping flex items
+    [class*="col-"] {
+        @include flex-shrink(1);
+    }
+}
+
+.wrap-reverse {
+    @include flex-wrap(wrap-reverse);
+}
+
+// --------------------------------------------------
+// flex-direction
+// --------------------------------------------------
+
+.direction-row {
+    @include flex-direction(row);
+}
+
+.direction-row-reverse {
+    @include flex-direction(row-reverse);
+}
+
+.direction-column {
+    @include flex-direction(column);
+}
+
+.direction-column-reverse {
+    @include flex-direction(column-reverse);
+}
+
+// --------------------------------------------------
+// align items (cross axis)
+// --------------------------------------------------
+
+.align-start {
+    @include align-items(flex-start);
+}
+
+.align-end {
+    @include align-items(flex-end);
+}
+
+.align-center {
+    @include align-items(center);
+}
+
+.align-baseline {
+    @include align-items(baseline);
+}
+
+// --------------------------------------------------
+// align content (cross axis)
+// --------------------------------------------------
+
+.align-content-start {
+    @include align-content(flex-start);
+}
+
+.align-content-end {
+    @include align-content(flex-end);
+
+    // fallback to legacy vertical-align
+    [class*="col-"] {
+        vertical-align: bottom;
+    }
+}
+
+.align-content-center {
+    @include align-content(center);
+}
+
+.align-content-space-between {
+    @include align-content(space-between);
+}
+
+.align-content-space-around {
+    @include align-content(space-around);
+}
+
+// --------------------------------------------------
+// align-self
+// --------------------------------------------------
+
+.align-self-stretch {
+    @include align-self(stretch);
+}
+
+.align-self-start {
+    @include align-self(flex-start);
+}
+
+.align-self-end {
+    @include align-self(flex-end);
+    vertical-align: bottom;
+}
+
+.align-self-center {
+    @include align-self(center);
+    vertical-align: middle;
+}
+
+.align-self-baseline {
+    @include align-self(baseline);
+    vertical-align: baseline;
+}
+
+// --------------------------------------------------
+// justify-content (main axis)
+// --------------------------------------------------
+
+.justify-start {
+    @include justify-content-start();
+}
+
+.justify-end {
+    @include justify-content-end();
+}
+
+.justify-center {
+    @include justify-content-center();
+}
+
+.justify-space-between {
+    @include justify-content-space-between();
+}
+
+.justify-space-around {
+    @include justify-content-space-around();
+}
+
+// --------------------------------------------------
+// cosmetic grid modifiers
+// --------------------------------------------------
+
+// Removes internal padding from all columns in a grid
+.grid-bleed {
+    [class*="col-"] {
+        padding: 0;
+    }
+}
+
+// --------------------------------------------------
+// col modifiers
+// --------------------------------------------------
+
+// Makes a column element into a flexbox column
+.col-grid {
+    @include display-flex();
+    @include flex-direction(column);
+
+    &.direction-row {
+        @include flex-direction(row);
+    }
+}
+
+// Removes internal padding from all columns in a grid
+.col-bleed {
+    padding: 0;
+}
+
+// Removes horizontal padding from all columns in a grid
+.col-bleed-x {
+    padding: $grid__spacing 0;
+}
+
+// Removes vertical padding from all columns in a grid
+.col-bleed-y {
+    padding: 0 $grid__spacing;
+}
+
+// --------------------------------------------------
+// col-grid contents
+// --------------------------------------------------
+
+.flex-img {
+    display: block;
+    @include flex(0, 0, auto);
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.flex-footer {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// --------------------------------------------------
+// Responsive visibility modifiers
+// --------------------------------------------------
+
+@include grid-responsive-visibility-helpers();

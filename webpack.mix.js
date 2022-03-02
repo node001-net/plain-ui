@@ -47,12 +47,12 @@ mix.webpackConfig({
 })
 
 mix
-    .setPublicPath('./public')
-    .sass('src/scss/plain-ui.scss', 'public/plain-ui.css')
+    .setPublicPath('./examples')
+    .sass('src/scss/plain-ui.scss', 'examples/plain-ui.css')
     .purgeCss({
         extend: {
             content: [
-                path.join(__dirname, 'public/*.html'),
+                path.join(__dirname, 'examples/*.html'),
             ]
         }
     })

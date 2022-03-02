@@ -61,7 +61,7 @@
 }
 
 
-.col-grid {
+.col-item {
     @include box-sizing(border-box);
     position: relative;
     width: 100%;
@@ -82,7 +82,7 @@
 
 @for $i from 1 through $grid__columns {
     .col-#{$i} {
-        @extend .col-grid;
+        @extend .col-item;
     }
 }
 
@@ -123,12 +123,12 @@
  */
 
 .col-auto {
-    @extend .col-grid;
+    @extend .col-item;
     @include grid-setup-auto-cols();
 }
 
 .col-xs-auto, .col-sm-auto, .col-lg-auto, .col-xlg-auto {
-    @extend .col-grid;
+    @extend .col-item;
 }
 
 @media (min-width: $grid__xs) {

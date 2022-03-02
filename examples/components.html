@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
-        Plain UI | Lightweight CSS UI Framework for Building Apps and Websites
+        Plain UI 0.5 | Lightweight CSS UI Framework for Building Apps and Websites
     </title>
     <meta name="description" content="Lightweight UI Framework for building fast and clean Websites and Apps for Mobile, Tablet and Desktop. Minimal UI-Elements, Functions and Helpers">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,53 +18,17 @@
     <header class="header">
         <div class="bar">
             <div class="bar__start">
-                <h1 class="m-top-4 m-bottom-4 h4">
+                <div class="m-top-4 m-bottom-4 h4">
                     Plain UI 0.5
-                </h1>
-            </div>
-            <div class="bar__main justify-end">
-                <a class="button button--small m-bottom-0" href="#">
-                    Github
-                    <svg class="m-left-3 icon fill-text" aria-hidden="true">
-                        <use xlink:href="symbol-defs.svg#icon-github"></use>
-                    </svg>
-                </a>
-                <a class="button button--small m-left-sm-3 m-bottom-0" href="https://gitea.tentakelfabrik.de/" rel="noopener" target="_blank">
-                    Gitea
-                    <svg class="m-left-3 icon fill-text" aria-hidden="true">
-                        <use xlink:href="symbol-defs.svg#icon-gitea"></use>
-                    </svg>
-                </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="container m-top-6">
-        <div class="grid">
-            <div class="col-12">
-                <nav>
-                    <div class="tabs">
-                        <a href="index.html" class="tabs__item">
-                            Basics
-                        </a>
-                        <a href="components.html" class="tabs__item tabs__item--selected">
-                            Components
-                        </a>
-                        <a href="layout.html" class="tabs__item">
-                            Layout
-                        </a>
-                        <a href="helpers.html" class="tabs__item">
-                            Helpers
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <div class="grid">
             <div class="col-12">
+
                 <h1 class="highlight m-bottom-5">
                     Components
                 </h1>
@@ -80,12 +44,7 @@
                 </div>
 
                 <h2>Badge</h2>
-                <div class="content m-bottom-4">
-<code>&#x3C;span class=&#x22;badge&#x22;&#x3E;
-    Category
-&#x3C;/span&#x3E;
-</code>
-                </div>
+
                 <span class="badge">
                     Category
                 </span>
@@ -96,21 +55,6 @@
                 <h2 class="m-top-5">
                     Bar
                 </h2>
-                <div class="content m-bottom-4">
-<code>&#x3C;div class=&#x22;bar&#x22;&#x3E;
-    &#x3C;div class=&#x22;bar__start&#x22;&#x3E;
-        &#x3C;button class=&#x22;button button--transparent&#x22;&#x3E;
-            &#x3C;svg class=&#x22;icon fill-text-contrast marginless&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
-            &#x3C;/svg&#x3E;
-        &#x3C;/button&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;div class=&#x22;bar__main&#x22;&#x3E;
-        Bar
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="bar">
                     <div class="bar__start">
                         <button class="button button--transparent">
@@ -127,12 +71,6 @@
                 <h2 class="m-top-5">
                     Buttons
                 </h2>
-                <div class="content">
-<code>&lt;button class=&quot;button&quot;&gt;
-    Default
-&lt;/button&gt;
-</code>
-                </div>
                 <div>
                     <button class="button">
                         Default
@@ -189,21 +127,13 @@
                         outline
                     </button>
                 </div>
-
                 <button class="button button--small">
                     Small
                 </button>
 
-                <h2 class="m-top-5">Field</h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        Name
-        &#x3C;input class=&#x22;field-text&#x22; /&#x3E;
-    &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
+                <h2 class="m-top-5">
+                    Field
+                </h2>
                 <div class="field-group">
                     <label class="field-label">
                         Name
@@ -217,18 +147,6 @@
                     </label>
                 </div>
 
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group field-group--valid&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        &#x3C;svg class=&#x22;icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use class=&#x22;test&#x22; xlink:href=&#x22;symbol-defs.svg#icon-check&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        Surname
-        &#x3C;input class=&#x22;field-text&#x22; /&#x3E;
-     &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="field-group field-group--valid">
                     <label class="field-label">
                         <svg class="icon" aria-hidden="true">
@@ -239,21 +157,6 @@
                     </label>
                 </div>
 
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group field-group--error&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        &#x3C;svg class=&#x22;icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use class=&#x22;test&#x22; xlink:href=&#x22;symbol-defs.svg#icon-warning&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        E-Mail
-        &#x3C;input class=&#x22;field-text&#x22; /&#x3E;
-    &#x3C;/label&#x3E;
-    &#x3C;span class=&#x22;field-error&#x22;&#x3E;
-        String is not valid
-    &#x3C;/span&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="field-group field-group--error">
                     <label class="field-label">
                         <svg class="icon" aria-hidden="true">
@@ -267,18 +170,6 @@
                     </span>
                 </div>
 
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        Towns
-        &#x3C;select class=&#x22;field-choice&#x22;&#x3E;
-            &#x3C;option&#x3E;&#x3C;/option&#x3E;
-            &#x3C;option value=&#x22;lonytown&#x22;&#x3E;Lonytown&#x3C;/option&#x3E;
-        &#x3C;/select&#x3E;
-    &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="field-group">
                     <label class="field-label">
                         Towns
@@ -289,21 +180,6 @@
                     </label>
                 </div>
 
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;checkbox&#x22; value=&#x22;true&#x22; /&#x3E;
-        &#x3C;svg class=&#x22;icon field-choice__unchecked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-checkbox&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        &#x3C;svg class=&#x22;icon field-choice__checked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-checkbox-checked&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        Checkbox
-    &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="field-group">
                     <label class="field-label">
                         <input class="field-choice" type="checkbox" value="true" />
@@ -317,31 +193,6 @@
                     </label>
                 </div>
 
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;true&#x22; /&#x3E;
-        &#x3C;svg class=&#x22;icon field-choice__unchecked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        &#x3C;svg class=&#x22;icon field-choice__checked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle-check&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        Radio A
-    &#x3C;/label&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;radio&#x22; name=&#x22;radio&#x22; value=&#x22;true&#x22; /&#x3E;
-        &#x3C;svg class=&#x22;icon field-choice__unchecked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        &#x3C;svg class=&#x22;icon field-choice__checked&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-            &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-circle-check&#x22;&#x3E;&#x3C;/use&#x3E;
-        &#x3C;/svg&#x3E;
-        Radio B
-    &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="field-group">
                     <label class="field-label">
                         <input class="field-choice" type="radio" name="radio" value="true" />
@@ -365,15 +216,6 @@
                     </label>
                 </div>
 
-                <div class="content">
-<code>&#x3C;div class=&#x22;field-group&#x22;&#x3E;
-    &#x3C;label class=&#x22;field-label&#x22;&#x3E;
-        &#x3C;input class=&#x22;field-choice&#x22; type=&#x22;checkbox&#x22; name=&#x22;radio&#x22; value=&#x22;true&#x22; /&#x3E;
-        &#x3C;span class=&#x22;field-switch&#x22;&#x3E;&#x3C;/span&#x3E;
-    &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="field-group">
                     <label class="field-label">
                         <input class="field-choice" type="checkbox" name="radio" value="true" />
@@ -384,17 +226,7 @@
                 <h2 class="m-top-5">
                     Group
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;group&#x22;&#x3E;
-    &#x3C;div class=&#x22;group__item background-color-primary color-text-contrast p-3&#x22;&#x3E;
-        One
-    &#x3C;/div&#x3E;
-    &#x3C;div class=&#x22;group__item background-color-primary color-text-contrast p-3&#x22;&#x3E;
-        Two
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
+
                 <div class="group">
                     <div class="group__item background-color-primary color-text-contrast p-3">
                         One
@@ -413,12 +245,6 @@
                 <h2>
                     Hero
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;hero&#x22;&#x3E;
-    &#x3C;img style=&#x22;max-height: 400px;&#x22; src=&#x22;/image.jpg&#x22; /&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
             </div>
         </div>
     </div>
@@ -429,19 +255,9 @@
     <div class="container">
         <div class="grid">
             <div class="col-12">
-                <h2 class="m-top-5">Icon</h2>
-                <div class="content">
-<code>&#x3C;svg class=&#x22;icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-check&#x22;&#x3E;&#x3C;/use&#x3E;
-&#x3C;/svg&#x3E;
-&#x3C;svg class=&#x22;icon fill-danger&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-camera&#x22;&#x3E;&#x3C;/use&#x3E;
-&#x3C;/svg&#x3E;
-&#x3C;svg class=&#x22;icon fill-success&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-clock&#x22;&#x3E;&#x3C;/use&#x3E;
-&#x3C;/svg&#x3E;
-</code>
-                </div>
+                <h2 class="m-top-5">
+                    Icon
+                </h2>
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="symbol-defs.svg#icon-check"></use>
                 </svg>
@@ -453,15 +269,9 @@
                 </svg>
 
                 <!-- Loading -->
-                <h2 class="m-top-5">Loading</h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;loading&#x22;&#x3E;
-    &#x3C;span&#x3E;&#x3C;/span&#x3E;
-    &#x3C;span&#x3E;&#x3C;/span&#x3E;
-    &#x3C;span&#x3E;&#x3C;/span&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
+                <h2 class="m-top-5">
+                    Loading
+                </h2>
                 <div class="loading">
                     <span></span>
                     <span></span>
@@ -471,15 +281,6 @@
                 <h2 class="m-top-5">
                     Media
                 </h2>
-                <div class="content">
-<code>&#x3C;figure class=&#x22;figure&#x22;&#x3E;
-    &#x3C;img class=&#x22;media&#x22; src=&#x22;/image.jpg&#x22; /&#x3E;
-    &#x3C;figcaption class=&#x22;figure__caption&#x22;&#x3E;
-        food truck yr franzen pabst
-    &#x3C;/figcaption&#x3E;
-&#x3C;/figure&#x3E;
-</code>
-                </div>
                 <figure class="figure">
                     <img class="media" src="/image.jpg" />
                     <figcaption class="figure__caption">
@@ -487,35 +288,10 @@
                     </figcaption>
                 </figure>
 
-
                 <!-- modal -->
                 <h2 class="m-top-5">
                     Modal
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;modal&#x22;&#x3E;
-    &#x3C;div class=&#x22;modal__inner&#x22;&#x3E;
-        &#x3C;div class=&#x22;modal__title t-center&#x22;&#x3E;
-            &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
-             &#x3C;/svg&#x3E;
-             Delete
-          &#x3C;/div&#x3E;
-      &#x3C;div class=&#x22;modal__body&#x22;&#x3E;
-          Do you really wan&#x27;t to delete all files?
-      &#x3C;/div&#x3E;
-      &#x3C;div class=&#x22;modal__footer&#x22;&#x3E;
-          &#x3C;button class=&#x22;button button--outline button--danger&#x22; onclick=&#x22;closeModal()&#x22;&#x3E;
-              Confirm
-          &#x3C;/button&#x3E;
-          &#x3C;button class=&#x22;button button--outline float-right&#x22; onclick=&#x22;closeModal()&#x22;&#x3E;
-              Reject
-          &#x3C;/button&#x3E;
-       &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <button class="button" onclick="openModal()">
                     Click me!
                 </button>
@@ -555,40 +331,6 @@
                 <h2 class="m-top-5">
                     Panel
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;panel&#x22;&#x3E;
-    &#x3C;div class=&#x22;bar&#x22;&#x3E;
-        &#x3C;div class=&#x22;bar__start&#x22;&#x3E;
-            &#x3C;button type=&#x22;button&#x22; class=&#x22;button button--transparent&#x22;&#x3E;
-                &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-expand&#x22;&#x3E;&#x3C;/use&#x3E;
-                &#x3C;/svg&#x3E;
-             &#x3C;/button&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;bar__main&#x22;&#x3E;Panel&#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;bar__end&#x22;&#x3E;
-            &#x3C;button type=&#x22;button&#x22; class=&#x22;button button--transparent&#x22;&#x3E;
-                &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                    &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-edit&#x22;&#x3E;&#x3C;/use&#x3E;
-                &#x3C;/svg&#x3E;
-            &#x3C;/button&#x3E;
-            &#x3C;button type=&#x22;button&#x22; class=&#x22;button button--transparent&#x22;&#x3E;
-                &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                     &#x3C;use xlink:href=&#x22;symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
-                &#x3C;/svg&#x3E;
-            &#x3C;/button&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-    &#x3C;div class=&#x22;panel__body&#x22;&#x3E;
-        &#x3C;div class=&#x22;content m-last-child-0&#x22;&#x3E;
-             &#x3C;p&#x3E;
-                 Content
-             &#x3C;/p&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <div class="panel">
                     <div class="bar">
                         <div class="bar__start">
@@ -626,12 +368,7 @@
                 <h2 class="m-top-5">
                     Progress
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;progress&#x22;&#x3E;
-    &#x3C;div class=&#x22;progress__inner&#x22; style=&#x22;width: 20%;&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
+
                 <div class="progress">
                     <div class="progress__inner" style="width: 20%;"></div>
                 </div>
@@ -640,21 +377,6 @@
                 <h2 class="m-top-5">
                     Sidebar
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;sidebar&#x22;&#x3E;
-    &#x3C;div class=&#x22;sidebar__inner&#x22;&#x3E;
-        &#x3C;div class=&#x22;sidebar__body&#x22;&#x3E;
-
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;sidebar__footer&#x22;&#x3E;
-            &#x3C;button type=&#x22;button&#x22; class=&#x22;button m-bottom-0&#x22;&#x3E;
-                Close
-            &#x3C;/button&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <button class="button" onclick="openSidebar()">
                     Click me!
                 </button>
@@ -684,35 +406,7 @@
                 <h2 class="m-top-5">
                     Sidebar + Bar
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;sidebar&#x22;&#x3E;
-    &#x3C;div class=&#x22;sidebar__inner&#x22;&#x3E;
 
-        &#x3C;div class=&#x22;bar&#x22;&#x3E;
-            &#x3C;div class=&#x22;bar__main&#x22;&#x3E;
-                Sidebar
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;bar__end&#x22;&#x3E;
-                &#x3C;button class=&#x22;button button--transparent&#x22; type=&#x22;button&#x22;&#x3E;
-                    &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                        &#x3C;use xlink:href=&#x22;/symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
-                    &#x3C;/svg&#x3E;
-                &#x3C;/button&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-
-        &#x3C;div class=&#x22;sidebar__body&#x22;&#x3E;
-
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;sidebar__footer&#x22;&#x3E;
-            &#x3C;button type=&#x22;button&#x22; class=&#x22;button m-bottom-0&#x22;&#x3E;
-                Close
-            &#x3C;/button&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
                 <button class="button" onclick="openSidebarBar()">
                     Click me!
                 </button>
@@ -756,39 +450,7 @@
                 <h2 class="m-top-5">
                     Table
                 </h2>
-                <div class="content">
-<code>&#x3C;table class=&#x22;table table--striped table--hover&#x22;&#x3E;
-    &#x3C;thead&#x3E;
-        &#x3C;tr class=&#x22;table__tr&#x22;&#x3E;
-            &#x3C;th class=&#x22;table__th&#x22;&#x3E;A&#x3C;/th&#x3E;
-            &#x3C;th class=&#x22;table__th&#x22;&#x3E;B&#x3C;/th&#x3E;
-            &#x3C;th class=&#x22;table__th&#x22;&#x3E;C&#x3C;/th&#x3E;
-            &#x3C;th class=&#x22;table__th&#x22;&#x3E;D&#x3C;/th&#x3E;
-        &#x3C;/tr&#x3E;
-    &#x3C;/thead&#x3E;
-    &#x3C;tbody&#x3E;
-        &#x3C;tr class=&#x22;table__tr&#x22;&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;1&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;2&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;3&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;4&#x3C;/td&#x3E;
-        &#x3C;/tr&#x3E;
-        &#x3C;tr class=&#x22;table__tr&#x22;&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;1&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;2&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;3&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;4&#x3C;/td&#x3E;
-        &#x3C;/tr&#x3E;
-        &#x3C;tr class=&#x22;table__tr&#x22;&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;1&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;2&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;3&#x3C;/td&#x3E;
-            &#x3C;td class=&#x22;table__td&#x22;&#x3E;4&#x3C;/td&#x3E;
-        &#x3C;/tr&#x3E;
-    &#x3C;/tbody&#x3E;
-&#x3C;/table&#x3E;
-</code>
-                </div>
+
                 <table class="table table--striped table--hover">
                     <thead>
                         <tr class="table__tr">
@@ -824,20 +486,7 @@
                 <h2 class="m-top-5">
                     Tabs
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;tabs&#x22;&#x3E;
-    &#x3C;a class=&#x22;tabs__item tabs__item--selected&#x22;&#x3E;
-        Tab A
-    &#x3C;/a&#x3E;
-    &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
-        Tab B
-    &#x3C;/a&#x3E;
-    &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
-        Tab C
-    &#x3C;/a&#x3E;
-&#x3C;/div&#x3E;
-</code>
-                </div>
+
                 <div class="tabs">
                     <a class="tabs__item tabs__item--selected">
                         Tab A
@@ -853,22 +502,7 @@
                 <h2 class="m-top-5">
                     Tabs + Bar
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;bar&#x22;&#x3E;
-    &#x3C;div class=&#x22;tabs tabs--contrast&#x22;&#x3E;
-        &#x3C;a class=&#x22;tabs__item tabs__item--selected&#x22;&#x3E;
-            Tab A
-        &#x3C;/a&#x3E;
-        &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
-            Tab B
-        &#x3C;/a&#x3E;
-        &#x3C;a class=&#x22;tabs__item&#x22;&#x3E;
-            Tab C
-        &#x3C;/a&#x3E;
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-</div>
+
                 <div class="bar">
                     <div class="tabs tabs--contrast">
                         <a class="tabs__item tabs__item--selected">
@@ -887,26 +521,6 @@
                 <h2 class="m-top-5">
                     Toast
                 </h2>
-                <div class="content">
-<code>&#x3C;div class=&#x22;toast-wrapper&#x22;&#x3E;
-    &#x3C;div class=&#x22;toast&#x22;&#x3E;
-        &#x3C;div class=&#x22;toast__icon&#x22;&#x3E;
-            &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                &#x3C;use xlink:href=&#x22;/symbol-defs.svg#icon-warning&#x22;&#x3E;&#x3C;/use&#x3E;
-            &#x3C;/svg&#x3E;
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;toast__body&#x22;&#x3E;
-
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;toast__button&#x22;&#x3E;
-            &#x3C;svg class=&#x22;icon fill-text-contrast&#x22; aria-hidden=&#x22;true&#x22;&#x3E;
-                &#x3C;use xlink:href=&#x22;/symbol-defs.svg#icon-close&#x22;&#x3E;&#x3C;/use&#x3E;
-            &#x3C;/svg&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-</code>
-</div>
 
                 <script type="text/javascript">
                     function addToast() {
@@ -955,14 +569,9 @@
     <footer class="site-footer m-top-5">
         <div class="bar">
             <div class="bar__main">
-                <a class="color-text-contrast m-right-4" href="/imprint.html">
-                    Imprint
-                </a>
-                <a class="color-text-contrast" href="/private-policy.html">
-                    Privacy Policy
-                </a>
             </div>
         </div>
     </footer>
+
 </body>
-</html
+</html>

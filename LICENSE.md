@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Björn Hase, Tentakelfabrik
+Copyright (c) 2022 Björn Hase, me@herr-hase.wtf
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

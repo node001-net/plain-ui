@@ -1,6 +1,4 @@
-# Plain UI - Lightweight CSS UI Framework for Building Apps and Websites
-
-**Plain UI is currently under development, Styles, Names and Documentation may change until Release!**
+# Plain UI - Simple Framework for Building Apps and Websites
 
 [Documentation](https://plain-ui.com)  
 

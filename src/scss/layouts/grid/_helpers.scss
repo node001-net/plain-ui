@@ -1,11 +1,12 @@
-
-// --------------------------------------------------
-// grid modifiers
-// --------------------------------------------------
-
-// --------------------------------------------------
-// flex-wrap
-// --------------------------------------------------
+/**
+ *  grid: helpers
+ *
+ *
+ *  @author Björn Hase, me@herr-hase.wtf
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://gitea.node001.net/tiny-components/plain-ui.git
+ *
+ */
 
 .wrap {
     @include flex-wrap(wrap);
@@ -26,9 +27,11 @@
     @include flex-wrap(wrap-reverse);
 }
 
-// --------------------------------------------------
-// flex-direction
-// --------------------------------------------------
+
+/**
+ *  flex-direction
+ *
+ */
 
 .direction-row {
     @include flex-direction(row);
@@ -46,9 +49,11 @@
     @include flex-direction(column-reverse);
 }
 
-// --------------------------------------------------
-// align items (cross axis)
-// --------------------------------------------------
+
+/**
+ *  align items (cross axis)
+ *
+ */
 
 .align-start {
     @include align-items(flex-start);
@@ -66,9 +71,11 @@
     @include align-items(baseline);
 }
 
-// --------------------------------------------------
-// align content (cross axis)
-// --------------------------------------------------
+
+/**
+ *  align content (cross axis)
+ *
+ */
 
 .align-content-start {
     @include align-content(flex-start);
@@ -95,9 +102,11 @@
     @include align-content(space-around);
 }
 
-// --------------------------------------------------
-// align-self
-// --------------------------------------------------
+
+/**
+ *  align-self
+ *
+ */
 
 .align-self-stretch {
     @include align-self(stretch);
@@ -122,9 +131,11 @@
     vertical-align: baseline;
 }
 
-// --------------------------------------------------
-// justify-content (main axis)
-// --------------------------------------------------
+
+/**
+ *  justify-content (main axis)
+ *
+ */
 
 .justify-start {
     @include justify-content-start();
@@ -146,9 +157,11 @@
     @include justify-content-space-around();
 }
 
-// --------------------------------------------------
-// cosmetic grid modifiers
-// --------------------------------------------------
+
+/**
+ *  cosmetic grid modifiers
+ *
+ */
 
 // Removes internal padding from all columns in a grid
 .grid-bleed {
@@ -157,9 +170,11 @@
     }
 }
 
-// --------------------------------------------------
-// col modifiers
-// --------------------------------------------------
+
+/**
+ *  col modifiers
+ *
+ */
 
 // Makes a column element into a flexbox column
 .col-grid {
@@ -186,9 +201,11 @@
     padding: 0 $grid__spacing;
 }
 
-// --------------------------------------------------
-// col-grid contents
-// --------------------------------------------------
+
+/**
+ *  col-grid contents
+ *
+ */
 
 .flex-img {
     display: block;
@@ -208,8 +225,10 @@
     }
 }
 
-// --------------------------------------------------
-// Responsive visibility modifiers
-// --------------------------------------------------
+
+/**
+ *  Responsive visibility modifiers
+ *
+ */
 
 @include grid-responsive-visibility-helpers();

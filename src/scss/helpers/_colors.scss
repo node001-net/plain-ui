@@ -1,8 +1,10 @@
 /**
+ *  colors
  *
  *
- *
- *
+ *  @author Björn Hase, me@herr-hase.wtf
+ *  @license http://opensource.org/licenses/MIT The MIT License
+ *  @link https://gitea.node001.net/tiny-components/plain-ui.git
  *
  */
 
@@ -19,6 +21,10 @@
 
     .fill-#{$class} {
         fill: var(#{$name});
+
+        svg {
+            fill: var(#{$name});
+        }
     }
 }
 
@@ -26,8 +32,10 @@
 @each $name, $color in $colors {
     $class: str-replace($name, '--', '');
 
-    .hover-fill-#{$class} {
+    .fill-#{$class}-hover {
         &:hover {
+            fill: var(#{$name});
+
             svg {
                 fill: var(#{$name});
             }

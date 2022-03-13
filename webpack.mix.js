@@ -40,6 +40,12 @@ mix.webpackConfig({
                 svg4everybody: false,
                 svgo: {
                     plugins: [{
+                        name: 'convertStyleToAttrs',
+                        active: true
+                    },{
+                        name: 'removeStyleElement',
+                        active: true
+                    }, {
                         name: 'removeAttrs',
                         params: {
                             attrs: 'fill'

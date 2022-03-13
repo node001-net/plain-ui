@@ -4,7 +4,7 @@
   "description": "Simple UI Framework for Building Apps and Websites",
   "repository": {
     "type": "git",
-    "url": "git@gitea.node001.net:tiny-components/plain-ui.git"
+    "url": "git@github.com:node001-net/plain-ui.git"
   },
   "author": "Björn Hase",
   "license": "MIT",

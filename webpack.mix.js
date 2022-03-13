@@ -37,7 +37,15 @@ mix.webpackConfig({
                 chunk: {
                     keep: true
                 },
-                svg4everybody: false
+                svg4everybody: false,
+                svgo: {
+                    plugins: [{
+                        name: 'removeAttrs',
+                        params: {
+                            attrs: 'fill'
+                        }
+                    }]
+                }
             },
             sprite: {
                 prefix: 'icon-'

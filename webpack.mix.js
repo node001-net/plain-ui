@@ -1,8 +1,12 @@
 const mix = require('laravel-mix')
-const SvgSpritemapPlugin = require('svg-spritemap-webpack-plugin')
 const path = require('path')
+const fs = require('fs')
+
+const SvgSpritemapPlugin = require('svg-spritemap-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 require('laravel-mix-purgecss')
+
 
 /*
  |--------------------------------------------------------------------------
@@ -15,17 +19,12 @@ require('laravel-mix-purgecss')
  |
  */
 
+const strings = {
+    'title'       : 'Plain UI',
+    'description' : 'Simple UI Framework for Apps and Websites',
+    'version'     : '0.5'
+}
 
-/**
- *  svgo: {
-*     plugins: [{
-*         removeAttrs: {
-*             attrs: 'fill'
-    *     }
-    * }]
- *},*
- *  @type {Array}
- */
 mix.webpackConfig({
     plugins: [
         new SvgSpritemapPlugin([
@@ -56,6 +55,39 @@ mix.webpackConfig({
             sprite: {
                 prefix: 'icon-'
             }
+        }),
+
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'src/html/layout.html.ejs',
+            current: 'index.html',
+            strings: strings,
+            content: fs.readFileSync(__dirname + '/src/html/basics.html'),
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'components.html',
+            template: 'src/html/layout.html.ejs',
+            current: 'components.html',
+            strings: strings,
+            content: fs.readFileSync(__dirname + '/src/html/components.html'),
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'layout.html',
+            template: 'src/html/layout.html.ejs',
+            current: 'layout.html',
+            strings: strings,
+            content: fs.readFileSync(__dirname + '/src/html/layout.html'),
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'helpers.html',
+            template: 'src/html/layout.html.ejs',
+            current: 'helpers.html',
+            strings: strings,
+            content: fs.readFileSync(__dirname + '/src/html/helpers.html'),
+            inject: false
         })
     ]
 })

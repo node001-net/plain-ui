@@ -9,6 +9,7 @@
   "author": "Björn Hase",
   "license": "MIT",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "laravel-mix": "^6.0.43",
     "laravel-mix-purgecss": "^6.0.0",
     "postcss-css-variables": "^0.18.0",
